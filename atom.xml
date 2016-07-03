@@ -42,37 +42,4 @@
     
   </entry>
   
-  <entry>
-    <title>个人博客搭建详解（Windows和Mac通用版）</title>
-    <link href="http://ufdouble.com/2016/07/03/fisrtBlog/"/>
-    <id>http://ufdouble.com/2016/07/03/fisrtBlog/</id>
-    <published>2016-07-03T00:25:00.720Z</published>
-    <updated>2016-07-01T01:39:30.799Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;Hexo 是一个基于nodejs 的静态博客网站生成器，作者是来自台湾的 Tommy Chen&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;文／diygreen（简书作者）&lt;br&gt;原文链接：&lt;a href=&quot;http://www.jianshu.com/p/380290deb8f0#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/380290deb8f0#&lt;/a&gt;&lt;br&gt;著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;Hexo 是一个基于nodejs 的静态博客网站生成器，作者是来自台湾的 Tommy Chen&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;文／diygreen（简书作者）&lt;br&gt;原文链接：&lt;a href=&quot;http://www.jianshu.co
-    
-    </summary>
-    
-      <category term="实用技术" scheme="http://ufdouble.com/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="个人博客" scheme="http://ufdouble.com/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E6%9C%AF/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="实用" scheme="http://ufdouble.com/tags/%E5%AE%9E%E7%94%A8/"/>
-    
-      <category term="个人博客" scheme="http://ufdouble.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
 </feed>
