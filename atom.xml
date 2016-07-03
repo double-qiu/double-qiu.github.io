@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ufdouble.com/"/>
-  <updated>2016-06-30T05:38:52.197Z</updated>
+  <updated>2016-07-03T03:26:17.446Z</updated>
   <id>http://ufdouble.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人博客视频测试</title>
+    <link href="http://ufdouble.com/2016/07/03/videoTest/"/>
+    <id>http://ufdouble.com/2016/07/03/videoTest/</id>
+    <published>2016-07-03T03:26:37.688Z</published>
+    <updated>2016-07-03T03:26:17.446Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;放入视频&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Idina-Menze和Caleb-Hyles激情对唱Let-It-Go：&quot;&gt;&lt;a href=&quot;#Idina-Menze和Caleb-Hyles激情对唱Let-It-Go：&quot; class=&quot;headerlink&quot; title=&quot;Idina Menze和Caleb Hyles激情对唱Let It Go：&quot;&gt;&lt;/a&gt;Idina Menze和Caleb Hyles激情对唱Let It Go：&lt;/h2&gt;&lt;iframe height=&quot;498&quot; width=&quot;510&quot; src=&quot;http://player.youku.com/embed/XNjcyMDU4Njg0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;object type=&quot;application/x-shockwave-flash&quot; data=&quot;http://static.youku.com/v1.0.0634/v/swf/loader.swf&quot; width=&quot;100%&quot; height=&quot;100%&quot; id=&quot;movie_player&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot;&gt;&lt;param name=&quot;allowFullScreenInteractive&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;flashvars&quot; value=&quot;VideoIDS=XOTE2NTU3NTA0&amp;amp;ShowId=0&amp;amp;category=98&amp;amp;Cp=0&amp;amp;Light=on&amp;amp;THX=off&amp;amp;unCookie=0&amp;amp;frame=0&amp;amp;pvid=14675163114537C0Se5&amp;amp;uepflag=0&amp;amp;Tid=0&amp;amp;isAutoPlay=true&amp;amp;Version=/v1.0.147&amp;amp;show_ce=0&amp;amp;winType=interior&amp;amp;Type=Folder&amp;amp;Fid=26752271&amp;amp;Pt=5&amp;amp;Ob=1&amp;amp;plchid=&amp;amp;playmode=2&amp;amp;embedid=AjIyOTEzOTM3NgJ3d3cuc29rdS5jb20CL3NlYXJjaF92aWRlby9xX25iYSVFOCVCRiU4NyVFNCVCQSVCQSVFOSU5QiU4NiVFOSU5NCVBNg==&amp;amp;ysuid=1467515917311kc0&amp;amp;vext=bc%3D%26pid%3D14675163114537C0Se5%26unCookie%3D0%26frame%3D0%26type%3D1%26fob%3D1%26fpo%3D5%26svt%3D0%26cna%3D4Gb%2FDwWX2WQCAXns2zdh%2BbLJ%26emb%3DAjIyOTEzOTM3NgJ3d3cuc29rdS5jb20CL3NlYXJjaF92aWRlby9xX25iYSVFOCVCRiU4NyVFNCVCQSVCQSVFOSU5QiU4NiVFOSU5NCVBNg%3D%3D%26dn%3D%E7%BD%91%E9%A1%B5%26hwc%3D1%26mtype%3Doth&amp;amp;cna=4Gb/DwWX2WQCAXns2zdh+bLJ&amp;amp;pageStartTime=1467516311452&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.youku.com/v1.0.0634/v/swf/loader.swf&quot;&gt;&lt;div class=&quot;player_html5&quot;&gt;&lt;div class=&quot;picture&quot; style=&quot;height:100%&quot;&gt;&lt;div style=&quot;line-height:460px;&quot;&gt;&lt;span style=&quot;font-size:18px&quot;&gt;您还没有安装flash播放器,请点击&lt;a href=&quot;http://www.adobe.com/go/getflash&quot; target=&quot;_blank&quot;&gt;这里&lt;/a&gt;安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/object&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;放入视频&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Idina-Menze和Caleb-Hyles激情对唱Let-It-Go：&quot;&gt;&lt;a href=&quot;#Idina-Menze和Caleb-Hyles激情对唱Let-It-Go：&quot; class
+    
+    </summary>
+    
+      <category term="篮球" scheme="http://ufdouble.com/categories/%E7%AF%AE%E7%90%83/"/>
+    
+      <category term="NBA" scheme="http://ufdouble.com/categories/%E7%AF%AE%E7%90%83/NBA/"/>
+    
+    
+      <category term="篮球" scheme="http://ufdouble.com/tags/%E7%AF%AE%E7%90%83/"/>
+    
+      <category term="NBA" scheme="http://ufdouble.com/tags/NBA/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -47,12 +81,12 @@
     <link href="http://ufdouble.com/2016/07/03/fisrtBlog/"/>
     <id>http://ufdouble.com/2016/07/03/fisrtBlog/</id>
     <published>2016-07-03T00:25:00.720Z</published>
-    <updated>2016-07-01T01:39:30.799Z</updated>
+    <updated>2016-07-03T03:11:55.361Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;Hexo 是一个基于nodejs 的静态博客网站生成器，作者是来自台湾的 Tommy Chen&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;文／diygreen（简书作者）&lt;br&gt;原文链接：&lt;a href=&quot;http://www.jianshu.com/p/380290deb8f0#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/380290deb8f0#&lt;/a&gt;&lt;br&gt;著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。&lt;/p&gt;
+&lt;p&gt;文／diygreen（简书作者）&lt;br&gt;原文链接：&lt;a href=&quot;http://www.jianshu.com/p/380290deb8f0#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/380290deb8f0#&lt;/a&gt;&lt;br&gt;著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。&lt;br&gt;Idina Menze和Caleb Hyles激情对唱Let It Go：&lt;iframe height=&quot;498&quot; width=&quot;510&quot; src=&quot;http://player.youku.com/embed/XNjcyMDU4Njg0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
