@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ufdouble.com/"/>
-  <updated>2016-07-03T04:23:33.591Z</updated>
+  <updated>2016-07-03T04:37:11.627Z</updated>
   <id>http://ufdouble.com/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人博客搭建详解（Windows和Mac通用版）</title>
+    <link href="http://ufdouble.com/2016/07/03/rating/"/>
+    <id>http://ufdouble.com/2016/07/03/rating/</id>
+    <published>2016-07-03T04:32:01.153Z</published>
+    <updated>2016-07-03T04:37:11.627Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;图片测试&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/bwyG01t.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/CorVKWU.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/xQOTqbP.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/WENVFWW.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;图片测试&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/bwyG01t.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/CorVKWU.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;
+    
+    </summary>
+    
+      <category term="个人爱好" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/"/>
+    
+      <category term="骑行" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/%E9%AA%91%E8%A1%8C/"/>
+    
+    
+      <category term="骑行" scheme="http://ufdouble.com/tags/%E9%AA%91%E8%A1%8C/"/>
+    
+      <category term="山地车" scheme="http://ufdouble.com/tags/%E5%B1%B1%E5%9C%B0%E8%BD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>个人博客音乐测试</title>
