@@ -110,9 +110,11 @@
     <link href="http://ufdouble.com/2016/07/04/Redis%E5%92%8CMemcached%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://ufdouble.com/2016/07/04/Redis和Memcached的区别/</id>
     <published>2016-07-04T09:26:54.008Z</published>
-    <updated>2016-07-05T02:31:17.671Z</updated>
+    <updated>2016-07-05T05:49:10.629Z</updated>
     
-    <content type="html">&lt;blockquote&gt;
+    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月4日&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Redis 的作者 Salvatore Sanfilippo 曾经对这两种基于内存的数据存储系统进行过比较：&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol&gt;
@@ -181,11 +183,8 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;Redis 的作者 Salvatore Sanfilippo 曾经对这两种基于内存的数据存储系统进行过比较：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;Redis支持服务器端的数据操作：Redis相比Memcached来说，拥有更多的数
+      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/s
     
     </summary>
     
@@ -207,9 +206,11 @@
     <link href="http://ufdouble.com/2016/07/04/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91TDD/"/>
     <id>http://ufdouble.com/2016/07/04/测试驱动开发TDD/</id>
     <published>2016-07-04T09:10:24.110Z</published>
-    <updated>2016-07-04T09:21:45.312Z</updated>
+    <updated>2016-07-05T05:48:43.503Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;blockquote&gt;
+    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月4日&lt;/p&gt;
+&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;一个高效的软件开发过程对软件开发人员来说是至关重要的，决定着开发是痛苦的挣扎，还是不断进步的喜悦。国人对软件蓝领的不屑，对繁琐冗长的传统开发过程的不耐，使大多数开发人员无所适从。最近兴起的一些软件开发过程相关的技术，提供一些比较高效、实用的软件过程开发方法。其中比较基础、关键的一个技术就是测试驱动开发（Test-Driven Development）。虽然TDD光大于极限编程，但测试驱动开发完全可以单独应用。下面就从开发人员使用的角度进行介绍，使开发人员用最少的代价尽快理解、掌握、应用这种技术。下面分优势，原理，过程，原则，测试技术，Tips等方面进行讨论&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;优势&quot;&gt;&lt;a href=&quot;#优势&quot; class=&quot;headerlink&quot; title=&quot;优势&quot;&gt;&lt;/a&gt;优势&lt;/h2&gt;&lt;p&gt;TDD的基本思路就是通过测试来推动整个开发的进行。而测试驱动开发技术并不只是单纯的测试工作。&lt;/p&gt;
@@ -268,8 +269,8 @@ project/Makefile                   项目的 Makefile
     
     <summary type="html">
     
-      &lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;一个高效的软件开发过程对软件开发人员来说是至关重要的，决定着开发是痛苦的挣扎，还是不断进步的喜悦。国人对软件蓝领的
+      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/s
     
     </summary>
     
@@ -293,11 +294,12 @@ project/Makefile                   项目的 Makefile
     <link href="http://ufdouble.com/2016/07/04/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
     <id>http://ufdouble.com/2016/07/04/敏捷开发/</id>
     <published>2016-07-04T08:42:22.393Z</published>
-    <updated>2016-07-04T09:07:29.968Z</updated>
+    <updated>2016-07-05T05:48:24.860Z</updated>
     
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;现在敏捷开发是越来越火了，人人都在谈敏捷，人人都在学习Scrum和XP…&lt;/p&gt;
-&lt;p&gt;为了不落后他人，于是我也开始学习Scrum，今天主要是对我最近阅读的相关资料，根据自己的理解，用自己的话来讲述Scrum中的各个环节，主要目的有两个，一个是进行知识的总结，另外一个是觉得网上很多学习资料的讲述方式让初学者不太容易理解；所以我决定写一篇扫盲性的博文，同时试着也与园内的朋友一起分享交流一下，希望对初学者有帮助。&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月4日&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;现在敏捷开发是越来越火了，人人都在谈敏捷，人人都在学习Scrum和XP…&lt;br&gt;为了不落后他人，于是我也开始学习Scrum，今天主要是对我最近阅读的相关资料，根据自己的理解，用自己的话来讲述Scrum中的各个环节，主要目的有两个，一个是进行知识的总结，另外一个是觉得网上很多学习资料的讲述方式让初学者不太容易理解；所以我决定写一篇扫盲性的博文，同时试着也与园内的朋友一起分享交流一下，希望对初学者有帮助。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;什么是敏捷开发？&quot;&gt;&lt;a href=&quot;#什么是敏捷开发？&quot; class=&quot;headerlink&quot; title=&quot;什么是敏捷开发？&quot;&gt;&lt;/a&gt;什么是敏捷开发？&lt;/h2&gt;&lt;p&gt;敏捷开发(Agile Development)是一种以人为核心、迭代、循序渐进的开发方法。&lt;br&gt;怎么理解呢？首先，我们要理解它不是一门技术，它是一种开发方法，也就是一种软件开发的流程，它会指导我们用规定的环节去一步一步完成项目的开发；而这种开发方式的主要驱动核心是人；它采用的是迭代式开发；&lt;/p&gt;
 &lt;h2 id=&quot;为什么说是以人为核心？&quot;&gt;&lt;a href=&quot;#为什么说是以人为核心？&quot; class=&quot;headerlink&quot; title=&quot;为什么说是以人为核心？&quot;&gt;&lt;/a&gt;为什么说是以人为核心？&lt;/h2&gt;&lt;p&gt;我们大部分人都学过瀑布开发模型，它是以文档为驱动的，为什么呢？因为在瀑布的整个开发过程中，要写大量的文档，把需求文档写出来后，开发人员都是根据文档进行开发的，一切以文档为依据；而敏捷开发它只写有必要的文档，或尽量少写文档，敏捷开发注重的是人与人之间，面对面的交流，所以它强调以人为核心。&lt;/p&gt;
@@ -348,9 +350,8 @@ project/Makefile                   项目的 Makefile
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;现在敏捷开发是越来越火了，人人都在谈敏捷，人人都在学习Scrum和XP…&lt;/p&gt;
-&lt;p&gt;为了不落后他人，于是我也开始学习Scrum，今天主要是对我最近阅读的相关资料，根据自己的理解，用自己的话来讲述Scrum中的各个环节，主要目的有两个，一个是进行
+      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/s
     
     </summary>
     
@@ -370,9 +371,11 @@ project/Makefile                   项目的 Makefile
     <link href="http://ufdouble.com/2016/07/04/nginx%E7%BC%93%E5%AD%98%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/"/>
     <id>http://ufdouble.com/2016/07/04/nginx缓存静态文件/</id>
     <published>2016-07-04T08:18:12.941Z</published>
-    <updated>2016-07-04T08:36:07.518Z</updated>
+    <updated>2016-07-05T05:49:21.866Z</updated>
     
-    <content type="html">&lt;blockquote&gt;
+    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月4日&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;nginx缓存静态文件&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。&lt;/p&gt;
@@ -539,10 +542,8 @@ echo&amp;quot;ta1&amp;quot;;
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;nginx缓存静态文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。&lt;/p
+      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/s
     
     </summary>
     
