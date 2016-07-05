@@ -108,7 +108,7 @@
     <link href="http://ufdouble.com/2016/07/04/Redis%E5%92%8CMemcached%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://ufdouble.com/2016/07/04/Redis和Memcached的区别/</id>
     <published>2016-07-04T09:26:54.008Z</published>
-    <updated>2016-07-05T01:44:18.984Z</updated>
+    <updated>2016-07-05T02:29:59.999Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;Redis 的作者 Salvatore Sanfilippo 曾经对这两种基于内存的数据存储系统进行过比较：&lt;/p&gt;
@@ -187,9 +187,9 @@
     
     </summary>
     
-      <category term="服务器端技术" scheme="http://ufdouble.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
+      <category term="服务器技术" scheme="http://ufdouble.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="缓存服务器" scheme="http://ufdouble.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%8A%80%E6%9C%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="缓存服务器" scheme="http://ufdouble.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
       <category term="缓存" scheme="http://ufdouble.com/tags/%E7%BC%93%E5%AD%98/"/>
