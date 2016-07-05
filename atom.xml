@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ufdouble.com/"/>
-  <updated>2016-07-05T05:31:58.345Z</updated>
+  <updated>2016-07-05T05:38:59.736Z</updated>
   <id>http://ufdouble.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://ufdouble.com/2016/07/05/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E5%85%A8%E6%A0%88%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     <id>http://ufdouble.com/2016/07/05/如何成为一名优秀的全栈工程师/</id>
     <published>2016-07-05T01:46:54.144Z</published>
-    <updated>2016-07-05T05:31:58.345Z</updated>
+    <updated>2016-07-05T05:38:59.736Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/JO6Qoaf.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：DOUBLE&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：[DOUBLE]:&lt;a href=&quot;http://search.msn.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://search.msn.com/&lt;/a&gt; &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月5日&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;谈谈如何才能成为一名优秀的全栈工程师。&lt;/p&gt;
@@ -82,15 +82,13 @@
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;参加线下活动&lt;/strong&gt; —— 与以前程序员总是宅在家里不同，现在的年轻程序员们更愿意分享和交流。很多网站也会组织不同技术主题的线下活动，在这些活动中你可以听到一些技术牛人的分享，还可以找到很多和你一样对技术富有激情的人。而我现在所做的开源项目中的很多团队成员，正是我在这些线下活动中结识的。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;全栈工程师决不是一夜练成的，你需要打好技术基础，强化核心技能，并持续学习。相信有一天你也能像我一样，感受到自由地运用技术，开发出优秀产品所带来的乐趣的。&lt;/p&gt;
+&lt;p&gt;全栈工程师决不是一夜练成的，你需要打好技术基础，强化核心技能，并持续学习。感受到自由地运用技术，开发出优秀产品所带来的乐趣的。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/JO6Qoaf.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：DOUBLE&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月5日&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：[DOUBLE]:&lt;a href=&quot;http://search.msn.com/&quot; target=&quot;_blank&quot; re
     
     </summary>
     
@@ -553,11 +551,11 @@ echo&amp;quot;ta1&amp;quot;;
       <category term="nginx" scheme="http://ufdouble.com/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8A%80%E6%9C%AF/nginx/"/>
     
     
+      <category term="缓存" scheme="http://ufdouble.com/tags/%E7%BC%93%E5%AD%98/"/>
+    
       <category term="nginx" scheme="http://ufdouble.com/tags/nginx/"/>
     
       <category term="java" scheme="http://ufdouble.com/tags/java/"/>
-    
-      <category term="缓存" scheme="http://ufdouble.com/tags/%E7%BC%93%E5%AD%98/"/>
     
   </entry>
   
