@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="单元测试,TDD,JUnit,TestNG," />
+  <meta name="keywords" content="TDD,单元测试,JUnit,TestNG," />
 
 
 
@@ -103,7 +103,7 @@
 
 编写单元测试的误区这里其实有一个误区，很多人编写单元测试时只是一对一的去写业务测试类，例如有一个业务方法叫做保存（save），业务功能是保存一个实体到数据库中，很多人在编写单元测试的时候只添加一个测试方法叫s">
 <meta property="og:image" content="http://o9vx870vo.bkt.clouddn.com/test%20case%20%20task.jpg">
-<meta property="og:updated_time" content="2016-07-06T10:01:11.767Z">
+<meta property="og:updated_time" content="2016-07-06T10:03:44.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈开发中的单元测试怎么写">
 <meta name="twitter:description" content="作者：DOUBLE
@@ -525,9 +525,9 @@ public class BuyBookImpl implements BuyBook {
     }
 
 } 
-</code></pre><p>Portfolio.java<br>业务逻辑类，包括添加书本，获取所买书的总价</p>
+</code></pre><p>Portfolio.java</p>
+<p>业务逻辑类，包括添加书本，获取所买书的总价</p>
 <pre><code>package com.ufdouble.demo.testwork.business;
-
 import java.util.ArrayList;
 import java.util.List;
 import com.ufdouble.demo.testwork.dao.BookMarket;
@@ -579,7 +579,6 @@ public class Portfolio {
 </code></pre><p>PortfolioTest.java</p>
 <p>测试类</p>
 <pre><code>package com.ufdouble.demo.testwork.test;
-
 import static org.junit.Assert.*;
 import org.easymock.EasyMock;
 import org.junit.Before;
@@ -765,9 +764,9 @@ EasyMock.replay(marketMock);
       
         <div class="post-tags">
           
-            <a href="/tags/单元测试/" rel="tag">#单元测试</a>
-          
             <a href="/tags/TDD/" rel="tag">#TDD</a>
+          
+            <a href="/tags/单元测试/" rel="tag">#单元测试</a>
           
             <a href="/tags/JUnit/" rel="tag">#JUnit</a>
           

@@ -146,9 +146,9 @@ public class BuyBookImpl implements BuyBook {
     }
 
 } 
-</code></pre><p>Portfolio.java<br>业务逻辑类，包括添加书本，获取所买书的总价</p>
+</code></pre><p>Portfolio.java</p>
+<p>业务逻辑类，包括添加书本，获取所买书的总价</p>
 <pre><code>package com.ufdouble.demo.testwork.business;
-
 import java.util.ArrayList;
 import java.util.List;
 import com.ufdouble.demo.testwork.dao.BookMarket;
@@ -200,7 +200,6 @@ public class Portfolio {
 </code></pre><p>PortfolioTest.java</p>
 <p>测试类</p>
 <pre><code>package com.ufdouble.demo.testwork.test;
-
 import static org.junit.Assert.*;
 import org.easymock.EasyMock;
 import org.junit.Before;
