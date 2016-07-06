@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="单元测试,TDD,JUnit,TestNG," />
+  <meta name="keywords" content="TDD,单元测试,JUnit,TestNG," />
 
 
 
@@ -98,7 +98,7 @@
 时间：2016年7月6日
 背景
 最近，在网上看到过一个调查，调查的内容是“程序员在项目开发中编写单元测试的情况”。当然，至于调查的结果，我想聪明的你已经可以猜到了。高达 58.3% 的比例，一般情况下不写单元测试，只有偶尔的情况才会写写。16.6% 的程序员从来都不写单元测试。只有很少的一部分程序员才会在自己的代码中进行单元测试，并保证方法测试通过。看到这些，你想到了什么？">
-<meta property="og:updated_time" content="2016-07-06T05:35:23.908Z">
+<meta property="og:updated_time" content="2016-07-06T05:39:51.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈开发中单元测试的重要性">
 <meta name="twitter:description" content="作者：DOUBLE
@@ -410,6 +410,7 @@
 <p>一个 bug 被隐藏的时间越长，修复这个 bug 的代价就越大。在《快速软件开发》一书中已引用了大量的研究数据指出：最后才修改一个 bug 的代价是在 bug 产生时修改它的代价的10倍。</p>
 <p>当然，我们主要讨论的是单元测试。单元测试是一个方法层面上的测试，也是最细粒度的测试。用于测试一个类的每一个方法都已经满足了方法的功能要求。在开发中，对于自己开发的模块，只有在通过单元测试之后，才能提交到 SVN 库 或者 Git 库。</p>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>正是由于测试在开发中的重要地位，才会在IT界刮起了 TDD 的旋风。TDD，也就是测试驱动开发模式。它旨在强调在开发功能代码之前，先编写测试代码。也就是说在明确要开发某个功能后，首先思考如何对这个功能进行测试，并完成测试代码的编写，然后编写相关的代码满足这些测试用例。然后循环进行添加其他功能，直到完成全部功能的开发。</p>
+<p><strong>注：</strong> 关于测试驱动开发，我之前的博客中有提到过，请参考之前的博文《<a href="http://ufdouble.com/2016/07/04/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91TDD/" title="测试驱动开发">测试驱动开发</a>》</p>
 <h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>说了这么多，那么都有什么工具（框架）能帮助我们完成可重复的单元测试呢？下面我就介绍几个常用的。这里只介绍 Java 语言的。其他语言的请问谷老师（Google）。</p>
 <ul>
 <li>JUnit（推荐使用JUnit4）</li>
@@ -463,9 +464,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/单元测试/" rel="tag">#单元测试</a>
-          
             <a href="/tags/TDD/" rel="tag">#TDD</a>
+          
+            <a href="/tags/单元测试/" rel="tag">#单元测试</a>
           
             <a href="/tags/JUnit/" rel="tag">#JUnit</a>
           

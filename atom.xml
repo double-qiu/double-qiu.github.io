@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ufdouble.com/"/>
-  <updated>2016-07-06T05:35:23.908Z</updated>
+  <updated>2016-07-06T05:39:51.415Z</updated>
   <id>http://ufdouble.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://ufdouble.com/2016/07/06/%E8%B0%88%E8%B0%88%E5%BC%80%E5%8F%91%E4%B8%AD%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/"/>
     <id>http://ufdouble.com/2016/07/06/谈谈开发中单元测试的重要性/</id>
     <published>2016-07-06T05:22:19.401Z</published>
-    <updated>2016-07-06T05:35:23.908Z</updated>
+    <updated>2016-07-06T05:39:51.415Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月6日&lt;/p&gt;
@@ -55,6 +55,7 @@
 &lt;p&gt;一个 bug 被隐藏的时间越长，修复这个 bug 的代价就越大。在《快速软件开发》一书中已引用了大量的研究数据指出：最后才修改一个 bug 的代价是在 bug 产生时修改它的代价的10倍。&lt;/p&gt;
 &lt;p&gt;当然，我们主要讨论的是单元测试。单元测试是一个方法层面上的测试，也是最细粒度的测试。用于测试一个类的每一个方法都已经满足了方法的功能要求。在开发中，对于自己开发的模块，只有在通过单元测试之后，才能提交到 SVN 库 或者 Git 库。&lt;/p&gt;
 &lt;h2 id=&quot;应用&quot;&gt;&lt;a href=&quot;#应用&quot; class=&quot;headerlink&quot; title=&quot;应用&quot;&gt;&lt;/a&gt;应用&lt;/h2&gt;&lt;p&gt;正是由于测试在开发中的重要地位，才会在IT界刮起了 TDD 的旋风。TDD，也就是测试驱动开发模式。它旨在强调在开发功能代码之前，先编写测试代码。也就是说在明确要开发某个功能后，首先思考如何对这个功能进行测试，并完成测试代码的编写，然后编写相关的代码满足这些测试用例。然后循环进行添加其他功能，直到完成全部功能的开发。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; 关于测试驱动开发，我之前的博客中有提到过，请参考之前的博文《&lt;a href=&quot;http://ufdouble.com/2016/07/04/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91TDD/&quot; title=&quot;测试驱动开发&quot;&gt;测试驱动开发&lt;/a&gt;》&lt;/p&gt;
 &lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;p&gt;说了这么多，那么都有什么工具（框架）能帮助我们完成可重复的单元测试呢？下面我就介绍几个常用的。这里只介绍 Java 语言的。其他语言的请问谷老师（Google）。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;JUnit（推荐使用JUnit4）&lt;/li&gt;
@@ -80,9 +81,9 @@
       <category term="单元测试" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="单元测试" scheme="http://ufdouble.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
-    
       <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
+    
+      <category term="单元测试" scheme="http://ufdouble.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
       <category term="JUnit" scheme="http://ufdouble.com/tags/JUnit/"/>
     
@@ -359,13 +360,13 @@ project/Makefile                   项目的 Makefile
       <category term="开发方法论" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
     
-      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
-    
       <category term="软件工程" scheme="http://ufdouble.com/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
     
       <category term="方法论" scheme="http://ufdouble.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
       <category term="测试驱动开发" scheme="http://ufdouble.com/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
     
   </entry>
   
