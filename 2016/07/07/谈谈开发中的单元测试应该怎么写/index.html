@@ -88,23 +88,31 @@
 
 <meta name="description" content="作者：DOUBLE
 时间：2016年7月6日
-背景
-最近，在网上看到过一个调查，调查的内容是“程序员在项目开发中编写单元测试的情况”。当然，至于调查的结果，我想聪明的你已经可以猜到了。高达 58.3% 的比例，一般情况下不写单元测试，只有偶尔的情况才会写写。16.6% 的程序员从来都不写单元测试。只有很少的一部分程序员才会在自己的代码中进行单元测试，并保证方法测试通过。看到这些，你想到了什么？">
+前言
+上篇博客中我谈到了单元测试的重要性 ，并且在文章中提到过，有的人不知道怎么编写单元测试从而不去编写，在此本文介绍下如何正确的编写单元测试
+
+编写单元测试的误区这里其实有一个误区，很多人编写单元测试时只是一对一的去写业务测试类，例如有一个业务方法叫做保存（save），业务功能是保存一个实体到数据库中，很多人在编写单元测试的时候只添加一个测试方法叫s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谈谈开发中单元测试的重要性">
-<meta property="og:url" content="http://ufdouble.com/2016/07/06/2016/07/06/谈谈开发中单元测试的重要性/index.html">
+<meta property="og:title" content="谈谈开发中的单元测试怎么写">
+<meta property="og:url" content="http://ufdouble.com/2016/07/07/谈谈开发中的单元测试应该怎么写/index.html">
 <meta property="og:site_name" content="闲言碎语">
 <meta property="og:description" content="作者：DOUBLE
 时间：2016年7月6日
-背景
-最近，在网上看到过一个调查，调查的内容是“程序员在项目开发中编写单元测试的情况”。当然，至于调查的结果，我想聪明的你已经可以猜到了。高达 58.3% 的比例，一般情况下不写单元测试，只有偶尔的情况才会写写。16.6% 的程序员从来都不写单元测试。只有很少的一部分程序员才会在自己的代码中进行单元测试，并保证方法测试通过。看到这些，你想到了什么？">
-<meta property="og:updated_time" content="2016-07-06T05:39:51.415Z">
+前言
+上篇博客中我谈到了单元测试的重要性 ，并且在文章中提到过，有的人不知道怎么编写单元测试从而不去编写，在此本文介绍下如何正确的编写单元测试
+
+编写单元测试的误区这里其实有一个误区，很多人编写单元测试时只是一对一的去写业务测试类，例如有一个业务方法叫做保存（save），业务功能是保存一个实体到数据库中，很多人在编写单元测试的时候只添加一个测试方法叫s">
+<meta property="og:image" content="http://o9vx870vo.bkt.clouddn.com/test%20case%20%20task.jpg">
+<meta property="og:updated_time" content="2016-07-06T10:03:44.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="谈谈开发中单元测试的重要性">
+<meta name="twitter:title" content="谈谈开发中的单元测试怎么写">
 <meta name="twitter:description" content="作者：DOUBLE
 时间：2016年7月6日
-背景
-最近，在网上看到过一个调查，调查的内容是“程序员在项目开发中编写单元测试的情况”。当然，至于调查的结果，我想聪明的你已经可以猜到了。高达 58.3% 的比例，一般情况下不写单元测试，只有偶尔的情况才会写写。16.6% 的程序员从来都不写单元测试。只有很少的一部分程序员才会在自己的代码中进行单元测试，并保证方法测试通过。看到这些，你想到了什么？">
+前言
+上篇博客中我谈到了单元测试的重要性 ，并且在文章中提到过，有的人不知道怎么编写单元测试从而不去编写，在此本文介绍下如何正确的编写单元测试
+
+编写单元测试的误区这里其实有一个误区，很多人编写单元测试时只是一对一的去写业务测试类，例如有一个业务方法叫做保存（save），业务功能是保存一个实体到数据库中，很多人在编写单元测试的时候只添加一个测试方法叫s">
+<meta name="twitter:image" content="http://o9vx870vo.bkt.clouddn.com/test%20case%20%20task.jpg">
 
 
 
@@ -125,9 +133,9 @@
 
 
 
-  <link rel="canonical" href="http://ufdouble.com/2016/07/06/2016/07/06/谈谈开发中单元测试的重要性/"/>
+  <link rel="canonical" href="http://ufdouble.com/2016/07/07/谈谈开发中的单元测试应该怎么写/"/>
 
-  <title> 谈谈开发中单元测试的重要性 | 闲言碎语 </title>
+  <title> 谈谈开发中的单元测试怎么写 | 闲言碎语 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -294,7 +302,7 @@
             
             
               
-                谈谈开发中单元测试的重要性
+                谈谈开发中的单元测试怎么写
               
             
           </h1>
@@ -306,8 +314,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-06T13:22:19+08:00" content="2016-07-06">
-              2016-07-06
+            <time itemprop="dateCreated" datetime="2016-07-07T16:01:46+08:00" content="2016-07-07">
+              2016-07-07
             </time>
           </span>
 
@@ -348,8 +356,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/06/2016/07/06/谈谈开发中单元测试的重要性/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/06/2016/07/06/谈谈开发中单元测试的重要性/" itemprop="commentsCount"></span>
+                <a href="/2016/07/07/谈谈开发中的单元测试应该怎么写/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/07/谈谈开发中的单元测试应该怎么写/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -379,49 +387,341 @@
       
         <p><strong>作者</strong>：<a href="https://github.com/double-qiu" title="DOUBLE" target="_blank" rel="external">DOUBLE</a></p>
 <p><strong>时间</strong>：2016年7月6日</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote>
-<p>最近，在网上看到过一个调查，调查的内容是“程序员在项目开发中编写单元测试的情况”。当然，至于调查的结果，我想聪明的你已经可以猜到了。高达 58.3% 的比例，一般情况下不写单元测试，只有偶尔的情况才会写写。16.6% 的程序员从来都不写单元测试。只有很少的一部分程序员才会在自己的代码中进行单元测试，并保证方法测试通过。看到这些，你想到了什么？</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>上篇博客中我谈到了<a href="http://ufdouble.com/2016/07/06/%E8%B0%88%E8%B0%88%E5%BC%80%E5%8F%91%E4%B8%AD%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/#more" title="单元测试的重要性">单元测试的重要性</a> ，并且在文章中提到过，有的人不知道怎么编写单元测试从而不去编写，在此本文介绍下如何正确的编写单元测试</p>
 </blockquote>
-<h2 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h2><p>虽然，这个调查可能会有些片面性，但这也基本反应了国内程序员的开发现状，很少有程序员能够比较认真的去编写单元测试。而且，甚至有的程序员根本就不知道为什么要写单元测试（这一点让我很郁闷）。他们经常会说，公司里不是有测试人员嘛，测试应该是他们要做的事，我们的工作只是开发（这位仁兄肯定没有学过软件工程）。当然，这些并不是偶然的，正如佛经里边说的“因果循环”，有果必有因。那么，到底是什么原因，导致程序员对单元测试这么不感冒呢？</p>
-<h2 id="发现"><a href="#发现" class="headerlink" title="发现"></a>发现</h2><p>通过与几个朋友的讨论，以及网上的调查，主要有这几种原因，导致程序员对单元测试很排斥，或许说很不以为意。</p>
+<h2 id="编写单元测试的误区"><a href="#编写单元测试的误区" class="headerlink" title="编写单元测试的误区"></a>编写单元测试的误区</h2><p>这里其实有一个误区，很多人编写单元测试时只是一对一的去写业务测试类，例如有一个业务方法叫做保存（save），业务功能是保存一个实体到数据库中，很多人在编写单元测试的时候只添加一个测试方法叫saveTest(),然后在测试方法中封装好实体数据，调用业务方法，完成之后查看数据库是否成功保存了这条实体数据。相信很多开发人员都是这样写单元测试的，但是我在这可以很负责任的告诉各位，这种方式不是真正的单元测试。</p>
+<h2 id="什么才是真正的单元测试"><a href="#什么才是真正的单元测试" class="headerlink" title="什么才是真正的单元测试"></a>什么才是真正的单元测试</h2><p>那到底什么才是真正的单元测试呢？或者怎样编写正确的单元测试呢？各位看官先别急，让我们来分析下上面提到的误区为什么不能算是单元测试，换句话说就是编写单元测试的原则</p>
 <ul>
-<li>不知道怎么编写单元测试</li>
-<li>项目没有要求，所以不编写</li>
-<li>单元测试价值不高，完全是浪费时间</li>
-<li>业务逻辑比较简单，不值得编写单元测试</li>
-<li>不管怎样，集成测试将会抓住所有的 bug，用不着进行单元测试</li>
-<li>在项目的前期还是尽量去编写单元测试，但是越到项目的后期就越失控</li>
-<li>为了完成编码任务，没有足够的时间编写单元测试。编写单元测试会导致不能按时完成编码任务，导致项目延期</li>
+<li><strong>隔离依赖</strong></li>
 </ul>
-<p>很显然，这几种原因归根结底，无外乎就是不了解单元测试，自认为很聪明，自己懒不想去测试，对项目的时间、进度把控不好。下面，我将一 一进行分析，剖析出程序员的开发心理，以此来给朋友们提个醒，最终聪明反被聪明误。</p>
-<h2 id="剖析"><a href="#剖析" class="headerlink" title="剖析"></a>剖析</h2><p><strong>不知道怎么编写单元测试</strong></p>
-<p>这个问题在于，还没有接触过单元测试，同时，也没有体会过企业级的代码开发。不知道同时也不了解单元测试能带给你什么。设想一下，当你开发完一个功能模块的时候，你如何确定你的模块没有 bug 呢？如果涉及到具体的业务，你会执行 debug 模式，然后一点一点的深入到代码中去查看吗？如果你一直都是这样，那么你早就已经 OUT 了。赶快去了解一下单元测试的工具吧，你会收获很大的。</p>
-<p><strong>项目没有要求，所以不编写</strong></p>
-<p>这个问题反映出了一种现象，同时也是一种习惯。项目有没有要求，只能说明项目的管理上不严格，并不是程序员不编写单元测试的理由。他们在以往的开发中，并没有养成写单元测试的好习惯。可想而知，他们的代码质量，我就不敢恭维了。给个建议，尝试着写漂亮的代码，之所以因为漂亮，是指得健康、简洁、健壮。当然，完成漂亮的代码就离不开单元测试了。</p>
-<p><strong>单元测试价值不高，完全是浪费时间</strong></p>
-<p>这种说法其实是错误的。为什么这么说呢？在日常的开发中，代码的完工其实并不等于开发的完工。如果没有单元测试，那么如何保证代码能够正常运行呢？测试人员做的只是业务上的集成测试，也就是黑盒测试，对单个的方法是没有办法测试的，而且，测试出的 bug 的范围也会很广，根本不能确定 bug 的范围，还得去花时间来确定 bug 出在什么地方。难道这就不浪费时间了吗？甚至，这样的方式，时间浪费的会更多。</p>
-<p><strong>业务逻辑比较简单，不值得编写单元测试</strong></p>
-<p>所谓的业务逻辑比较简单，其实是相对的。当你对某一块业务逻辑很熟悉的时候，你自然会认为它很简单。然而，单元测试的必要性并不是仅仅在于测试代码的功能是否正确，还在于，当其他同事在了解你的业务的时候，能够很快的通过单元测试来熟悉代码的功能，甚至不用去读代码，就能够知道它做了哪些事情。因此，写单元测试不仅是解放了自己，更方便了别人。</p>
-<p><strong>项目前期还在尽量写测试，到了后期就失控了</strong></p>
-<p>这种问题的原因在于，对项目进度、项目中的技术点研究时间、人员的沟通、业务需求的熟悉程度等没有把控好。这个问题的出现并不是个人的问题，而是反映了项目管理中存在的问题。当然，个人的原因也存在，就是如何在有限的时间里，提高效率。这一点需要大家好好思考一下了。我的建议，多做计划，根据实际情况变更计划。多和项目组长、组成员进行沟通。及时反应项目中存在的问题。</p>
-<p><strong>为了完成编码任务，没有足够的时间编写单元测试</strong></p>
-<p>这个问题在于，程序员领取的任务较为复杂，或者自己的开发效率有待提高。其实，开发任务是包括编码和单元测试的。在领任务的时候，应该跟据自身的能力，跟组长或经理沟通好，以便留出一定的测试时间。当然，提高自己的编码效率也是很有必要的。至于如何提高开发效率，网上有很多这样的文章，这里就不再赘述了。</p>
-<h2 id="重要性"><a href="#重要性" class="headerlink" title="重要性"></a>重要性</h2><p>测试常常是程序员十分厌倦的一个活动。测试能给我们带来什么？了解这些是非常重要的，测试不可能保证一个程序是完全正确的，但是测试却可以增强我们对程序完整的信心，测试可以让我们相信程序做了我么期望它做的事情。测试能够使我们尽早的发现程序的 bug 和不足。</p>
-<p>一个 bug 被隐藏的时间越长，修复这个 bug 的代价就越大。在《快速软件开发》一书中已引用了大量的研究数据指出：最后才修改一个 bug 的代价是在 bug 产生时修改它的代价的10倍。</p>
-<p>当然，我们主要讨论的是单元测试。单元测试是一个方法层面上的测试，也是最细粒度的测试。用于测试一个类的每一个方法都已经满足了方法的功能要求。在开发中，对于自己开发的模块，只有在通过单元测试之后，才能提交到 SVN 库 或者 Git 库。</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>正是由于测试在开发中的重要地位，才会在IT界刮起了 TDD 的旋风。TDD，也就是测试驱动开发模式。它旨在强调在开发功能代码之前，先编写测试代码。也就是说在明确要开发某个功能后，首先思考如何对这个功能进行测试，并完成测试代码的编写，然后编写相关的代码满足这些测试用例。然后循环进行添加其他功能，直到完成全部功能的开发。</p>
-<p><strong>注：</strong> 关于测试驱动开发，我之前的博客中有提到过，请参考之前的博文《<a href="http://ufdouble.com/2016/07/04/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91TDD/" title="测试驱动开发">测试驱动开发</a>》</p>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>说了这么多，那么都有什么工具（框架）能帮助我们完成可重复的单元测试呢？下面我就介绍几个常用的。这里只介绍 Java 语言的。其他语言的请问谷老师（Google）。</p>
+<p>在上面的举例中数据库是一个第三方的依赖，对于保存数据到数据库这个业务动作是有第三方提供的接口完成的，并不是你自己的业务逻辑，我们在编写单元测试的时候一般都会隔离它，隔离的方式一般是通过stub(数据传递输出),mock(状态行为调用)一个假的模拟来替代</p>
 <ul>
-<li>JUnit（推荐使用JUnit4）</li>
+<li><strong>测试覆盖</strong></li>
 </ul>
-<p>JUnit 在日常开发中还是很常用的，而且 Java 的各种 IDE （Eclipse、MyEclipse、IntelliJ IDEA）都集成了 JUnit 的组件。当然，自己添加插件也是很方便的。JUnit 框架是 Java 语言单元测试当前的一站式解决方案。这个框架值得称赞，因为它把测试驱动的开发思想介绍给 Java 开发人员并教给他们如何有效地编写单元测试。</p>
-<ul>
-<li>TestNG</li>
-</ul>
-<p>TestNG，即Testing Next Generation，下一代测试技术。是根据JUnit和NUnit思想，采用 jdk 的 annotation 技术来强化测试功能并借助XML 文件强化测试组织结构而构建的测试框架。TestNG 的强大之处还在于不仅可以用来做单元测试，还可以用来做集成测试。</p>
-<p>这里仅仅是介绍一下有哪些最常用的 Java 单元测试工具，对于如何使用这些工具，在后续的博客中会有介绍，这里就不再多说了。有兴趣的请关注后续的文章。</p>
-<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>俗话说，一屋不扫，何以扫天下。开发中，我们自己的代码都不能保证功能的正确性，那么还有什么效率可言呢？做再多的任务，写再多的代码也只不过是在搭鸡窝，做着机器一样的重复的工作。IT界有一个原则，DRY原则 —— Don’t Repeat Yourself ！只有通过对自己的工作不断的检查，不断的测试，才能不断的突破，不断的脱颖而出，当然，你才能不断的提高。</p>
+<p>在上面的举例中一个业务方法对应一个测试方法这样的方式显然是不够准确的，一种数据状态能测试通过并不能保证你的业务方法就没有bug,应该有不同的数据状态去测试来保证所有的数据类型通过的情况下，这是就出现了一个概念叫做单元测试任务，如下：</p>
+<p><img src="http://o9vx870vo.bkt.clouddn.com/test%20case%20%20task.jpg" alt="test case task"></p>
+<h2 id="如何编程正确的单元测试"><a href="#如何编程正确的单元测试" class="headerlink" title="如何编程正确的单元测试"></a>如何编程正确的单元测试</h2><p>俗话说光说不做假把式，作为一个有节操的程序猿是不光只会纸上谈兵的，下面我们来具体编写一个实例：</p>
+<p>首先你要编写单元测试肯定需要有一业务方法给你测试吧，正所谓巧妇难做无米之炊。</p>
+<p><strong>模拟一个业务功能</strong>：小明（不是滚粗去的那个小明）去书店买书，付款的时候，老板通过扫描书店上的二维码来得出小明应该付多少钱！</p>
+<p><strong>业务分析</strong>：这里的二维码扫描动作我们是忽然的，关键是通过二维码扫描来获取书的价格（第三方依赖），这里我们使用easyMock这个mock框架来隔离这个依赖，当然网上也有很多第三方的mock框架可以使用，常见的有easyMock和mockito等</p>
+<p>maven添加junit、easyMock 依赖：</p>
+<pre><code>&lt;dependencies&gt;
+   &lt;dependency&gt;
+     &lt;groupId&gt;junit&lt;/groupId&gt;
+     &lt;artifactId&gt;junit&lt;/artifactId&gt;
+     &lt;version&gt;4.12&lt;/version&gt;
+     &lt;scope&gt;test&lt;/scope&gt;
+   &lt;/dependency&gt;
+   &lt;dependency&gt;
+       &lt;groupId&gt;org.easymock&lt;/groupId&gt;
+       &lt;artifactId&gt;easymock&lt;/artifactId&gt;
+       &lt;version&gt;3.0&lt;/version&gt;
+       &lt;scope&gt;test&lt;/scope&gt;
+   &lt;/dependency&gt;
+ &lt;/dependencies&gt;
+</code></pre><p><strong>Book.java</strong></p>
+<p>业务实体类</p>
+<pre><code>package com.ufdouble.demo.testwork.model;
+
+/**
+ * ClassName: Book  
+ * 书本类，name:名称  number：数量
+ * @author DOUBLE
+ * @version
+ */
+public class Book {
+
+    private String name;
+    private int number;
+
+    public Book(String name, int number) {
+        super();
+        this.name = name;
+        this.number = number;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getNumber() {
+        return number;
+    }
+    public void setNumber(int number) {
+        this.number = number;
+    }
+}
+</code></pre><p>BookMarket.java<br>模拟二维码扫描书获取书本价格的业务接口</p>
+<pre><code>package com.ufdouble.demo.testwork.dao;
+
+/**
+ * ClassName: BookMarket  
+ * 外部接口
+ * @author DOUBLE
+ * @version
+ */
+public interface BookMarket {
+    /**
+     *  getPrice:获取书的价格
+     *  @return_type:Double
+     *  @author DOUBLE
+     *  @param bookName
+     *  @return
+     */
+    public Double getPrice(String bookName);
+}
+</code></pre><p>BuyBook.java</p>
+<p>获取所买书总价的业务接口    </p>
+<pre><code>package com.ufdouble.demo.testwork.service;
+import java.util.List;
+import com.ufdouble.demo.testwork.dao.BookMarket;
+import com.ufdouble.demo.testwork.model.Book;
+
+/**
+ * ClassName: buyBook  
+ * 业务接口
+ * @author DOUBLE
+ * @version
+ */
+public interface BuyBook {
+
+    /**
+     *  getBookTotalPrice:获取总价
+     *  @return_type:double
+     *  @author DOUBLE
+     *  @return
+     */
+    public double getBookTotalPrice(List&lt;Book&gt; books,BookMarket bookMarket);
+
+}
+</code></pre><p>BuyBookImpl.java</p>
+<p>书本总价的业务接口实现</p>
+<pre><code>package com.ufdouble.demo.testwork.service.impl;
+
+import java.util.List;
+import com.ufdouble.demo.testwork.dao.BookMarket;
+import com.ufdouble.demo.testwork.model.Book;
+import com.ufdouble.demo.testwork.service.BuyBook;
+/**
+ * ClassName: BuyBookImpl  
+ * 接口业务实现
+ * @author DOUBLE
+ * @version
+ */
+public class BuyBookImpl implements BuyBook {
+
+    @Override
+    public double getBookTotalPrice(List&lt;Book&gt; books,BookMarket bookMarket) {
+        Double result = 0.0;
+        if (books == null || books.size() == 0) 
+            return  result;
+        for (Book book : books) {
+            if(book == null)  continue;
+            result += (bookMarket.getPrice(book.getName()) * book.getNumber());
+        }
+        return result;
+    }
+
+} 
+</code></pre><p>Portfolio.java</p>
+<p>业务逻辑类，包括添加书本，获取所买书的总价</p>
+<pre><code>package com.ufdouble.demo.testwork.business;
+import java.util.ArrayList;
+import java.util.List;
+import com.ufdouble.demo.testwork.dao.BookMarket;
+import com.ufdouble.demo.testwork.model.Book;
+import com.ufdouble.demo.testwork.service.BuyBook;
+import com.ufdouble.demo.testwork.service.impl.BuyBookImpl;
+
+/**
+ * ClassName: Portfolio  
+ * 书单类
+ * @author DOUBLE
+ * @version
+ */
+public class Portfolio {
+
+    private BookMarket bookMarket;
+    List&lt;Book&gt; books = new ArrayList&lt;Book&gt;();
+
+    /**
+     *  getBookTotalPrice:获取总价的业务方法
+     *  @return_type:String
+     *  @author DOUBLE
+     *  @return
+     */
+    public String getBookTotalPrice() {
+        BuyBook buyBook = new BuyBookImpl();
+        double bookTotalPrice = buyBook.getBookTotalPrice(books, bookMarket);
+        return String.valueOf(bookTotalPrice);
+    }
+    /**
+     *  setBookMarket:mock类注入
+     *  @return_type:void
+     *  @author DOUBLE
+     *  @param bookMarket
+     */
+    public void setBookMarket(BookMarket bookMarket) {
+        this.bookMarket = bookMarket;
+    }
+    /**
+     *  addBook:添加书单
+     *  @return_type:void
+     *  @author DOUBLE
+     *  @param book
+     */
+    public void addBook(Book book) {
+        books.add(book);
+    }
+}
+</code></pre><p>PortfolioTest.java</p>
+<p>测试类</p>
+<pre><code>package com.ufdouble.demo.testwork.test;
+import static org.junit.Assert.*;
+import org.easymock.EasyMock;
+import org.junit.Before;
+import org.junit.Test;
+import com.ufdouble.demo.testwork.business.Portfolio;
+import com.ufdouble.demo.testwork.dao.BookMarket;
+import com.ufdouble.demo.testwork.model.Book;
+
+/**
+ * ClassName: PortfolioTest  
+ * 业务逻辑单元测试
+ * @author DOUBLE
+ * @version
+ */
+public class PortfolioTest {
+
+    private Portfolio portfolio;
+    private BookMarket marketMock;
+
+    @Before
+    public void setUp() {
+        portfolio = new Portfolio();
+        marketMock = EasyMock.createMock(BookMarket.class);
+        portfolio.setBookMarket(marketMock);
+    }
+
+    /**
+     *  testBuyBook_OneBook_numNotZero:二本书一样的书
+     *  @return_type:void
+     *  @author DOUBLE
+     */
+    @Test
+    public void testBuyBook_OneBook_numNotZero() {
+        EasyMock.expect(marketMock.getPrice(&quot;JAVA&quot;)).andReturn(42.0);
+        EasyMock.replay(marketMock);
+
+        Book book = new Book(&quot;JAVA&quot;, 2);
+        portfolio.addBook(book);
+
+        assertEquals(&quot;84.0&quot;,portfolio.getBookTotalPrice());
+    }
+    /**
+     *  testBuyBook__OneBook_numZero:数量为0的书，现实情况不可能出现，但是代码业务中可能出现
+     *  @return_type:void
+     *  @author DOUBLE
+     */
+    @Test
+    public void testBuyBook__OneBook_numZero() {
+        EasyMock.expect(marketMock.getPrice(&quot;JAVA&quot;)).andReturn(42.0);
+        EasyMock.replay(marketMock);
+
+        Book book = new Book(&quot;JAVA&quot;, 0);
+        portfolio.addBook(book);
+
+        assertEquals(&quot;0.0&quot;,portfolio.getBookTotalPrice());
+    }
+    /**
+     *  testBuyBook_emptyBook:没有添加书的情况
+     *  @return_type:void
+     *  @author DOUBLE
+     */
+    @Test
+    public void testBuyBook_emptyBook() {
+        EasyMock.expect(marketMock.getPrice(&quot;JAVA&quot;)).andReturn(42.0);
+        EasyMock.replay(marketMock);
+
+        assertEquals(&quot;0.0&quot;,portfolio.getBookTotalPrice());
+    }
+    /**
+     *  testBuyBook_null:添加一本为空的书的情况
+     *  @return_type:void
+     *  @author DOUBLE
+     */
+    @Test
+    public void testBuyBook_null() {
+        EasyMock.expect(marketMock.getPrice(&quot;JAVA&quot;)).andReturn(42.0);
+        EasyMock.replay(marketMock);
+        portfolio.addBook(null);
+        assertEquals(&quot;0.0&quot;,portfolio.getBookTotalPrice());
+    }
+    /**
+     *  testBuyBook_nullAndBook1:添加两种不同的书,其中有一本说为空
+     *  @return_type:void
+     *  @author DOUBLE
+     */
+    @Test
+    public void testBuyBook_nullAndBook1() {
+        EasyMock.expect(marketMock.getPrice(&quot;JAVA&quot;)).andReturn(42.0);
+        EasyMock.replay(marketMock);
+        Book book1 = new Book(&quot;JAVA&quot;, 2);
+        portfolio.addBook(null);
+        portfolio.addBook(book1);
+        assertEquals(&quot;84.0&quot;,portfolio.getBookTotalPrice());
+    }
+    /**
+     * 
+     *  testBuyBook_diffTwoBook:添加两本不同的书
+     *  @return_type:void
+     *  @author DOUBLE
+     */
+    @Test
+    public void testBuyBook_diffTwoBook() {
+        EasyMock.expect(marketMock.getPrice(&quot;JAVA&quot;)).andReturn(42.0);
+        EasyMock.expect(marketMock.getPrice(&quot;Spring&quot;)).andReturn(31.0);
+        EasyMock.replay(marketMock);
+
+        Book book1 = new Book(&quot;JAVA&quot;, 2);
+        Book book2= new Book(&quot;Spring&quot;, 1);
+        portfolio.addBook(book1);
+        portfolio.addBook(book2);
+
+        assertEquals(&quot;115.0&quot;,portfolio.getBookTotalPrice());
+    }
+    /**
+     *  testBuyBook_diffTwoBookAndDesc:书的排序不同
+     *  @return_type:void
+     *  @author DOUBLE
+     */
+    @Test
+    public void testBuyBook_diffTwoBookAndDesc() {
+        EasyMock.expect(marketMock.getPrice(&quot;JAVA&quot;)).andReturn(42.0);
+        EasyMock.expect(marketMock.getPrice(&quot;Spring&quot;)).andReturn(31.0);
+        EasyMock.replay(marketMock);
+
+        Book book1 = new Book(&quot;JAVA&quot;, 2);
+        Book book2= new Book(&quot;Spring&quot;, 1);
+        portfolio.addBook(book2);
+        portfolio.addBook(book1);
+
+        assertEquals(&quot;115.0&quot;,portfolio.getBookTotalPrice());
+    }
+
+}
+</code></pre><p>正如你所看到的，在 setUp() 调用时我们创建新的 Portfolio 对象。然后我们调用 EasyMock为 BookMarket 接口创建一个模拟对象。然后我们使用 Portfolio.setBookMarket() 方法将这个对象注入到 Portfolio 对象中。</p>
+<p>在 @Test方法，我们使用以下代码定义模拟对象的行为：</p>
+<pre><code>EasyMock.expect(marketMock.getPrice(&quot;JAVA&quot;)).andReturn(42.0);
+EasyMock.replay(marketMock);
+</code></pre><p>这样一来，当 getPrice() 方法带有 “JAVA” 的参数被调用的时候，将会返回42.0。</p>
+<p>然后我们创建了一个数量为2的 javaBook ，并将其添加到我们的 Portfolio 中。将我们设置 JAVA 价格定为 42.0 时，我们便知道书本的总价格为 84.00（2*42.00）。在最后一行，我们使用assertEquals() 进行了同样的声明。</p>
+<p>如果 getBookTotalPrice() 中代码不出错的话，以上测试应该会成功，否则测试将会失败。</p>
+<p><strong>结论</strong></p>
+<p>以上便是如果使用 EasyMock 库模拟外部服务/对象以及在测试代码中使用的示例，EasyMock 能做的远不止我在上面展示的，可以去网上搜索更多有关mock框架的信息</p>
+<p>本文的测试代码在我的gitHub库中，感兴趣的朋友可以clone下来参考下 <a href="https://github.com/double-qiu/DemoWork" title="DemoWork" target="_blank" rel="external">DemoWork</a></p>
 
       
     </div>
@@ -479,17 +779,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/05/2016/07/06/如何成为一名优秀的全栈工程师/" rel="next" title="如何成为一名优秀的全栈工程师？">
-                <i class="fa fa-chevron-left"></i> 如何成为一名优秀的全栈工程师？
+              <a href="/2016/07/07/谈谈开发中单元测试的重要性/" rel="next" title="谈谈开发中单元测试的重要性">
+                <i class="fa fa-chevron-left"></i> 谈谈开发中单元测试的重要性
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/06/2016/07/06/谈谈开发中的单元测试应该怎么写/" rel="prev" title="谈谈开发中的单元测试怎么写">
-                谈谈开发中的单元测试怎么写 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -538,8 +834,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/06/2016/07/06/谈谈开发中单元测试的重要性/"
-           data-title="谈谈开发中单元测试的重要性" data-url="http://ufdouble.com/2016/07/06/2016/07/06/谈谈开发中单元测试的重要性/">
+      <div class="ds-thread" data-thread-key="2016/07/07/谈谈开发中的单元测试应该怎么写/"
+           data-title="谈谈开发中的单元测试怎么写" data-url="http://ufdouble.com/2016/07/07/谈谈开发中的单元测试应该怎么写/">
       </div>
     
   </div>
@@ -712,7 +1008,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现状"><span class="nav-number">2.</span> <span class="nav-text">现状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发现"><span class="nav-number">3.</span> <span class="nav-text">发现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#剖析"><span class="nav-number">4.</span> <span class="nav-text">剖析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重要性"><span class="nav-number">5.</span> <span class="nav-text">重要性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">6.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具"><span class="nav-number">7.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结束语"><span class="nav-number">8.</span> <span class="nav-text">结束语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写单元测试的误区"><span class="nav-number">2.</span> <span class="nav-text">编写单元测试的误区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么才是真正的单元测试"><span class="nav-number">3.</span> <span class="nav-text">什么才是真正的单元测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何编程正确的单元测试"><span class="nav-number">4.</span> <span class="nav-text">如何编程正确的单元测试</span></a></li></ol></div>
             
           </div>
         </section>
