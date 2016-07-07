@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="软件工程,方法论,全栈," />
+  <meta name="keywords" content="nginx,java,缓存," />
 
 
 
@@ -87,33 +87,36 @@
 
 
 <meta name="description" content="作者：DOUBLE
-时间：2016年7月5日
+时间：2016年7月4日
 
-谈谈如何才能成为一名优秀的全栈工程师。
+nginx缓存静态文件
 
-什么是全栈工程师全栈工程师一词，最早出现于Facebook工程师Calos Bueno的一篇文章 – Full Stack（需翻墙）。他把全栈工程师定义为对性能影响有着深入理解的技术通才。自那以后全栈这个词便流行起来，我看到过的就有全栈工程师，全栈设计师，全栈运维，全栈市场营销人员等等。而在针对互联网人才的">
+接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。
+架构图client端  &amp;lt;——————&amp;gt;   nginx cache &amp;lt;——————&amp;gt;源服务器
+经过大量测试发现：nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何成为一名优秀的全栈工程师？">
-<meta property="og:url" content="http://ufdouble.com/2016/07/如何成为一名优秀的全栈工程师.html">
+<meta property="og:title" content="nginx缓存静态文件搭建详解">
+<meta property="og:url" content="http://ufdouble.com/2016/07/04/2016/07/nginx缓存静态文件/index.html">
 <meta property="og:site_name" content="闲言碎语">
 <meta property="og:description" content="作者：DOUBLE
-时间：2016年7月5日
+时间：2016年7月4日
 
-谈谈如何才能成为一名优秀的全栈工程师。
+nginx缓存静态文件
 
-什么是全栈工程师全栈工程师一词，最早出现于Facebook工程师Calos Bueno的一篇文章 – Full Stack（需翻墙）。他把全栈工程师定义为对性能影响有着深入理解的技术通才。自那以后全栈这个词便流行起来，我看到过的就有全栈工程师，全栈设计师，全栈运维，全栈市场营销人员等等。而在针对互联网人才的">
-<meta property="og:image" content="http://i.imgur.com/JO6Qoaf.jpg">
-<meta property="og:image" content="http://i.imgur.com/jhCGREb.jpg">
-<meta property="og:updated_time" content="2016-07-05T05:44:25.131Z">
+接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。
+架构图client端  &amp;lt;——————&amp;gt;   nginx cache &amp;lt;——————&amp;gt;源服务器
+经过大量测试发现：nginx">
+<meta property="og:updated_time" content="2016-07-05T05:49:21.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何成为一名优秀的全栈工程师？">
+<meta name="twitter:title" content="nginx缓存静态文件搭建详解">
 <meta name="twitter:description" content="作者：DOUBLE
-时间：2016年7月5日
+时间：2016年7月4日
 
-谈谈如何才能成为一名优秀的全栈工程师。
+nginx缓存静态文件
 
-什么是全栈工程师全栈工程师一词，最早出现于Facebook工程师Calos Bueno的一篇文章 – Full Stack（需翻墙）。他把全栈工程师定义为对性能影响有着深入理解的技术通才。自那以后全栈这个词便流行起来，我看到过的就有全栈工程师，全栈设计师，全栈运维，全栈市场营销人员等等。而在针对互联网人才的">
-<meta name="twitter:image" content="http://i.imgur.com/JO6Qoaf.jpg">
+接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。
+架构图client端  &amp;lt;——————&amp;gt;   nginx cache &amp;lt;——————&amp;gt;源服务器
+经过大量测试发现：nginx">
 
 
 
@@ -134,9 +137,9 @@
 
 
 
-  <link rel="canonical" href="http://ufdouble.com/2016/07/如何成为一名优秀的全栈工程师.html"/>
+  <link rel="canonical" href="http://ufdouble.com/2016/07/04/2016/07/nginx缓存静态文件/"/>
 
-  <title> 如何成为一名优秀的全栈工程师？ | 闲言碎语 </title>
+  <title> nginx缓存静态文件搭建详解 | 闲言碎语 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -303,7 +306,7 @@
             
             
               
-                如何成为一名优秀的全栈工程师？
+                nginx缓存静态文件搭建详解
               
             
           </h1>
@@ -315,8 +318,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-05T09:46:54+08:00" content="2016-07-05">
-              2016-07-05
+            <time itemprop="dateCreated" datetime="2016-07-04T16:18:12+08:00" content="2016-07-04">
+              2016-07-04
             </time>
           </span>
 
@@ -329,8 +332,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/软件工程/" itemprop="url" rel="index">
-                    <span itemprop="name">软件工程</span>
+                  <a href="/categories/服务端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">服务端技术</span>
                   </a>
                 </span>
 
@@ -341,8 +344,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/软件工程/开发方法论/" itemprop="url" rel="index">
-                    <span itemprop="name">开发方法论</span>
+                  <a href="/categories/服务端技术/nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">nginx</span>
                   </a>
                 </span>
 
@@ -357,8 +360,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/如何成为一名优秀的全栈工程师.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/如何成为一名优秀的全栈工程师.html" itemprop="commentsCount"></span>
+                <a href="/2016/07/04/2016/07/nginx缓存静态文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/04/2016/07/nginx缓存静态文件/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -386,67 +389,171 @@
       
 
       
-        <p><img src="http://i.imgur.com/JO6Qoaf.jpg" alt=""></p>
-<p><strong>作者</strong>：<a href="https://github.com/double-qiu" title="DOUBLE" target="_blank" rel="external">DOUBLE</a></p>
-<p><strong>时间</strong>：2016年7月5日</p>
+        <p><strong>作者</strong>：<a href="https://github.com/double-qiu" title="DOUBLE" target="_blank" rel="external">DOUBLE</a></p>
+<p><strong>时间</strong>：2016年7月4日</p>
 <blockquote>
-<p>谈谈如何才能成为一名优秀的全栈工程师。</p>
+<p>nginx缓存静态文件</p>
 </blockquote>
-<h2 id="什么是全栈工程师"><a href="#什么是全栈工程师" class="headerlink" title="什么是全栈工程师"></a>什么是全栈工程师</h2><p>全栈工程师一词，最早出现于Facebook工程师Calos Bueno的一篇文章 – Full Stack（需翻墙）。他把全栈工程师定义为对性能影响有着深入理解的技术通才。自那以后全栈这个词便流行起来，我看到过的就有全栈工程师，全栈设计师，全栈运维，全栈市场营销人员等等。而在针对互联网人才的招聘网站上，全栈工程师更是一跃成为热门招聘职位，其薪资水平也比一般的开发工程师职位要高出一截。那么，什么是全栈工程师，我们又应该如何定义一名全栈工程师呢？</p>
-<p>百度百科对全栈工程师的定义是这样的：“掌握多种技能，并能利用多种技能独立完成产品的人”。我觉得这个定义还不够全面，我认为全栈工程师应该同时是一位资深开发工程师、架构师以及具有敏捷开发技能的程序员。全栈工程师对于软件开发的认识往往已经进化了，他们把特定的技术抛到了身后，明白技术的更新始终比计算机理论要快的道理，因此，他们注重强化自身的核心技能，关注并乐于实践其他技术。全栈工程师往往是某一方面的专家，同时通晓并善于在正确的场合运用其他语言、工具和技术。</p>
-<h2 id="全栈工程师的价值"><a href="#全栈工程师的价值" class="headerlink" title="全栈工程师的价值"></a>全栈工程师的价值</h2><p>随着时间的推移，全栈工程师的作用和价值在越来越多的产品或项目中得到了印证。那么，我们来看看全栈工程师对于个人或公司意味着什么。</p>
-<ul>
-<li><p><strong>个人价值及自由度的极大提升</strong> —— 我曾看过一些介绍全栈工程师的文章，文中大多强调了全栈工程师对于公司与团队的价值。而我想说的是，没有一个优秀的全栈工程师是因为会对公司产生多大的利益，而努力学习各种技术的。我所认识的他们，都是那些有着一颗匠心，不断追求更高技能，并执着于做出更优秀产品的人。而当你成为一名真正的全栈工程师后，会感受到前所未有的个人价值与技术自由度的提升。试想当一个很好的创意出现时，你可以一个人或主导一个团队去实现并不断完善它，这是一件多么让人兴奋的事啊！</p>
-</li>
-<li><p><strong>全局思维与技术前瞻性</strong> —— 由于具备了各个开发环节与技术领域的知识，全栈工程师往往具有更好的大局观和技术前瞻性，能够在项目初期就选择正确的技术，并很好地把控一个项目的整体方向。现代项目往往非常复杂，而全栈工程师往往能带来技术和质量上的保障，从而成为一个项目成功的关键人物。</p>
-</li>
-<li><p><strong>降低沟通成本</strong> —— 我经常听到有设计师抱怨前端工程师无法百分之百地还原他们的设计，而前端工程师又在抱怨后端工程师从接口返回的数据更本无法直接使用，后端工程师也在抱怨产品经理所提的需求根本无法完成。随着团队人数的上升，由于各自技能栈的不同，沟通成本一定会随之上升。全栈工程师除了能够独立完成前后端的开发（甚至包括设计）外，如果能够在项目初期提前介入，便能很好地规避技术风险，过滤不合理的需求，从而显著降低因不同技术差异导致的沟通问题，显著降低项目风险。</p>
-</li>
-<li><p><strong>初创公司</strong> —— 我们已经来到了一个万众创业，全民创新的时代。那些初创公司也如雨后春笋般不断涌现。初创公司往往都有了一个不错的创意，但经常会遇到“就缺一个程序员”的尴尬。我想说的是，他们其实并不是缺程序员，而是缺一位全栈工程师。初创公司往往资金有限，而一名优秀的全栈工程师能够帮助初创公司用最低的代价与最短的时间推出自己的产品。这是初创公司能够存活下来，拿到更多投资，甚至成为“独角兽”一员的最关键一步。</p>
-</li>
-</ul>
-<h2 id="全栈工程师的技能栈"><a href="#全栈工程师的技能栈" class="headerlink" title="全栈工程师的技能栈"></a>全栈工程师的技能栈</h2><p>看到这里你一定会问，到底需要具备怎样的技能才能成为一名全栈工程呢？下面这张图来自Medium，作者将软件开发所涉及的各个方面分为层，又将每个层所包含的主要技术作为组件，制作了这张全栈技术图。<br><img src="http://i.imgur.com/jhCGREb.jpg" alt=""></p>
-<p>从上面这张图，我们不难发现，现在的技术体系是多么庞大，每一年又会有新的技术加入到这些层中，而已有的技术又在不断地更新。因此要掌握所有技术是根本不可能的，而成为全栈工程师也并不需要你真的掌握所有的技术，你应该将自己的精力聚焦于关键开发技能以及一些必须掌握的附加技能上。</p>
-<h2 id="关键开发技能（硬实力）："><a href="#关键开发技能（硬实力）：" class="headerlink" title="关键开发技能（硬实力）："></a>关键开发技能（硬实力）：</h2><ul>
-<li><p><strong>Git / GitHub</strong> —— 你必须掌握如何使用Git来管理和分享你的代码。把Git作为关键技能的第一条，是因为它不仅仅是一个代码管理工具，更是一种推荐的工作方式。它使你能在任何地方进行开发，高效地管理任何大小的项目，通过Git你还能与其他团队成员进行分布式协作，大大提升工作效率。通过GitHub，还能将你与世界所有的开发者联系在一起。</p>
-</li>
-<li><p><strong>至少一门编程语言</strong> —— 你需要精通至少一门编程语言，JAVA 、PHP、C#、Python、Ruby、Perl 等，因为你的大多数核心业务处理都需要用这门语言来写。你既要掌握这门语言的语法，又需要非常熟悉如何基于这门语言进行项目的架构、设计、实现以及测试。如果你选择的是JAVA，那么你就需要掌握面向对象的设计和开发，设计模式的应用，基于J2EE各个组件的开发 等等。</p>
-</li>
-<li><p><strong>运用开发框架和第三方库</strong> —— 流行的开发语言，一般都伴有出色的开发框架，比如JAVA的Spring、MyBatis、Hibernate，Python的Django，PHP的 thinkphp、yin，nodeJs的 express 等等。这些开发框架往往都遵循软件开发领域的一些最佳实践，并由非常优秀的开发人员创建。熟练使用这些开发框架或第三方库能够避免重复发明轮子，使你的工作事半功倍。更重要的是这些优秀框架或第三方库的一般都得到持续的维护，是对你的产品或项目在质量与安全方便的最有效的保障。<br>前端技术 —— 之所以将前端技术独立出来，作为一项关键技术，是因为它在今天的项目和产品的研发过程中正变得越来越重要。一个产品除了实现所需的功能之外，是否好用（用户体验）也正在成为评判一个产品是否成功的重要标准。而这都依赖于前端技术的实现，你至少需要掌握 HTML5、CSS3、JavaScript 等基本前端技术，同时进一步学习 JQuery、LESS、SASS、AngularJS或REACT等前端框架或第三方库。</p>
-</li>
-<li><p><strong>数据库与缓存</strong> —— 任何产品或项目都需要一个数据库来存储数据。作为全栈工程师，你也需要至少掌握一到两个数据库，并知道怎样与数据库进行交互。目前流行的数据库主要有MySQL、MongoDB、Redis、Oracle、SQLServer等。MongoDB作为文档型数据库，在互联网产品中正被越来越多地使用，对于规模稍大一些的项目，我仍推荐使用MySQL或商用的Oracle作为后端数据库。而Redis这样的内存数据库则可以用于缓存，以提升系统的性能。</p>
-</li>
-<li><p><strong>基本设计能力</strong> —— 大部分关于全栈工程师的文章或讨论中，都不会将设计能力做为全栈工程师的关键技能，但我却认为这项技能非常重要。我曾被邀请评估一些软件工程师自己开发的产品，这些产品都有不错的创意，功能实现也很到位，但一看就不是一个好的产品，用户根本没有使用欲望，原因是这些产品的设计太差了，而往往那些开发者完全没有意识到问题的存在，比如色彩的不一致，排版的凌乱，不恰当的图标 等等。我所建议的基本设计能力，并不要求你像专业设计师那样能够P出神图、制作奇妙的视觉效果等，但你需要掌握最基本的UI设计原则，如 色彩的搭配，基本的排版，并具备良好的审美能力，和一些基本UI设计能力，这样你做的产品就不会太差了。</p>
-</li>
-</ul>
-<p>在掌握了这些核心技能之后，你可以根据自己的兴趣与发展方向，学习其他方面的技术。比如，如果你对数据处理感兴趣，那么你可以学习大数据方面的技术。如果你对移动互联网更感兴趣，那么你可以学习Swift，开发ios应用。知识总是相通的，在有了良好的技术基础后，学习其他知识将会变得非常容易。</p>
-<h2 id="附加技能（软实力）："><a href="#附加技能（软实力）：" class="headerlink" title="附加技能（软实力）："></a>附加技能（软实力）：</h2><ul>
-<li><strong>沟通</strong> —— 除非你是在做个人项目，对于稍大一些的项目，你总是需要与同事、干系人或是客户进行沟通的。而成功的沟通往往是获得有效需求，与建立团队信心的第一步。在项目的进行过程中，你更需要通过有效的沟通去确定方案，消除误解，与项目成员协同前进。良好的沟通能力将使你在团队中更具影响力，收到更多尊重和关注。</li>
-</ul>
-<ul>
-<li><p>问题解决能力 —— 全栈工程师首先是一名工程师，他必须掌握工程化的方法来解决遇到的各种问题。我在职业生涯中的几乎所有亮点，都与解决问题相关，大到提供整个项目的架构方案，小到以最快的速度解决生产问题 等。其实有很多提高问题解决能力的方法，但没有一种比实践更有效。我所见到的优秀工程师，往往能够凭借直觉以最短的时间给出正确的解决方案，但你可能没有看到的是，在这背后其实是经过大量实践累积而来的经验。</p>
-</li>
-<li><p><strong>时间管理</strong> —— 作为全栈工程师，你可能会被安排同时在不同的项目中承担不同的角色。你需要合理地分配时间，保证所有的工作能够按时交付。同样在你的业余时间，你还需要花时间阅读和学习，同时你还可能会有自己的Side Project。因此，合理地进行时间分配，并对一些关键任务，进行计划是很重要的。你或许会感到一些压力，但这反而会激发你的创造力，并能让一切都有条不紊地进行。</p>
-</li>
-<li><p><strong>好奇心</strong> —— 对任何工作都抱有好奇心，并愿意不断学习和改善是那些优秀工程师的共同特性。软件开发领域汇集了世界上最聪明的人，各种类型的技术、产品、框架更是日新月异，层出不穷。优秀的全栈工程师需要不断地学习来抓住这些变化，跟上计算机领域发展的脚步。时常有人会问我，做计算机这一行一直会有新的东西产生，要去不断地学习，是不是会很累。我要说的是，对于将持续学习作为一种生活习惯的人来说，学习新东西并不会成为一种负担，反而是一种乐趣。</p>
-</li>
-<li><p><strong>领导力</strong> —— 优秀的全栈工程师往往会被赋予技术Leader甚至项目管理者的角色。成为管理者并不是让你去支配其他人，或让其他人替你做事。管理者需要理解你的团队成员的长处与不足，并知道如何以服务的态度使团队获得最大化的产出。我见过一些非常优秀的工程师，当他们被安排去管理团队时，他们是排斥的，他们往往更愿意独自工作。但我想说，成为管理者，将会使你更加睿智、可靠和值得他人信赖，也会对你未来的职业生涯带来极大的益处。因此，当机会到来时，请将它视为挑战，不要排斥它。</p>
-</li>
-</ul>
-<p>有经验的技术领导者在招聘时，往往会同时考察应聘者技术能力与上述附加技能，而对于初级程序员的招聘来说，那些附加技能往往更被优秀的技术公司所看重。开发技能是你的硬实力，而附加技能则可以看作是你的软实力，只有同时具备这两方面技能，才能成为一名优秀的全栈工程师。</p>
-<h2 id="优秀的全栈工程师需要走出去"><a href="#优秀的全栈工程师需要走出去" class="headerlink" title="优秀的全栈工程师需要走出去"></a>优秀的全栈工程师需要走出去</h2><p>优秀的全栈工程师不应局限于自己的工作，他更应该走出去，接触不同的技术，分享自己的经验和心得，认识更多的朋友。下面便是我的一些做法。</p>
-<ul>
-<li><strong>参加技术大会</strong> —— InfoQ、CSDN、GITC、优设、TED 等网站都会定期举办各类技术大会。在这些大会上，你不仅能够听到技术大咖们带来的各自领域最佳技术实践，而且能认识很多行业内的朋友。这对你开拓思路，扩大技术社交圈都很有帮助。因此，如果公司没有安排你去参加这些技术大会的话，那就自己买票参加，作为对自己的一种投资吧。</li>
-</ul>
-<ul>
-<li><p><strong>作公开演讲</strong> —— 全栈工程师并不需要是一个公开演讲者，但作为团队的核心成员，他一定需要在团队内部做技术、管理等方面的进行演讲。如果你是一个乐于分享的技术达人，那么也可以尝试录制个人课程（视频或音频），并在慕课、网易课堂、优酷 或 像 荔枝、喜马拉雅 等各种媒体分享自己的技能和知识，不要因为自己并不是专家就不愿尝试，相信我，你用心制作的内容，会获得大家的认可，并收获一大批粉丝的。</p>
-</li>
-<li><p><strong>个人博客</strong> —— 每天进步一点点，一年以后你便会获得质的飞跃。优秀的全栈工程师懂得如何进行知识的积累，而技术博客就是一个很好的方式，将自己平时的实践、思考记录下来，配以tag标签方便日后的回顾。最有意思的是，当你在不断记录和更新你的博客同时，世界各地的程序员也会通过你的博客认识你。</p>
-</li>
-<li><p><strong>参加线下活动</strong> —— 与以前程序员总是宅在家里不同，现在的年轻程序员们更愿意分享和交流。很多网站也会组织不同技术主题的线下活动，在这些活动中你可以听到一些技术牛人的分享，还可以找到很多和你一样对技术富有激情的人。而我现在所做的开源项目中的很多团队成员，正是我在这些线下活动中结识的。</p>
-</li>
-</ul>
-<p>全栈工程师决不是一夜练成的，你需要打好技术基础，强化核心技能，并持续学习。感受到自由地运用技术，开发出优秀产品所带来的乐趣的。</p>
+<p>接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。</p>
+<h2 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h2><p>client端  &lt;——————&gt;   nginx cache &lt;——————&gt;源服务器</p>
+<p>经过大量测试发现：nginx的过期顺序是有一个优先级的。下面首先说明各个影响缓存过期的因素：</p>
+<p>（1）inactive:在proxy_cache_path配置项中进行配置，说明某个缓存在inactive指定的时间内如果不访问，将会从缓存中删除。</p>
+<p>（2）源服务器php页面中生成的响应头中的Expires，生成语句为：header(“Expires: Fri, 07 Sep 2013 08:05:18 GMT”);</p>
+<p>（3）源服务器php页面生成的max-age，生成语句为：header(“Cache-Control: max-age=60”);</p>
+<p>（4）nginx的配置项 proxy_cache_valid:配置nginx cache中的缓存文件的缓存时间，如果配置项为：proxy_cache_valid 200 304 2m;说<br>明对于状态为200和304的缓存文件的缓存时间是2分钟，两分钟之后再访问该缓存文件时，文件会过期，从而去源服务器重新取数据。<br>其次对需要注意的一点：源服务器的expires和nginx cache的expires配置项的冲突进行说明，场景如下</p>
+<p>（1）源服务器端有php文件ta1.php内容如下：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2013 08:05:18 GMT&quot;);
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=60&quot;);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>（2）在nginx cache服务器端的配置信息如下：</p>
+<pre><code>…….
+proxy_cache_path /data0/proxy_cache_dir levels=1:2  keys_zone=cache_one:200minactive=5smax_size=30g;
+……..
+
+location~.*\.(php|jsp|cgi)$
+{
+   proxy_read_timeout10s;
+   proxy_connect_timeout10s;
+   proxy_set_header Host$host;
+   proxy_cache_use_stale updating;
+   proxy_cache_key$host$uri$is_args$args;
+   proxy_cache cache_one;
+   #proxy_ignore_headers &quot;Cache-Control&quot;;
+   #proxy_hide_header &quot;Cache-Control&quot;;
+   #proxy_ignore_headers &quot;Expires&quot;;
+   #proxy_hide_header &quot;Expires&quot;;
+   proxy_hide_header&quot;Set-Cookie&quot;;
+   proxy_ignore_headers&quot;Set-Cookie&quot;;
+   #add_header Cache-Control max-age=60;
+   add_headerX-Cache&apos;$upstream_cache_status from $server_addr&apos;;
+   proxy_cache_valid2003042m;
+   #proxy_cache_valid any 0m;
+   proxy_pass http://backend_server;
+   expires30s;
+}
+………….
+</code></pre><p>从上面两项可以看出nginx cache 服务器中expires的配置是30s，该expires的值直接决定了在浏览器端看到的max-age以及expires的值。而源服务器断的代码中设置的响应头中的max-age为60，expires为Fri, 07 Sep 2013 08:05:18 GMT。这是源服务器的设置于nginx-cache的设置冲突了，那么着两个属性应该怎么设置呢？<br>这时client端的max-age与expires的值按照nginx cache中的expires配置项的设置，即:</p>
+<pre><code>Expires Fri,07Sep201208:59:16GMT
+Cache-Controlmax-age=30
+</code></pre><p>而nginx cache端的缓存的max-age与expire的值按照源服务器上的代码的设置。即：</p>
+<pre><code>Expires Fri,07Sep201308:05:18GMT
+Cache-Controlmax-age=60
+</code></pre><p>现在步入正题：</p>
+<p>经过大量测试发现：对缓存的过期与清除起作用的因素的优先级从高到低一次为：<br>inactive配置项、源服务器设置的Expires、源服务器设置的Max-Age、proxy_cache_valid配置项<br>下面通过几个实例对这几个优先级进行说明</p>
+<p>实例1：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//其实是3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=180&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>1分钟之后 ：HIT//这说明valid没有起作用</p>
+<p>2分钟之后 ：HIT//这说明 源服务器设置的max-age没有起作用</p>
+<p>3分钟之后：MISS//这说明源服务器设置的Expires起作用了</p>
+<p>4分钟之后：MISS//这说明inactive起作用了</p>
+<p>实例2：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=180&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 10s//10秒钟</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>5秒后访问：HIT</p>
+<p>10秒后访问: MISS</p>
+<p>15秒后访问：HIT</p>
+<p>20秒后访问:MISS</p>
+<p>通过实例1和实例2综合分析：如果inactive已经进行了设置，则缓存的过期时间以inactive设置的值为准</p>
+<p>实例3：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 1977 08:03:18 GMT&quot;);//直接过期
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=120&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>每隔一秒访问一次：MISS//这说明源服务器端设置的Expires屏蔽了nginx的valide和源服务器端设置的max-age的作用</p>
+<p>实例4：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=120&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>1分钟之后 ：   HIT//这说明valid没有起作用，因为源服务器设置的Expires将valid的效果屏蔽了</p>
+<p>2分钟之后 ：   HIT//这说明 源服务器设置的max-age没有起作用，因为源服务器设置的Expires将max-age屏蔽了</p>
+<p>3分钟之后：    MISS//这说明服务器端设置的expires起作用了</p>
+<p>通过实例2和实例3的现象说明：如果inactive设置的比较大，在inactive到期之前，如果valid、服务器端设置的expires、服务器端设置的max-<br>age都进行了设置，则以服务器端设置的expires为准。</p>
+<p>实例5：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=120&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>#下面两行用于消除服务器端配置的Expires响应头的影响</p>
+<p>proxy_ignore_headers “Expires”;</p>
+<p>proxy_hide_header “Expires”;</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>1分钟之后   HIT //这说明valid的作用已经被服务器端的max-age屏蔽</p>
+<p>2分钟之后   MISS//服务器端设置的max-age起作用</p>
+<p>实例6：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=50&quot;);//50秒钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>#下面两行用于消除服务器端配置的Expires响应头的影响</p>
+<p>proxy_ignore_headers “Expires”;</p>
+<p>proxy_hide_header “Expires”;</p>
+<p>proxy_cache_valid 2m//2分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>50秒钟之后 ：   MISS//这说明服务器端配置的max-age起作用</p>
+<p>1分钟之后 ：   HIT//</p>
+<p>100秒钟之后：   MISS//这说明服务器端设置的max-age起作用了</p>
+<p>通过实例5和实例6的现象说明：如果inactive设置的比较大，而且在nginx配置文件中取消服务器端Expires对缓存的影响。在同时设置了proxy_cache_valid和服务器端设置了max-age响应头字段的情况下，以服务器端设置的max-age的值为标准进行缓存过期处理。</p>
+<p>综上所述：</p>
+<p>（1）在同时设置了源服务器端Expires、源服务器端max-age和nginx cahe端的proxy_cache_valid的情况下，以源服务器端设置的Expires的值为标准进行缓存的过期处理</p>
+<p>（2）若在nginx中配置了相关配置项，取消原服务器端Expires对缓存的影响，在同时设置了源服务器端Expires、源服务器端max-age和nginx cahe端的proxy_cache_valid的情况下，以源服务器端max-age的值为标准进行缓存的过期处理</p>
+<p>（3）若同时取消源服务器端Expires和源服务器端max-age对缓存的影响，则以proxy_cache_valid设置的值为标准进行缓存的过期处理</p>
+<p>（4）Inactive的值不受上述三个因素的影响，即第一次请求页面之后，每经过inactvie指定的时间，都要强制进行相应的缓存清理。因此inactive的优先级最高。</p>
+<p>（5）所以对缓存过期影响的优先级进行排序为：inactvie、源服务器端Expires、源服务器端max-age、proxy_cache_valid</p>
+<p><strong>转自：<a href="http://lmdkfs.blog.163.com/blog/static/7461132420142128311980/" target="_blank" rel="external">http://lmdkfs.blog.163.com/blog/static/7461132420142128311980/</a></strong></p>
 
       
     </div>
@@ -489,11 +596,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/软件工程/" rel="tag">#软件工程</a>
+            <a href="/tags/nginx/" rel="tag">#nginx</a>
           
-            <a href="/tags/方法论/" rel="tag">#方法论</a>
+            <a href="/tags/java/" rel="tag">#java</a>
           
-            <a href="/tags/全栈/" rel="tag">#全栈</a>
+            <a href="/tags/缓存/" rel="tag">#缓存</a>
           
         </div>
       
@@ -502,16 +609,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/Redis和Memcached的区别.html" rel="next" title="Redis 和 Memcached 的区别">
-                <i class="fa fa-chevron-left"></i> Redis 和 Memcached 的区别
+              <a href="/2016/07/03/2016/07/rating/" rel="next" title="个人博客图片测试">
+                <i class="fa fa-chevron-left"></i> 个人博客图片测试
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/谈谈开发中单元测试的重要性.html" rel="prev" title="谈谈开发中单元测试的重要性">
-                谈谈开发中单元测试的重要性 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/04/2016/07/敏捷开发/" rel="prev" title="敏捷开发">
+                敏捷开发 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -561,8 +668,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/如何成为一名优秀的全栈工程师.html"
-           data-title="如何成为一名优秀的全栈工程师？" data-url="http://ufdouble.com/2016/07/如何成为一名优秀的全栈工程师.html">
+      <div class="ds-thread" data-thread-key="2016/07/04/2016/07/nginx缓存静态文件/"
+           data-title="nginx缓存静态文件搭建详解" data-url="http://ufdouble.com/2016/07/04/2016/07/nginx缓存静态文件/">
       </div>
     
   </div>
@@ -735,7 +842,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是全栈工程师"><span class="nav-number">1.</span> <span class="nav-text">什么是全栈工程师</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全栈工程师的价值"><span class="nav-number">2.</span> <span class="nav-text">全栈工程师的价值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全栈工程师的技能栈"><span class="nav-number">3.</span> <span class="nav-text">全栈工程师的技能栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键开发技能（硬实力）："><span class="nav-number">4.</span> <span class="nav-text">关键开发技能（硬实力）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附加技能（软实力）："><span class="nav-number">5.</span> <span class="nav-text">附加技能（软实力）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优秀的全栈工程师需要走出去"><span class="nav-number">6.</span> <span class="nav-text">优秀的全栈工程师需要走出去</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#架构图"><span class="nav-number">1.</span> <span class="nav-text">架构图</span></a></li></ol></div>
             
           </div>
         </section>
