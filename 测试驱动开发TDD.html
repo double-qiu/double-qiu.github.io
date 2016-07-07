@@ -92,7 +92,7 @@
 一个高效的软件开发过程对软件开发人员来说是至关重要的，决定着开发是痛苦的挣扎，还是不断进步的喜悦。国人对软件蓝领的不屑，对繁琐冗长的传统开发过程的不耐，使大多数开发人员无所适从。最近兴起的一些软件开发过程相关的技术，提供一些比较高效、实用的软件过程开发方法。其中比较基础、关键的一个技术就是测试驱动开发（Test-Driven Developmen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="测试驱动开发（TDD）">
-<meta property="og:url" content="http://ufdouble.com/2016/07/04/测试驱动开发TDD/index.html">
+<meta property="og:url" content="http://ufdouble.com/测试驱动开发TDD.html">
 <meta property="og:site_name" content="闲言碎语">
 <meta property="og:description" content="作者：DOUBLE
 时间：2016年7月4日
@@ -128,9 +128,15 @@
 
 
 
-  <link rel="canonical" href="http://ufdouble.com/2016/07/04/测试驱动开发TDD/"/>
+  <link rel="canonical" href="http://ufdouble.com/测试驱动开发TDD.html"/>
 
-  <title> 测试驱动开发（TDD） | 闲言碎语 </title>
+  <title>
+  
+
+  
+    测试驱动开发（TDD） | 闲言碎语
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -151,7 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -278,109 +284,8 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                测试驱动开发（TDD）
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-04T17:10:24+08:00" content="2016-07-04">
-              2016-07-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/软件工程/" itemprop="url" rel="index">
-                    <span itemprop="name">软件工程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/软件工程/开发方法论/" itemprop="url" rel="index">
-                    <span itemprop="name">开发方法论</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/04/测试驱动开发TDD/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/04/测试驱动开发TDD/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-              &nbsp; | &nbsp;
-              <span class="page-pv">本文总阅读量
-              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
-              </span>
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p><strong>作者</strong>：<a href="https://github.com/double-qiu" title="DOUBLE" target="_blank" rel="external">DOUBLE</a></p>
+      <p><strong>作者</strong>：<a href="https://github.com/double-qiu" title="DOUBLE" target="_blank" rel="external">DOUBLE</a></p>
 <p><strong>时间</strong>：2016年7月4日</p>
 <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><blockquote>
 <p>一个高效的软件开发过程对软件开发人员来说是至关重要的，决定着开发是痛苦的挣扎，还是不断进步的喜悦。国人对软件蓝领的不屑，对繁琐冗长的传统开发过程的不耐，使大多数开发人员无所适从。最近兴起的一些软件开发过程相关的技术，提供一些比较高效、实用的软件过程开发方法。其中比较基础、关键的一个技术就是测试驱动开发（Test-Driven Development）。虽然TDD光大于极限编程，但测试驱动开发完全可以单独应用。下面就从开发人员使用的角度进行介绍，使开发人员用最少的代价尽快理解、掌握、应用这种技术。下面分优势，原理，过程，原则，测试技术，Tips等方面进行讨论</p>
@@ -438,111 +343,7 @@ project/Makefile                   项目的 Makefile
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>很多朋友有疑问，“测试代码的正确性如何保障？是写测试代码还是写测试文档？”这样是不是会陷入“鸡生蛋，蛋生鸡”的循环。其实是不会的。通常测试代码通常是非常简单的，通常围绕着某个情况的正确性判断的几个语句，如果太复杂，就应该继续分解啦。而传统的开发过程通常强调测试文档。但随着开发节奏的加快，用户需求的不断变化，维护高层（需求、概要设计）的测试文档可以，更低层的测试文档的成本的确太大了。而且可实时验证功能正确性的测试代码就是对代码最好的文档。</p>
 <p>软件开发过程中，除了遵守上面提到的测试驱动开发的几个原则外，一个需要注意的问题就是，谨防过度设计。编写功能代码时应该关注于完成当前功能点，通过测试，使用最简单、直接的方式来编码。过多的考虑后期的扩展，其他功能的添加，无疑增加了过多的复杂性，容易产生问题。应该等到要添加这些特性时在进行详细的测试驱动开发。到时候，有整套测试用例做基础，通过不断重构很容易添加相关特性。</p>
 
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/uploads/images/wechat-reward-image.jpg" alt="DOUBLE WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/uploads/images/alipay-reward-image.jpg" alt="DOUBLE Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
-  </div>
-
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/软件工程/" rel="tag">#软件工程</a>
-          
-            <a href="/tags/方法论/" rel="tag">#方法论</a>
-          
-            <a href="/tags/测试驱动开发/" rel="tag">#测试驱动开发</a>
-          
-            <a href="/tags/TDD/" rel="tag">#TDD</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/07/04/敏捷开发/" rel="next" title="敏捷开发">
-                <i class="fa fa-chevron-left"></i> 敏捷开发
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/04/Redis和Memcached的区别/" rel="prev" title="Redis 和 Memcached 的区别">
-                Redis 和 Memcached 的区别 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-        <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-  <a class="jiathis_button_tsina"></a>
-  <a class="jiathis_button_tqq"></a>
-  <a class="jiathis_button_weixin"></a>
-  <a class="jiathis_button_cqq"></a>
-  <a class="jiathis_button_douban"></a>
-  <a class="jiathis_button_renren"></a>
-  <a class="jiathis_button_qzone"></a>
-  <a class="jiathis_button_kaixin001"></a>
-  <a class="jiathis_button_copy"></a>
-  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-  <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" >
-  var jiathis_config={
-    hideMore:false
-  }
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-
-      
-    </div>
+    
   </div>
 
 
@@ -553,8 +354,8 @@ project/Makefile                   项目的 Makefile
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/04/测试驱动开发TDD/"
-           data-title="测试驱动开发（TDD）" data-url="http://ufdouble.com/2016/07/04/测试驱动开发TDD/">
+      <div class="ds-thread" data-thread-key="测试驱动开发TDD.html"
+           data-title="测试驱动开发（TDD）" data-url="http://ufdouble.com/测试驱动开发TDD.html">
       </div>
     
   </div>
@@ -578,17 +379,8 @@ project/Makefile                   项目的 Makefile
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -637,7 +429,7 @@ project/Makefile                   项目的 Makefile
           
             
               <span class="links-of-author-item">
-                <a href="http://git.oschina.net/ufdouble" target="_blank" title="OSChina">
+                <a href="http://git.oschina.net/ufdouble" target="_blank" rel="external nofollow"  title="OSChina">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -646,7 +438,7 @@ project/Makefile                   项目的 Makefile
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://github.com/double-qiu" target="_blank" title="GitHub">
+                <a href="https://github.com/double-qiu" target="_blank" rel="external nofollow"  title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -655,7 +447,7 @@ project/Makefile                   项目的 Makefile
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/ufdouble" target="_blank" title="Zhihu">
+                <a href="https://www.zhihu.com/people/ufdouble" target="_blank" rel="external nofollow"  title="Zhihu">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -664,7 +456,7 @@ project/Makefile                   项目的 Makefile
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/ufdouble" target="_blank" title="Weibo">
+                <a href="http://weibo.com/ufdouble" target="_blank" rel="external nofollow"  title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
@@ -673,7 +465,7 @@ project/Makefile                   项目的 Makefile
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.jianshu.com/users/5d032fa831bf/timeline" target="_blank" title="JianShu">
+                <a href="http://www.jianshu.com/users/5d032fa831bf/timeline" target="_blank" rel="external nofollow"  title="JianShu">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -697,19 +489,19 @@ project/Makefile                   项目的 Makefile
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.oschina.net/" title="开源中国" target="_blank">开源中国</a>
+                  <a href="http://www.oschina.net/" title="开源中国" target="_blank" rel="external nofollow">开源中国</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                  <a href="http://www.liaoxuefeng.com/" title="廖雪峰" target="_blank" rel="external nofollow">廖雪峰</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://music.163.com/" title="网易云音乐" target="_blank">网易云音乐</a>
+                  <a href="http://music.163.com/" title="网易云音乐" target="_blank" rel="external nofollow">网易云音乐</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.jobbole.com/" title="伯乐在线" target="_blank">伯乐在线</a>
+                  <a href="http://blog.jobbole.com/" title="伯乐在线" target="_blank" rel="external nofollow">伯乐在线</a>
                 </li>
               
             </ul>
@@ -720,17 +512,6 @@ project/Makefile                   项目的 Makefile
           </div>
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#优势"><span class="nav-number">1.1.</span> <span class="nav-text">优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">1.2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">1.3.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原则"><span class="nav-number">1.4.</span> <span class="nav-text">原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试技术"><span class="nav-number">1.5.</span> <span class="nav-text">测试技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试范围、粒度"><span class="nav-number">1.5.1.</span> <span class="nav-text">测试范围、粒度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么编写测试用例"><span class="nav-number">1.5.2.</span> <span class="nav-text">怎么编写测试用例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tips"><span class="nav-number">1.6.</span> <span class="nav-text">Tips</span></a></li></ol></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -755,12 +536,12 @@ project/Makefile                   项目的 Makefile
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://github.com/double-qiu/double-qiu.github.io">Git</a> 强力驱动
+  由 <a class="theme-link" href="https://github.com/double-qiu/double-qiu.github.io"  rel="external nofollow">Git</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/double-qiu/next.git">
+  <a class="theme-link" href="https://github.com/double-qiu/next.git" rel="external nofollow">
     NexT.Pisces
   </a>
 </div>
@@ -851,10 +632,6 @@ project/Makefile                   项目的 Makefile
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
