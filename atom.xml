@@ -373,9 +373,9 @@ EasyMock.replay(marketMock);
       <category term="单元测试" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
-    
       <category term="单元测试" scheme="http://ufdouble.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
     
       <category term="JUnit" scheme="http://ufdouble.com/tags/JUnit/"/>
     
@@ -449,9 +449,9 @@ EasyMock.replay(marketMock);
       <category term="单元测试" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
-    
       <category term="单元测试" scheme="http://ufdouble.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
     
       <category term="JUnit" scheme="http://ufdouble.com/tags/JUnit/"/>
     
@@ -732,9 +732,9 @@ project/Makefile                   项目的 Makefile
     
       <category term="方法论" scheme="http://ufdouble.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
-      <category term="测试驱动开发" scheme="http://ufdouble.com/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
       <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
+    
+      <category term="测试驱动开发" scheme="http://ufdouble.com/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
