@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JAVA, DOUBLE, BASKETBALL, RATING" />
+  <meta name="keywords" content="缓存,nginx,java," />
 
 
 
@@ -86,15 +86,37 @@
 
 
 
-<meta name="description" content="喜欢骑行，喜欢篮球，热爱编程">
-<meta property="og:type" content="website">
-<meta property="og:title" content="闲言碎语">
-<meta property="og:url" content="http://ufdouble.com/page/2/index.html">
+<meta name="description" content="作者：DOUBLE
+时间：2016年7月4日
+
+nginx缓存静态文件
+
+接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。
+架构图client端  &amp;lt;——————&amp;gt;   nginx cache &amp;lt;——————&amp;gt;源服务器
+经过大量测试发现：nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx缓存静态文件搭建详解">
+<meta property="og:url" content="http://ufdouble.com/2016/07/nginx缓存静态文件.html">
 <meta property="og:site_name" content="闲言碎语">
-<meta property="og:description" content="喜欢骑行，喜欢篮球，热爱编程">
+<meta property="og:description" content="作者：DOUBLE
+时间：2016年7月4日
+
+nginx缓存静态文件
+
+接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。
+架构图client端  &amp;lt;——————&amp;gt;   nginx cache &amp;lt;——————&amp;gt;源服务器
+经过大量测试发现：nginx">
+<meta property="og:updated_time" content="2016-07-05T05:49:21.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="闲言碎语">
-<meta name="twitter:description" content="喜欢骑行，喜欢篮球，热爱编程">
+<meta name="twitter:title" content="nginx缓存静态文件搭建详解">
+<meta name="twitter:description" content="作者：DOUBLE
+时间：2016年7月4日
+
+nginx缓存静态文件
+
+接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。
+架构图client端  &amp;lt;——————&amp;gt;   nginx cache &amp;lt;——————&amp;gt;源服务器
+经过大量测试发现：nginx">
 
 
 
@@ -115,9 +137,9 @@
 
 
 
-  <link rel="canonical" href="http://ufdouble.com/page/2/"/>
+  <link rel="canonical" href="http://ufdouble.com/2016/07/nginx缓存静态文件.html"/>
 
-  <title> 闲言碎语 - 喜欢骑行，喜欢篮球，热爱编程 </title>
+  <title> nginx缓存静态文件搭建详解 | 闲言碎语 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -138,9 +160,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -264,9 +284,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -286,10 +306,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/07/fisrtBlog.html" itemprop="url">
-                  个人博客搭建详解（Windows和Mac通用版）
-                </a>
+                nginx缓存静态文件搭建详解
               
             
           </h1>
@@ -315,8 +332,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/实用技术/" itemprop="url" rel="index">
-                    <span itemprop="name">实用技术</span>
+                  <a href="/categories/服务端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">服务端技术</span>
                   </a>
                 </span>
 
@@ -327,8 +344,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/实用技术/个人博客/" itemprop="url" rel="index">
-                    <span itemprop="name">个人博客</span>
+                  <a href="/categories/服务端技术/nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">nginx</span>
                   </a>
                 </span>
 
@@ -343,8 +360,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/fisrtBlog.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/fisrtBlog.html" itemprop="commentsCount"></span>
+                <a href="/2016/07/nginx缓存静态文件.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/nginx缓存静态文件.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -355,6 +372,11 @@
           
           
 
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">本文总阅读量
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+              </span>
           
         </div>
       </header>
@@ -367,54 +389,276 @@
       
 
       
+        <p><strong>作者</strong>：<a href="https://github.com/double-qiu" title="DOUBLE" target="_blank" rel="external">DOUBLE</a></p>
+<p><strong>时间</strong>：2016年7月4日</p>
+<blockquote>
+<p>nginx缓存静态文件</p>
+</blockquote>
+<p>接触nginx的兄弟或多或少都有遇到缓存问题，要么是nginx为什么不缓存，要么就是nginx缓存很快就失效等等问题，在网上找了一遍nginx缓存优先级的文章，大家可以参考下。</p>
+<h2 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h2><p>client端  &lt;——————&gt;   nginx cache &lt;——————&gt;源服务器</p>
+<p>经过大量测试发现：nginx的过期顺序是有一个优先级的。下面首先说明各个影响缓存过期的因素：</p>
+<p>（1）inactive:在proxy_cache_path配置项中进行配置，说明某个缓存在inactive指定的时间内如果不访问，将会从缓存中删除。</p>
+<p>（2）源服务器php页面中生成的响应头中的Expires，生成语句为：header(“Expires: Fri, 07 Sep 2013 08:05:18 GMT”);</p>
+<p>（3）源服务器php页面生成的max-age，生成语句为：header(“Cache-Control: max-age=60”);</p>
+<p>（4）nginx的配置项 proxy_cache_valid:配置nginx cache中的缓存文件的缓存时间，如果配置项为：proxy_cache_valid 200 304 2m;说<br>明对于状态为200和304的缓存文件的缓存时间是2分钟，两分钟之后再访问该缓存文件时，文件会过期，从而去源服务器重新取数据。<br>其次对需要注意的一点：源服务器的expires和nginx cache的expires配置项的冲突进行说明，场景如下</p>
+<p>（1）源服务器端有php文件ta1.php内容如下：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2013 08:05:18 GMT&quot;);
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=60&quot;);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>（2）在nginx cache服务器端的配置信息如下：</p>
+<pre><code>…….
+proxy_cache_path /data0/proxy_cache_dir levels=1:2  keys_zone=cache_one:200minactive=5smax_size=30g;
+……..
+
+location~.*\.(php|jsp|cgi)$
+{
+   proxy_read_timeout10s;
+   proxy_connect_timeout10s;
+   proxy_set_header Host$host;
+   proxy_cache_use_stale updating;
+   proxy_cache_key$host$uri$is_args$args;
+   proxy_cache cache_one;
+   #proxy_ignore_headers &quot;Cache-Control&quot;;
+   #proxy_hide_header &quot;Cache-Control&quot;;
+   #proxy_ignore_headers &quot;Expires&quot;;
+   #proxy_hide_header &quot;Expires&quot;;
+   proxy_hide_header&quot;Set-Cookie&quot;;
+   proxy_ignore_headers&quot;Set-Cookie&quot;;
+   #add_header Cache-Control max-age=60;
+   add_headerX-Cache&apos;$upstream_cache_status from $server_addr&apos;;
+   proxy_cache_valid2003042m;
+   #proxy_cache_valid any 0m;
+   proxy_pass http://backend_server;
+   expires30s;
+}
+………….
+</code></pre><p>从上面两项可以看出nginx cache 服务器中expires的配置是30s，该expires的值直接决定了在浏览器端看到的max-age以及expires的值。而源服务器断的代码中设置的响应头中的max-age为60，expires为Fri, 07 Sep 2013 08:05:18 GMT。这是源服务器的设置于nginx-cache的设置冲突了，那么着两个属性应该怎么设置呢？<br>这时client端的max-age与expires的值按照nginx cache中的expires配置项的设置，即:</p>
+<pre><code>Expires Fri,07Sep201208:59:16GMT
+Cache-Controlmax-age=30
+</code></pre><p>而nginx cache端的缓存的max-age与expire的值按照源服务器上的代码的设置。即：</p>
+<pre><code>Expires Fri,07Sep201308:05:18GMT
+Cache-Controlmax-age=60
+</code></pre><p>现在步入正题：</p>
+<p>经过大量测试发现：对缓存的过期与清除起作用的因素的优先级从高到低一次为：<br>inactive配置项、源服务器设置的Expires、源服务器设置的Max-Age、proxy_cache_valid配置项<br>下面通过几个实例对这几个优先级进行说明</p>
+<p>实例1：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//其实是3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=180&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>1分钟之后 ：HIT//这说明valid没有起作用</p>
+<p>2分钟之后 ：HIT//这说明 源服务器设置的max-age没有起作用</p>
+<p>3分钟之后：MISS//这说明源服务器设置的Expires起作用了</p>
+<p>4分钟之后：MISS//这说明inactive起作用了</p>
+<p>实例2：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=180&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 10s//10秒钟</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>5秒后访问：HIT</p>
+<p>10秒后访问: MISS</p>
+<p>15秒后访问：HIT</p>
+<p>20秒后访问:MISS</p>
+<p>通过实例1和实例2综合分析：如果inactive已经进行了设置，则缓存的过期时间以inactive设置的值为准</p>
+<p>实例3：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 1977 08:03:18 GMT&quot;);//直接过期
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=120&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>每隔一秒访问一次：MISS//这说明源服务器端设置的Expires屏蔽了nginx的valide和源服务器端设置的max-age的作用</p>
+<p>实例4：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=120&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>1分钟之后 ：   HIT//这说明valid没有起作用，因为源服务器设置的Expires将valid的效果屏蔽了</p>
+<p>2分钟之后 ：   HIT//这说明 源服务器设置的max-age没有起作用，因为源服务器设置的Expires将max-age屏蔽了</p>
+<p>3分钟之后：    MISS//这说明服务器端设置的expires起作用了</p>
+<p>通过实例2和实例3的现象说明：如果inactive设置的比较大，在inactive到期之前，如果valid、服务器端设置的expires、服务器端设置的max-<br>age都进行了设置，则以服务器端设置的expires为准。</p>
+<p>实例5：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=120&quot;);//2分钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>#下面两行用于消除服务器端配置的Expires响应头的影响</p>
+<p>proxy_ignore_headers “Expires”;</p>
+<p>proxy_hide_header “Expires”;</p>
+<p>proxy_cache_valid 1m//1分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>1分钟之后   HIT //这说明valid的作用已经被服务器端的max-age屏蔽</p>
+<p>2分钟之后   MISS//服务器端设置的max-age起作用</p>
+<p>实例6：</p>
+<p>服务器端php代码：</p>
+<pre><code>&lt;?php
+header(&quot;Expires: Fri, 07 Sep 2012 08:03:18 GMT&quot;);//3分钟之后
+header(&quot;Last-Modified: &quot;.gmdate(&quot;D, d M Y H:i:s&quot;).&quot; GMT&quot;);
+header(&quot;Cache-Control: max-age=50&quot;);//50秒钟
+//header(&quot;Cache-Control: post-check=0, pre-check=0&quot;, false);
+echo&quot;ta1&quot;;
+?&gt;
+</code></pre><p>nginx cache 配置项</p>
+<p>inactive 4m//4分钟</p>
+<p>#下面两行用于消除服务器端配置的Expires响应头的影响</p>
+<p>proxy_ignore_headers “Expires”;</p>
+<p>proxy_hide_header “Expires”;</p>
+<p>proxy_cache_valid 2m//2分钟</p>
+<p>现象：第一次访问页面ta1.php之后，各个时间的访问结果：</p>
+<p>50秒钟之后 ：   MISS//这说明服务器端配置的max-age起作用</p>
+<p>1分钟之后 ：   HIT//</p>
+<p>100秒钟之后：   MISS//这说明服务器端设置的max-age起作用了</p>
+<p>通过实例5和实例6的现象说明：如果inactive设置的比较大，而且在nginx配置文件中取消服务器端Expires对缓存的影响。在同时设置了proxy_cache_valid和服务器端设置了max-age响应头字段的情况下，以服务器端设置的max-age的值为标准进行缓存过期处理。</p>
+<p>综上所述：</p>
+<p>（1）在同时设置了源服务器端Expires、源服务器端max-age和nginx cahe端的proxy_cache_valid的情况下，以源服务器端设置的Expires的值为标准进行缓存的过期处理</p>
+<p>（2）若在nginx中配置了相关配置项，取消原服务器端Expires对缓存的影响，在同时设置了源服务器端Expires、源服务器端max-age和nginx cahe端的proxy_cache_valid的情况下，以源服务器端max-age的值为标准进行缓存的过期处理</p>
+<p>（3）若同时取消源服务器端Expires和源服务器端max-age对缓存的影响，则以proxy_cache_valid设置的值为标准进行缓存的过期处理</p>
+<p>（4）Inactive的值不受上述三个因素的影响，即第一次请求页面之后，每经过inactvie指定的时间，都要强制进行相应的缓存清理。因此inactive的优先级最高。</p>
+<p>（5）所以对缓存过期影响的优先级进行排序为：inactvie、源服务器端Expires、源服务器端max-age、proxy_cache_valid</p>
+<p><strong>转自：<a href="http://lmdkfs.blog.163.com/blog/static/7461132420142128311980/" target="_blank" rel="external">http://lmdkfs.blog.163.com/blog/static/7461132420142128311980/</a></strong></p>
+
       
-        
-          
-          
-Hexo 是一个基于nodejs 的静态博客网站生成器，作者是来自台湾的 Tommy Chen
+    </div>
 
-文／diygreen（简书作者）原文链接：http://www.jianshu.com/p/380290deb8f0#著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。
-
-          
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/fisrtBlog.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+    <div>
+      
         
       
     </div>
 
     <div>
       
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/images/wechat-reward-image.jpg" alt="DOUBLE WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/images/alipay-reward-image.jpg" alt="DOUBLE Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
     </div>
+  </div>
 
-    <div>
+
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/缓存/" rel="tag">#缓存</a>
+          
+            <a href="/tags/nginx/" rel="tag">#nginx</a>
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/rating.html" rel="next" title="个人博客图片测试">
+                <i class="fa fa-chevron-left"></i> 个人博客图片测试
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/Redis和Memcached的区别.html" rel="prev" title="Redis 和 Memcached 的区别">
+                Redis 和 Memcached 的区别 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 
+      
+    </div>
+  </div>
 
 
           </div>
@@ -422,6 +666,14 @@ Hexo 是一个基于nodejs 的静态博客网站生成器，作者是来自台�
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/nginx缓存静态文件.html"
+           data-title="nginx缓存静态文件搭建详解" data-url="http://ufdouble.com/2016/07/nginx缓存静态文件.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -441,8 +693,17 @@ Hexo 是一个基于nodejs 的静态博客网站生成器，作者是来自台�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/images/avatar.jpg"
@@ -575,6 +836,17 @@ Hexo 是一个基于nodejs 的静态博客网站生成器，作者是来自台�
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#架构图"><span class="nav-number">1.</span> <span class="nav-text">架构图</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -694,6 +966,10 @@ Hexo 是一个基于nodejs 的静态博客网站生成器，作者是来自台�
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
