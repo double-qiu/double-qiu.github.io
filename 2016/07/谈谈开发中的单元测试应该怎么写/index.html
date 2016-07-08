@@ -102,8 +102,8 @@
 上篇博客中我谈到了单元测试的重要性 ，并且在文章中提到过，有的人不知道怎么编写单元测试从而不去编写，在此本文介绍下如何正确的编写单元测试
 
 编写单元测试的误区这里其实有一个误区，很多人编写单元测试时只是一对一的去写业务测试类，例如有一个业务方法叫做保存（save），业务功能是保存一个实体到数据库中，很多人在编写单元测试的时候只添加一个测试方法叫s">
-<meta property="og:image" content="http://o9vx870vo.bkt.clouddn.com/test%20case%20%20task.jpg">
-<meta property="og:updated_time" content="2016-07-06T10:03:44.245Z">
+<meta property="og:image" content="http://o9zji26zv.bkt.clouddn.com/test%20case%20%20task.jpg">
+<meta property="og:updated_time" content="2016-07-08T07:35:58.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈开发中的单元测试怎么写">
 <meta name="twitter:description" content="作者：DOUBLE
@@ -112,7 +112,7 @@
 上篇博客中我谈到了单元测试的重要性 ，并且在文章中提到过，有的人不知道怎么编写单元测试从而不去编写，在此本文介绍下如何正确的编写单元测试
 
 编写单元测试的误区这里其实有一个误区，很多人编写单元测试时只是一对一的去写业务测试类，例如有一个业务方法叫做保存（save），业务功能是保存一个实体到数据库中，很多人在编写单元测试的时候只添加一个测试方法叫s">
-<meta name="twitter:image" content="http://o9vx870vo.bkt.clouddn.com/test%20case%20%20task.jpg">
+<meta name="twitter:image" content="http://o9zji26zv.bkt.clouddn.com/test%20case%20%20task.jpg">
 
 
 
@@ -388,7 +388,7 @@
         <p><strong>作者</strong>：<a href="https://github.com/double-qiu" title="DOUBLE" target="_blank" rel="external">DOUBLE</a></p>
 <p><strong>时间</strong>：2016年7月6日</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>上篇博客中我谈到了<a href="http://ufdouble.com/2016/07/06/%E8%B0%88%E8%B0%88%E5%BC%80%E5%8F%91%E4%B8%AD%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/#more" title="单元测试的重要性">单元测试的重要性</a> ，并且在文章中提到过，有的人不知道怎么编写单元测试从而不去编写，在此本文介绍下如何正确的编写单元测试</p>
+<p>上篇博客中我谈到了<a href="http://ufdouble.com/2016/07/%E8%B0%88%E8%B0%88%E5%BC%80%E5%8F%91%E4%B8%AD%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/#more" title="单元测试的重要性">单元测试的重要性</a> ，并且在文章中提到过，有的人不知道怎么编写单元测试从而不去编写，在此本文介绍下如何正确的编写单元测试</p>
 </blockquote>
 <h2 id="编写单元测试的误区"><a href="#编写单元测试的误区" class="headerlink" title="编写单元测试的误区"></a>编写单元测试的误区</h2><p>这里其实有一个误区，很多人编写单元测试时只是一对一的去写业务测试类，例如有一个业务方法叫做保存（save），业务功能是保存一个实体到数据库中，很多人在编写单元测试的时候只添加一个测试方法叫saveTest(),然后在测试方法中封装好实体数据，调用业务方法，完成之后查看数据库是否成功保存了这条实体数据。相信很多开发人员都是这样写单元测试的，但是我在这可以很负责任的告诉各位，这种方式不是真正的单元测试。</p>
 <h2 id="什么才是真正的单元测试"><a href="#什么才是真正的单元测试" class="headerlink" title="什么才是真正的单元测试"></a>什么才是真正的单元测试</h2><p>那到底什么才是真正的单元测试呢？或者怎样编写正确的单元测试呢？各位看官先别急，让我们来分析下上面提到的误区为什么不能算是单元测试，换句话说就是编写单元测试的原则</p>
@@ -400,7 +400,7 @@
 <li><strong>测试覆盖</strong></li>
 </ul>
 <p>在上面的举例中一个业务方法对应一个测试方法这样的方式显然是不够准确的，一种数据状态能测试通过并不能保证你的业务方法就没有bug,应该有不同的数据状态去测试来保证所有的数据类型通过的情况下，这是就出现了一个概念叫做单元测试任务，如下：</p>
-<p><img src="http://o9vx870vo.bkt.clouddn.com/test%20case%20%20task.jpg" alt="test case task"></p>
+<p><img src="http://o9zji26zv.bkt.clouddn.com/test%20case%20%20task.jpg" alt="test case task"></p>
 <h2 id="如何编程正确的单元测试"><a href="#如何编程正确的单元测试" class="headerlink" title="如何编程正确的单元测试"></a>如何编程正确的单元测试</h2><p>俗话说光说不做假把式，作为一个有节操的程序猿是不光只会纸上谈兵的，下面我们来具体编写一个实例：</p>
 <p>首先你要编写单元测试肯定需要有一业务方法给你测试吧，正所谓巧妇难做无米之炊。</p>
 <p><strong>模拟一个业务功能</strong>：小明（不是滚粗去的那个小明）去书店买书，付款的时候，老板通过扫描书店上的二维码来得出小明应该付多少钱！</p>
@@ -779,8 +779,8 @@ EasyMock.replay(marketMock);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/谈谈开发中单元测试的重要性/" rel="next" title="谈谈开发中单元测试的重要性">
-                <i class="fa fa-chevron-left"></i> 谈谈开发中单元测试的重要性
+              <a href="/2016/07/敏捷开发/" rel="next" title="敏捷开发">
+                <i class="fa fa-chevron-left"></i> 敏捷开发
               </a>
             
           </div>
