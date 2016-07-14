@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ufdouble.com/"/>
-  <updated>2016-07-05T05:44:25.131Z</updated>
+  <updated>2016-07-06T05:39:51.415Z</updated>
   <id>http://ufdouble.com/</id>
   
   <author>
@@ -14,6 +14,247 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>谈谈开发中单元测试的重要性</title>
+    <link href="http://ufdouble.com/2016/07/%E8%B0%88%E8%B0%88%E5%BC%80%E5%8F%91%E4%B8%AD%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/"/>
+    <id>http://ufdouble.com/2016/07/谈谈开发中单元测试的重要性/</id>
+    <published>2016-07-07T08:01:46.454Z</published>
+    <updated>2016-07-06T05:39:51.415Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月6日&lt;/p&gt;
+&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;最近，在网上看到过一个调查，调查的内容是“程序员在项目开发中编写单元测试的情况”。当然，至于调查的结果，我想聪明的你已经可以猜到了。高达 58.3% 的比例，一般情况下不写单元测试，只有偶尔的情况才会写写。16.6% 的程序员从来都不写单元测试。只有很少的一部分程序员才会在自己的代码中进行单元测试，并保证方法测试通过。看到这些，你想到了什么？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;现状&quot;&gt;&lt;a href=&quot;#现状&quot; class=&quot;headerlink&quot; title=&quot;现状&quot;&gt;&lt;/a&gt;现状&lt;/h2&gt;&lt;p&gt;虽然，这个调查可能会有些片面性，但这也基本反应了国内程序员的开发现状，很少有程序员能够比较认真的去编写单元测试。而且，甚至有的程序员根本就不知道为什么要写单元测试（这一点让我很郁闷）。他们经常会说，公司里不是有测试人员嘛，测试应该是他们要做的事，我们的工作只是开发（这位仁兄肯定没有学过软件工程）。当然，这些并不是偶然的，正如佛经里边说的“因果循环”，有果必有因。那么，到底是什么原因，导致程序员对单元测试这么不感冒呢？&lt;/p&gt;
+&lt;h2 id=&quot;发现&quot;&gt;&lt;a href=&quot;#发现&quot; class=&quot;headerlink&quot; title=&quot;发现&quot;&gt;&lt;/a&gt;发现&lt;/h2&gt;&lt;p&gt;通过与几个朋友的讨论，以及网上的调查，主要有这几种原因，导致程序员对单元测试很排斥，或许说很不以为意。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不知道怎么编写单元测试&lt;/li&gt;
+&lt;li&gt;项目没有要求，所以不编写&lt;/li&gt;
+&lt;li&gt;单元测试价值不高，完全是浪费时间&lt;/li&gt;
+&lt;li&gt;业务逻辑比较简单，不值得编写单元测试&lt;/li&gt;
+&lt;li&gt;不管怎样，集成测试将会抓住所有的 bug，用不着进行单元测试&lt;/li&gt;
+&lt;li&gt;在项目的前期还是尽量去编写单元测试，但是越到项目的后期就越失控&lt;/li&gt;
+&lt;li&gt;为了完成编码任务，没有足够的时间编写单元测试。编写单元测试会导致不能按时完成编码任务，导致项目延期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;很显然，这几种原因归根结底，无外乎就是不了解单元测试，自认为很聪明，自己懒不想去测试，对项目的时间、进度把控不好。下面，我将一 一进行分析，剖析出程序员的开发心理，以此来给朋友们提个醒，最终聪明反被聪明误。&lt;/p&gt;
+&lt;h2 id=&quot;剖析&quot;&gt;&lt;a href=&quot;#剖析&quot; class=&quot;headerlink&quot; title=&quot;剖析&quot;&gt;&lt;/a&gt;剖析&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;不知道怎么编写单元测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个问题在于，还没有接触过单元测试，同时，也没有体会过企业级的代码开发。不知道同时也不了解单元测试能带给你什么。设想一下，当你开发完一个功能模块的时候，你如何确定你的模块没有 bug 呢？如果涉及到具体的业务，你会执行 debug 模式，然后一点一点的深入到代码中去查看吗？如果你一直都是这样，那么你早就已经 OUT 了。赶快去了解一下单元测试的工具吧，你会收获很大的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;项目没有要求，所以不编写&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个问题反映出了一种现象，同时也是一种习惯。项目有没有要求，只能说明项目的管理上不严格，并不是程序员不编写单元测试的理由。他们在以往的开发中，并没有养成写单元测试的好习惯。可想而知，他们的代码质量，我就不敢恭维了。给个建议，尝试着写漂亮的代码，之所以因为漂亮，是指得健康、简洁、健壮。当然，完成漂亮的代码就离不开单元测试了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;单元测试价值不高，完全是浪费时间&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这种说法其实是错误的。为什么这么说呢？在日常的开发中，代码的完工其实并不等于开发的完工。如果没有单元测试，那么如何保证代码能够正常运行呢？测试人员做的只是业务上的集成测试，也就是黑盒测试，对单个的方法是没有办法测试的，而且，测试出的 bug 的范围也会很广，根本不能确定 bug 的范围，还得去花时间来确定 bug 出在什么地方。难道这就不浪费时间了吗？甚至，这样的方式，时间浪费的会更多。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;业务逻辑比较简单，不值得编写单元测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;所谓的业务逻辑比较简单，其实是相对的。当你对某一块业务逻辑很熟悉的时候，你自然会认为它很简单。然而，单元测试的必要性并不是仅仅在于测试代码的功能是否正确，还在于，当其他同事在了解你的业务的时候，能够很快的通过单元测试来熟悉代码的功能，甚至不用去读代码，就能够知道它做了哪些事情。因此，写单元测试不仅是解放了自己，更方便了别人。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;项目前期还在尽量写测试，到了后期就失控了&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这种问题的原因在于，对项目进度、项目中的技术点研究时间、人员的沟通、业务需求的熟悉程度等没有把控好。这个问题的出现并不是个人的问题，而是反映了项目管理中存在的问题。当然，个人的原因也存在，就是如何在有限的时间里，提高效率。这一点需要大家好好思考一下了。我的建议，多做计划，根据实际情况变更计划。多和项目组长、组成员进行沟通。及时反应项目中存在的问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为了完成编码任务，没有足够的时间编写单元测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个问题在于，程序员领取的任务较为复杂，或者自己的开发效率有待提高。其实，开发任务是包括编码和单元测试的。在领任务的时候，应该跟据自身的能力，跟组长或经理沟通好，以便留出一定的测试时间。当然，提高自己的编码效率也是很有必要的。至于如何提高开发效率，网上有很多这样的文章，这里就不再赘述了。&lt;/p&gt;
+&lt;h2 id=&quot;重要性&quot;&gt;&lt;a href=&quot;#重要性&quot; class=&quot;headerlink&quot; title=&quot;重要性&quot;&gt;&lt;/a&gt;重要性&lt;/h2&gt;&lt;p&gt;测试常常是程序员十分厌倦的一个活动。测试能给我们带来什么？了解这些是非常重要的，测试不可能保证一个程序是完全正确的，但是测试却可以增强我们对程序完整的信心，测试可以让我们相信程序做了我么期望它做的事情。测试能够使我们尽早的发现程序的 bug 和不足。&lt;/p&gt;
+&lt;p&gt;一个 bug 被隐藏的时间越长，修复这个 bug 的代价就越大。在《快速软件开发》一书中已引用了大量的研究数据指出：最后才修改一个 bug 的代价是在 bug 产生时修改它的代价的10倍。&lt;/p&gt;
+&lt;p&gt;当然，我们主要讨论的是单元测试。单元测试是一个方法层面上的测试，也是最细粒度的测试。用于测试一个类的每一个方法都已经满足了方法的功能要求。在开发中，对于自己开发的模块，只有在通过单元测试之后，才能提交到 SVN 库 或者 Git 库。&lt;/p&gt;
+&lt;h2 id=&quot;应用&quot;&gt;&lt;a href=&quot;#应用&quot; class=&quot;headerlink&quot; title=&quot;应用&quot;&gt;&lt;/a&gt;应用&lt;/h2&gt;&lt;p&gt;正是由于测试在开发中的重要地位，才会在IT界刮起了 TDD 的旋风。TDD，也就是测试驱动开发模式。它旨在强调在开发功能代码之前，先编写测试代码。也就是说在明确要开发某个功能后，首先思考如何对这个功能进行测试，并完成测试代码的编写，然后编写相关的代码满足这些测试用例。然后循环进行添加其他功能，直到完成全部功能的开发。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; 关于测试驱动开发，我之前的博客中有提到过，请参考之前的博文《&lt;a href=&quot;http://ufdouble.com/2016/07/04/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91TDD/&quot; title=&quot;测试驱动开发&quot;&gt;测试驱动开发&lt;/a&gt;》&lt;/p&gt;
+&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;p&gt;说了这么多，那么都有什么工具（框架）能帮助我们完成可重复的单元测试呢？下面我就介绍几个常用的。这里只介绍 Java 语言的。其他语言的请问谷老师（Google）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JUnit（推荐使用JUnit4）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;JUnit 在日常开发中还是很常用的，而且 Java 的各种 IDE （Eclipse、MyEclipse、IntelliJ IDEA）都集成了 JUnit 的组件。当然，自己添加插件也是很方便的。JUnit 框架是 Java 语言单元测试当前的一站式解决方案。这个框架值得称赞，因为它把测试驱动的开发思想介绍给 Java 开发人员并教给他们如何有效地编写单元测试。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TestNG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TestNG，即Testing Next Generation，下一代测试技术。是根据JUnit和NUnit思想，采用 jdk 的 annotation 技术来强化测试功能并借助XML 文件强化测试组织结构而构建的测试框架。TestNG 的强大之处还在于不仅可以用来做单元测试，还可以用来做集成测试。&lt;/p&gt;
+&lt;p&gt;这里仅仅是介绍一下有哪些最常用的 Java 单元测试工具，对于如何使用这些工具，在后续的博客中会有介绍，这里就不再多说了。有兴趣的请关注后续的文章。&lt;/p&gt;
+&lt;h2 id=&quot;结束语&quot;&gt;&lt;a href=&quot;#结束语&quot; class=&quot;headerlink&quot; title=&quot;结束语&quot;&gt;&lt;/a&gt;结束语&lt;/h2&gt;&lt;p&gt;俗话说，一屋不扫，何以扫天下。开发中，我们自己的代码都不能保证功能的正确性，那么还有什么效率可言呢？做再多的任务，写再多的代码也只不过是在搭鸡窝，做着机器一样的重复的工作。IT界有一个原则，DRY原则 —— Don’t Repeat Yourself ！只有通过对自己的工作不断的检查，不断的测试，才能不断的突破，不断的脱颖而出，当然，你才能不断的提高。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/s
+    
+    </summary>
+    
+      <category term="软件工程" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+      <category term="单元测试" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
+    
+      <category term="单元测试" scheme="http://ufdouble.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="JUnit" scheme="http://ufdouble.com/tags/JUnit/"/>
+    
+      <category term="TestNG" scheme="http://ufdouble.com/tags/TestNG/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试驱动开发（TDD）</title>
+    <link href="http://ufdouble.com/2016/07/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91TDD/"/>
+    <id>http://ufdouble.com/2016/07/测试驱动开发TDD/</id>
+    <published>2016-07-07T08:01:46.454Z</published>
+    <updated>2016-07-05T05:48:43.503Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月4日&lt;/p&gt;
+&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;一个高效的软件开发过程对软件开发人员来说是至关重要的，决定着开发是痛苦的挣扎，还是不断进步的喜悦。国人对软件蓝领的不屑，对繁琐冗长的传统开发过程的不耐，使大多数开发人员无所适从。最近兴起的一些软件开发过程相关的技术，提供一些比较高效、实用的软件过程开发方法。其中比较基础、关键的一个技术就是测试驱动开发（Test-Driven Development）。虽然TDD光大于极限编程，但测试驱动开发完全可以单独应用。下面就从开发人员使用的角度进行介绍，使开发人员用最少的代价尽快理解、掌握、应用这种技术。下面分优势，原理，过程，原则，测试技术，Tips等方面进行讨论&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;优势&quot;&gt;&lt;a href=&quot;#优势&quot; class=&quot;headerlink&quot; title=&quot;优势&quot;&gt;&lt;/a&gt;优势&lt;/h2&gt;&lt;p&gt;TDD的基本思路就是通过测试来推动整个开发的进行。而测试驱动开发技术并不只是单纯的测试工作。&lt;/p&gt;
+&lt;p&gt;需求向来就是软件开发过程中感觉最不好明确描述、易变的东西。这里说的需求不只是指用户的需求，还包括对代码的使用需求。很多开发人员最害怕的就是后期还要修改某个类或者函数的接口进行修改或者扩展，为什么会发生这样的事情就是因为这部分代码的使用需求没有很好的描述。测试驱动开发就是通过编写测试用例，先考虑代码的使用需求（包括功能、过程、接口等），而且这个描述是无二义的，可执行验证的。&lt;/p&gt;
+&lt;p&gt;通过编写这部分代码的测试用例，对其功能的分解、使用过程、接口都进行了设计。而且这种从使用角度对代码的设计通常更符合后期开发的需求。可测试的要求，对代码的内聚性的提高和复用都非常有益。因此测试驱动开发也是一种代码设计的过程。&lt;/p&gt;
+&lt;p&gt;开发人员通常对编写文档非常厌烦，但要使用、理解别人的代码时通常又希望能有文档进行指导。而测试驱动开发过程中产生的测试用例代码就是对代码的最好的解释。&lt;/p&gt;
+&lt;p&gt;快乐工作的基础就是对自己有信心，对自己的工作成果有信心。当前很多开发人员却经常在担心：“代码是否正确？”“辛苦编写的代码还有没有严重bug？”“修改的新代码对其他部分有没有影响？”。这种担心甚至导致某些代码应该修改却不敢修改的地步。测试驱动开发提供的测试集就可以作为你信心的来源。&lt;/p&gt;
+&lt;p&gt;当然测试驱动开发最重要的功能还在于保障代码的正确性，能够迅速发现、定位bug。而迅速发现、定位bug是很多开发人员的梦想。针对关键代码的测试集，以及不断完善的测试用例，为迅速发现、定位bug提供了条件。&lt;/p&gt;
+&lt;p&gt;我的一段功能非常复杂的代码使用TDD开发完成，真实环境应用中只发现几个bug，而且很快被定位解决。您在应用后，也一定会为那种自信的开发过程，功能不断增加、完善的感觉，迅速发现、定位bug的能力所感染，喜欢这个技术的。&lt;/p&gt;
+&lt;p&gt;那么是什么样的原理、方法提供上面说的这些好处哪？下面我们就看看TDD的原理。&lt;/p&gt;
+&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;测试驱动开发的基本思想就是在开发功能代码之前，先编写测试代码。也就是说在明确要开发某个功能后，首先思考如何对这个功能进行测试，并完成测试代码的编写，然后编写相关的代码满足这些测试用例。然后循环进行添加其他功能，直到完全部功能的开发。&lt;/p&gt;
+&lt;p&gt;我们这里把这个技术的应用领域从代码编写扩展到整个开发过程。应该对整个开发过程的各个阶段进行测试驱动，首先思考如何对这个阶段进行测试、验证、考核，并编写相关的测试文档，然后开始下一步工作，最后再验证相关的工作。下图是一个比较流行的测试模型：V测试模型。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/IbMQX1V.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在开发的各个阶段，包括需求分析、概要设计、详细设计、编码过程中都应该考虑相对应的测试工作，完成相关的测试用例的设计、测试方案、测试计划的编写。这里提到的开发阶段只是举例，根据实际的开发活动进行调整。相关的测试文档也不一定是非常详细复杂的文档，或者什么形式，但应该养成测试驱动的习惯。&lt;/p&gt;
+&lt;p&gt;关于测试模型，还有X测试模型。这个测试模型，我认为，是对详细阶段和编码阶段进行建模，应该说更详细的描述了详细设计和编码阶段的开发行为。及针对某个功能进行对应的测试驱动开发。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/XsKqinL.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;基本原理应该说非常简单，那么如何进行实际操作哪，下面对开发过程进行详细的介绍。&lt;/p&gt;
+&lt;h2 id=&quot;过程&quot;&gt;&lt;a href=&quot;#过程&quot; class=&quot;headerlink&quot; title=&quot;过程&quot;&gt;&lt;/a&gt;过程&lt;/h2&gt;&lt;p&gt;软件开发其他阶段的测试驱动开发，根据测试驱动开发的思想完成对应的测试文档即可。下面针对详细设计和编码阶段进行介绍。&lt;/p&gt;
+&lt;p&gt;测试驱动开发的基本过程如下：&lt;/p&gt;
+&lt;p&gt;1） 明确当前要完成的功能。可以记录成一个 TODO 列表。&lt;/p&gt;
+&lt;p&gt;2） 快速完成针对此功能的测试用例编写。&lt;/p&gt;
+&lt;p&gt;3） 测试代码编译不通过。&lt;/p&gt;
+&lt;p&gt;4） 编写对应的功能代码。&lt;/p&gt;
+&lt;p&gt;5） 测试通过。&lt;/p&gt;
+&lt;p&gt;6） 对代码进行重构，并保证测试通过。&lt;/p&gt;
+&lt;p&gt;7） 循环完成所有功能的开发。&lt;/p&gt;
+&lt;p&gt;为了保证整个测试过程比较快捷、方便，通常可以使用测试框架组织所有的测试用例。一个免费的、优秀的测试框架是 Xunit 系列，几乎所有的语言都有对应的测试框架。我曾经写过一篇文章介绍CppUnit的文章（ &lt;a href=&quot;http://www.ibm.com/developerworks/cn/linux/l-cppunit/index.html）。&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ibm.com/developerworks/cn/linux/l-cppunit/index.html）。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;开发过程中，通常把测试代码和功能代码分开存放，这里提供一个简单的测试框架使用例子，您可以通过它了解测试框架的使用。下面是文件列表。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;project/                项目主目录
+project/test            测试项目主目录
+project/test/testSeq.cpp        测试seq_t 的测试文件，对其他功能文件的测试文件复制后修改即可
+project/test/testSeq.h
+project/test/Makefile            测试项目的 Makefile 
+project/test/main.cpp            测试项目的主文件，不需要修改
+project/main.cpp                   项目的主文件
+project/seq_t.h            功能代码，被测试文件
+project/Makefile                   项目的 Makefile
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;主要流程基本如此，但要让你的代码很容易的进行测试，全面又不繁琐的进行测试，还是有很多测试原则和技术需要考虑。&lt;/p&gt;
+&lt;h2 id=&quot;原则&quot;&gt;&lt;a href=&quot;#原则&quot; class=&quot;headerlink&quot; title=&quot;原则&quot;&gt;&lt;/a&gt;原则&lt;/h2&gt;&lt;p&gt;测试隔离。不同代码的测试应该相互隔离。对一块代码的测试只考虑此代码的测试，不要考虑其实现细节（比如它使用了其他类的边界条件）。&lt;/p&gt;
+&lt;p&gt;一顶帽子。开发人员开发过程中要做不同的工作，比如：编写测试代码、开发功能代码、对代码重构等。做不同的事，承担不同的角色。开发人员完成对应的工作时应该保持注意力集中在当前工作上，而不要过多的考虑其他方面的细节，保证头上只有一顶帽子。避免考虑无关细节过多，无谓地增加复杂度。&lt;/p&gt;
+&lt;p&gt;测试列表。需要测试的功能点很多。应该在任何阶段想添加功能需求问题时，把相关功能点加到测试列表中，然后继续手头工作。然后不断的完成对应的测试用例、功能代码、重构。一是避免疏漏，也避免干扰当前进行的工作。&lt;/p&gt;
+&lt;p&gt;测试驱动。这个比较核心。完成某个功能，某个类，首先编写测试代码，考虑其如何使用、如何测试。然后在对其进行设计、编码。&lt;/p&gt;
+&lt;p&gt;先写断言。测试代码编写时，应该首先编写对功能代码的判断用的断言语句，然后编写相应的辅助语句。&lt;/p&gt;
+&lt;p&gt;可测试性。功能代码设计、开发时应该具有较强的可测试性。其实遵循比较好的设计原则的代码都具备较好的测试性。比如比较高的内聚性，尽量依赖于接口等。&lt;/p&gt;
+&lt;p&gt;及时重构。无论是功能代码还是测试代码，对结构不合理，重复的代码等情况，在测试通过后，及时进行重构。关于重构，我会另撰文详细分析。&lt;br&gt;小步前进。软件开发是个复杂性非常高的工作，开发过程中要考虑很多东西，包括代码的正确性、可扩展性、性能等等，很多问题都是因为复杂性太大导致的。极限编程提出了一个非常好的思路就是小步前进。把所有的规模大、复杂性高的工作，分解成小的任务来完成。对于一个类来说，一个功能一个功能的完成，如果太困难就再分解。每个功能的完成就走测试代码－功能代码－测试－重构的循环。通过分解降低整个系统开发的复杂性。这样的效果非常明显。几个小的功能代码完成后，大的功能代码几乎是不用调试就可以通过。一个个类方法的实现，很快就看到整个类很快就完成啦。本来感觉很多特性需要增加，很快就会看到没有几个啦。你甚至会为这个速度感到震惊。（我理解，是大幅度减少调试、出错的时间产生的这种速度感）&lt;/p&gt;
+&lt;h2 id=&quot;测试技术&quot;&gt;&lt;a href=&quot;#测试技术&quot; class=&quot;headerlink&quot; title=&quot;测试技术&quot;&gt;&lt;/a&gt;测试技术&lt;/h2&gt;&lt;h3 id=&quot;测试范围、粒度&quot;&gt;&lt;a href=&quot;#测试范围、粒度&quot; class=&quot;headerlink&quot; title=&quot;测试范围、粒度&quot;&gt;&lt;/a&gt;测试范围、粒度&lt;/h3&gt;&lt;p&gt;对哪些功能进行测试？会不会太繁琐？什么时候可以停止测试？这些问题比较常见。按大师 Kent Benk 的话，对那些你认为应该测试的代码进行测试。就是说，要相信自己的感觉，自己的经验。那些重要的功能、核心的代码就应该重点测试。感到疲劳就应该停下来休息一下。感觉没有必要更详细的测试，就停止本轮测试。&lt;br&gt;测试驱动开发强调测试并不应该是负担，而应该是帮助我们减轻工作量的方法。而对于何时停止编写测试用例，也是应该根据你的经验，功能复杂、核心功能的代码就应该编写更全面、细致的测试用例，否则测试流程即可。&lt;br&gt;测试范围没有静态的标准，同时也应该可以随着时间改变。对于开始没有编写足够的测试的功能代码，随着bug的出现，根据bug补齐相关的测试用例即可。&lt;br&gt;小步前进的原则，要求我们对大的功能块测试时，应该先分拆成更小的功能块进行测试，比如一个类A使用了类B、C，就应该编写到A使用B、C功能的测试代码前，完成对B、C的测试和开发。那么是不是每个小类或者小函数都应该测试哪？我认为没有必要。你应该运用你的经验，对那些可能出问题的地方重点测试，感觉不可能出问题的地方就等它真正出问题的时候再补测试吧。&lt;/p&gt;
+&lt;h3 id=&quot;怎么编写测试用例&quot;&gt;&lt;a href=&quot;#怎么编写测试用例&quot; class=&quot;headerlink&quot; title=&quot;怎么编写测试用例&quot;&gt;&lt;/a&gt;怎么编写测试用例&lt;/h3&gt;&lt;p&gt;测试用例的编写就用上了传统的测试技术。&lt;/p&gt;
+&lt;p&gt;操作过程尽量模拟正常使用的过程。&lt;/p&gt;
+&lt;p&gt;全面的测试用例应该尽量做到分支覆盖，核心代码尽量做到路径覆盖。&lt;/p&gt;
+&lt;p&gt;测试数据尽量包括：真实数据、边界数据。&lt;/p&gt;
+&lt;p&gt;测试语句和测试数据应该尽量简单，容易理解。&lt;/p&gt;
+&lt;p&gt;为了避免对其他代码过多的依赖，可以实现简单的桩函数或桩类（Mock Object）。&lt;/p&gt;
+&lt;p&gt;如果内部状态非常复杂或者应该判断流程而不是状态，可以通过记录日志字符串的方式进行验证。&lt;/p&gt;
+&lt;h2 id=&quot;Tips&quot;&gt;&lt;a href=&quot;#Tips&quot; class=&quot;headerlink&quot; title=&quot;Tips&quot;&gt;&lt;/a&gt;Tips&lt;/h2&gt;&lt;p&gt;很多朋友有疑问，“测试代码的正确性如何保障？是写测试代码还是写测试文档？”这样是不是会陷入“鸡生蛋，蛋生鸡”的循环。其实是不会的。通常测试代码通常是非常简单的，通常围绕着某个情况的正确性判断的几个语句，如果太复杂，就应该继续分解啦。而传统的开发过程通常强调测试文档。但随着开发节奏的加快，用户需求的不断变化，维护高层（需求、概要设计）的测试文档可以，更低层的测试文档的成本的确太大了。而且可实时验证功能正确性的测试代码就是对代码最好的文档。&lt;/p&gt;
+&lt;p&gt;软件开发过程中，除了遵守上面提到的测试驱动开发的几个原则外，一个需要注意的问题就是，谨防过度设计。编写功能代码时应该关注于完成当前功能点，通过测试，使用最简单、直接的方式来编码。过多的考虑后期的扩展，其他功能的添加，无疑增加了过多的复杂性，容易产生问题。应该等到要添加这些特性时在进行详细的测试驱动开发。到时候，有整套测试用例做基础，通过不断重构很容易添加相关特性。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/s
+    
+    </summary>
+    
+      <category term="软件工程" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+      <category term="开发方法论" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+    
+      <category term="软件工程" scheme="http://ufdouble.com/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+      <category term="方法论" scheme="http://ufdouble.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+      <category term="测试驱动开发" scheme="http://ufdouble.com/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>敏捷开发</title>
+    <link href="http://ufdouble.com/2016/07/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
+    <id>http://ufdouble.com/2016/07/敏捷开发/</id>
+    <published>2016-07-07T08:01:46.454Z</published>
+    <updated>2016-07-05T05:48:24.860Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月4日&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;现在敏捷开发是越来越火了，人人都在谈敏捷，人人都在学习Scrum和XP…&lt;br&gt;为了不落后他人，于是我也开始学习Scrum，今天主要是对我最近阅读的相关资料，根据自己的理解，用自己的话来讲述Scrum中的各个环节，主要目的有两个，一个是进行知识的总结，另外一个是觉得网上很多学习资料的讲述方式让初学者不太容易理解；所以我决定写一篇扫盲性的博文，同时试着也与园内的朋友一起分享交流一下，希望对初学者有帮助。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;什么是敏捷开发？&quot;&gt;&lt;a href=&quot;#什么是敏捷开发？&quot; class=&quot;headerlink&quot; title=&quot;什么是敏捷开发？&quot;&gt;&lt;/a&gt;什么是敏捷开发？&lt;/h2&gt;&lt;p&gt;敏捷开发(Agile Development)是一种以人为核心、迭代、循序渐进的开发方法。&lt;br&gt;怎么理解呢？首先，我们要理解它不是一门技术，它是一种开发方法，也就是一种软件开发的流程，它会指导我们用规定的环节去一步一步完成项目的开发；而这种开发方式的主要驱动核心是人；它采用的是迭代式开发；&lt;/p&gt;
+&lt;h2 id=&quot;为什么说是以人为核心？&quot;&gt;&lt;a href=&quot;#为什么说是以人为核心？&quot; class=&quot;headerlink&quot; title=&quot;为什么说是以人为核心？&quot;&gt;&lt;/a&gt;为什么说是以人为核心？&lt;/h2&gt;&lt;p&gt;我们大部分人都学过瀑布开发模型，它是以文档为驱动的，为什么呢？因为在瀑布的整个开发过程中，要写大量的文档，把需求文档写出来后，开发人员都是根据文档进行开发的，一切以文档为依据；而敏捷开发它只写有必要的文档，或尽量少写文档，敏捷开发注重的是人与人之间，面对面的交流，所以它强调以人为核心。&lt;/p&gt;
+&lt;h2 id=&quot;什么是迭代？&quot;&gt;&lt;a href=&quot;#什么是迭代？&quot; class=&quot;headerlink&quot; title=&quot;什么是迭代？&quot;&gt;&lt;/a&gt;什么是迭代？&lt;/h2&gt;&lt;p&gt;迭代是指把一个复杂且开发周期很长的开发任务，分解为很多小周期可完成的任务，这样的一个周期就是一次迭代的过程；同时每一次迭代都可以生产或开发出一个可以交付的软件产品。&lt;/p&gt;
+&lt;h2 id=&quot;关于Scrum和XP&quot;&gt;&lt;a href=&quot;#关于Scrum和XP&quot; class=&quot;headerlink&quot; title=&quot;关于Scrum和XP&quot;&gt;&lt;/a&gt;关于Scrum和XP&lt;/h2&gt;&lt;p&gt;前面说了敏捷它是一种指导思想或开发方式，但是它没有明确告诉我们到底采用什么样的流程进行开发，而Scrum和XP就是敏捷开发的具体方式了，你可以采用Scrum方式也可以采用XP方式；Scrum和XP的区别是，Scrum偏重于过程，XP则偏重于实践，但是实际中，两者是结合一起应用的，这里我主要讲Scrum。&lt;/p&gt;
+&lt;h2 id=&quot;什么是Scrum？&quot;&gt;&lt;a href=&quot;#什么是Scrum？&quot; class=&quot;headerlink&quot; title=&quot;什么是Scrum？&quot;&gt;&lt;/a&gt;什么是Scrum？&lt;/h2&gt;&lt;p&gt;Scrum的英文意思是橄榄球运动的一个专业术语，表示“争球”的动作；把一个开发流程的名字取名为Scrum，我想你一定能想象出你的开发团队在开发一个项目时，大家像打橄榄球一样迅速、富有战斗激情、人人你争我抢地完成它，你一定会感到非常兴奋的。&lt;br&gt;而Scrum就是这样的一个开发流程，运用该流程，你就能看到你团队高效的工作。&lt;/p&gt;
+&lt;h2 id=&quot;【Scrum开发流程中的三大角色】&quot;&gt;&lt;a href=&quot;#【Scrum开发流程中的三大角色】&quot; class=&quot;headerlink&quot; title=&quot;【Scrum开发流程中的三大角色】&quot;&gt;&lt;/a&gt;【Scrum开发流程中的三大角色】&lt;/h2&gt;&lt;h3 id=&quot;产品负责人（Product-Owner）&quot;&gt;&lt;a href=&quot;#产品负责人（Product-Owner）&quot; class=&quot;headerlink&quot; title=&quot;产品负责人（Product Owner）&quot;&gt;&lt;/a&gt;产品负责人（Product Owner）&lt;/h3&gt;&lt;p&gt;主要负责确定产品的功能和达到要求的标准，指定软件的发布日期和交付的内容，同时有权力接受或拒绝开发团队的工作成果。&lt;/p&gt;
+&lt;h3 id=&quot;流程管理员（Scrum-Master）&quot;&gt;&lt;a href=&quot;#流程管理员（Scrum-Master）&quot; class=&quot;headerlink&quot; title=&quot;流程管理员（Scrum Master）&quot;&gt;&lt;/a&gt;流程管理员（Scrum Master）&lt;/h3&gt;&lt;p&gt;主要负责整个Scrum流程在项目中的顺利实施和进行，以及清除挡在客户和开发工作之间的沟通障碍，使得客户可以直接驱动开发。&lt;/p&gt;
+&lt;h3 id=&quot;开发团队（Scrum-Team）&quot;&gt;&lt;a href=&quot;#开发团队（Scrum-Team）&quot; class=&quot;headerlink&quot; title=&quot;开发团队（Scrum Team）&quot;&gt;&lt;/a&gt;开发团队（Scrum Team）&lt;/h3&gt;&lt;p&gt;主要负责软件产品在Scrum规定流程下进行开发工作，人数控制在5~10人左右，每个成员可能负责不同的技术方面，但要求每成员必须要有很强的自我管理能力，同时具有一定的表达能力；成员可以采用任何工作方式，只要能达到Sprint的目标。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Scrum流程图&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/LRdmK1w.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;下面，我们开始讲具体实施流程，但是在讲之前，我还要对一个英文单词进行讲解。&lt;/p&gt;
+&lt;h2 id=&quot;什么是Sprint？&quot;&gt;&lt;a href=&quot;#什么是Sprint？&quot; class=&quot;headerlink&quot; title=&quot;什么是Sprint？&quot;&gt;&lt;/a&gt;什么是Sprint？&lt;/h2&gt;&lt;p&gt;Sprint是短距离赛跑的意思，这里面指的是一次迭代，而一次迭代的周期是1个月时间（即4个星期），也就是我们要把一次迭代的开发内容以最快的速度完成它，这个过程我们称它为Sprint。&lt;/p&gt;
+&lt;h2 id=&quot;如何进行Scrum开发？&quot;&gt;&lt;a href=&quot;#如何进行Scrum开发？&quot; class=&quot;headerlink&quot; title=&quot;如何进行Scrum开发？&quot;&gt;&lt;/a&gt;如何进行Scrum开发？&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;我们首先需要确定一个Product Backlog（按优先顺序排列的一个产品需求列表），这个是由Product Owner 负责的；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Scrum Team根据Product Backlog列表，做工作量的预估和安排；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;有了Product Backlog列表，我们需要通过 Sprint Planning Meeting（Sprint计划会议） 来从中挑选出一个Story作为本次迭代完成的目标，这个目标的时间周期是1~4个星期，然后把这个Story进行细化，形成一个Sprint Backlog；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sprint Backlog是由Scrum Team去完成的，每个成员根据Sprint Backlog再细化成更小的任务（细到每个任务的工作量在2天内能完成）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在Scrum Team完成计划会议上选出的Sprint Backlog过程中，需要进行 Daily Scrum Meeting（每日站立会议），每次会议控制在15分钟左右，每个人都必须发言，并且要向所有成员当面汇报你昨天完成了什么，并且向所有成员承诺你今天要完成什么，同时遇到不能解决的问题也可以提出，每个人回答完成后，要走到黑板前更新自己的 Sprint burn down（Sprint燃尽图）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;做到每日集成，也就是每天都要有一个可以成功编译、并且可以演示的版本；很多人可能还没有用过自动化的每日集成，其实TFS就有这个功能，它可以支持每次有成员进行签入操作的时候，在服务器上自动获取最新版本，然后在服务器中编译，如果通过则马上再执行单元测试代码，如果也全部通过，则将该版本发布，这时一次正式的签入操作才保存到TFS中，中间有任何失败，都会用邮件通知项目管理人员；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;当一个Story完成，也就是Sprint Backlog被完成，也就表示一次Sprint完成，这时，我们要进行 Srpint Review Meeting（演示会议），也称为评审会议，产品负责人和客户都要参加（最好本公司老板也参加），每一个Scrum Team的成员都要向他们演示自己完成的软件产品（这个会议非常重要，一定不能取消）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;最后就是 Sprint Retrospective Meeting（回顾会议），也称为总结会议，以轮流发言方式进行，每个人都要发言，总结并讨论改进的地方，放入下一轮Sprint的产品需求中；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;下面是运用Scrum开发流程中的一些场景图：&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/3462EkG.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上图是一个 Product Backlog 的示例。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/o2KWOy1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上图就是每日的站立会议了，参会人员可以随意姿势站立，任务看板要保证让每个人看到，当每个人发言完后，要走到任务版前更新自己的燃尽图。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/PDe0XDO.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;任务看版包含 未完成、正在做、已完成 的工作状态，假设你今天把一个未完成的工作已经完成，那么你要把小卡片从未完成区域贴到已完成区域。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/iaCmWmj.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;每个人的工作进度和完成情况都是公开的，如果有一个人的工作任务在某一个位置放了好几天，大家都能发现他的工作进度出现了什么问题（成员人数最好是5~7个，这样每人可以使用一种专用颜色的标签纸，一眼就可以从任务版看出谁的工作进度快，谁的工作进度慢）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/nFVvNbr.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;上图可不是扑克牌，它是计划纸牌，它的作用是防止项目在开发过程中，被某些人所领导。&lt;/p&gt;
+&lt;p&gt;怎么用的呢？比如A程序员开发一个功能，需要5个小时，B程序员认为只需要半小时，那他们各自取相应的牌，藏在手中，最后摊牌，如果时间差距很大，那么A和B就可以讨论A为什么要5个小时…&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;敏捷开发的4句宣言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;个体与交互 胜过 过程与工具&lt;/p&gt;
+&lt;p&gt;可以工作的软件 胜过 面面俱到的文挡&lt;/p&gt;
+&lt;p&gt;客户协作 胜过 合同谈判&lt;/p&gt;
+&lt;p&gt;响应变化 胜过 遵循计划&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时间&lt;/s
+    
+    </summary>
+    
+      <category term="软件工程" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+      <category term="开发方法论" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+    
+      <category term="软件工程" scheme="http://ufdouble.com/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+      <category term="方法论" scheme="http://ufdouble.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>如何成为一名优秀的全栈工程师？</title>
@@ -102,159 +343,6 @@
       <category term="方法论" scheme="http://ufdouble.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
       <category term="全栈" scheme="http://ufdouble.com/tags/%E5%85%A8%E6%A0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谈谈开发中单元测试的重要性</title>
-    <link href="http://ufdouble.com/2016/07/%E8%B0%88%E8%B0%88%E5%BC%80%E5%8F%91%E4%B8%AD%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/"/>
-    <id>http://ufdouble.com/2016/07/谈谈开发中单元测试的重要性/</id>
-    <published>2016-07-07T08:01:46.454Z</published>
-    <updated>2016-07-06T05:39:51.415Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月6日&lt;/p&gt;
-&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;最近，在网上看到过一个调查，调查的内容是“程序员在项目开发中编写单元测试的情况”。当然，至于调查的结果，我想聪明的你已经可以猜到了。高达 58.3% 的比例，一般情况下不写单元测试，只有偶尔的情况才会写写。16.6% 的程序员从来都不写单元测试。只有很少的一部分程序员才会在自己的代码中进行单元测试，并保证方法测试通过。看到这些，你想到了什么？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;现状&quot;&gt;&lt;a href=&quot;#现状&quot; class=&quot;headerlink&quot; title=&quot;现状&quot;&gt;&lt;/a&gt;现状&lt;/h2&gt;&lt;p&gt;虽然，这个调查可能会有些片面性，但这也基本反应了国内程序员的开发现状，很少有程序员能够比较认真的去编写单元测试。而且，甚至有的程序员根本就不知道为什么要写单元测试（这一点让我很郁闷）。他们经常会说，公司里不是有测试人员嘛，测试应该是他们要做的事，我们的工作只是开发（这位仁兄肯定没有学过软件工程）。当然，这些并不是偶然的，正如佛经里边说的“因果循环”，有果必有因。那么，到底是什么原因，导致程序员对单元测试这么不感冒呢？&lt;/p&gt;
-&lt;h2 id=&quot;发现&quot;&gt;&lt;a href=&quot;#发现&quot; class=&quot;headerlink&quot; title=&quot;发现&quot;&gt;&lt;/a&gt;发现&lt;/h2&gt;&lt;p&gt;通过与几个朋友的讨论，以及网上的调查，主要有这几种原因，导致程序员对单元测试很排斥，或许说很不以为意。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;不知道怎么编写单元测试&lt;/li&gt;
-&lt;li&gt;项目没有要求，所以不编写&lt;/li&gt;
-&lt;li&gt;单元测试价值不高，完全是浪费时间&lt;/li&gt;
-&lt;li&gt;业务逻辑比较简单，不值得编写单元测试&lt;/li&gt;
-&lt;li&gt;不管怎样，集成测试将会抓住所有的 bug，用不着进行单元测试&lt;/li&gt;
-&lt;li&gt;在项目的前期还是尽量去编写单元测试，但是越到项目的后期就越失控&lt;/li&gt;
-&lt;li&gt;为了完成编码任务，没有足够的时间编写单元测试。编写单元测试会导致不能按时完成编码任务，导致项目延期&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;很显然，这几种原因归根结底，无外乎就是不了解单元测试，自认为很聪明，自己懒不想去测试，对项目的时间、进度把控不好。下面，我将一 一进行分析，剖析出程序员的开发心理，以此来给朋友们提个醒，最终聪明反被聪明误。&lt;/p&gt;
-&lt;h2 id=&quot;剖析&quot;&gt;&lt;a href=&quot;#剖析&quot; class=&quot;headerlink&quot; title=&quot;剖析&quot;&gt;&lt;/a&gt;剖析&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;不知道怎么编写单元测试&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这个问题在于，还没有接触过单元测试，同时，也没有体会过企业级的代码开发。不知道同时也不了解单元测试能带给你什么。设想一下，当你开发完一个功能模块的时候，你如何确定你的模块没有 bug 呢？如果涉及到具体的业务，你会执行 debug 模式，然后一点一点的深入到代码中去查看吗？如果你一直都是这样，那么你早就已经 OUT 了。赶快去了解一下单元测试的工具吧，你会收获很大的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;项目没有要求，所以不编写&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这个问题反映出了一种现象，同时也是一种习惯。项目有没有要求，只能说明项目的管理上不严格，并不是程序员不编写单元测试的理由。他们在以往的开发中，并没有养成写单元测试的好习惯。可想而知，他们的代码质量，我就不敢恭维了。给个建议，尝试着写漂亮的代码，之所以因为漂亮，是指得健康、简洁、健壮。当然，完成漂亮的代码就离不开单元测试了。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;单元测试价值不高，完全是浪费时间&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这种说法其实是错误的。为什么这么说呢？在日常的开发中，代码的完工其实并不等于开发的完工。如果没有单元测试，那么如何保证代码能够正常运行呢？测试人员做的只是业务上的集成测试，也就是黑盒测试，对单个的方法是没有办法测试的，而且，测试出的 bug 的范围也会很广，根本不能确定 bug 的范围，还得去花时间来确定 bug 出在什么地方。难道这就不浪费时间了吗？甚至，这样的方式，时间浪费的会更多。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;业务逻辑比较简单，不值得编写单元测试&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;所谓的业务逻辑比较简单，其实是相对的。当你对某一块业务逻辑很熟悉的时候，你自然会认为它很简单。然而，单元测试的必要性并不是仅仅在于测试代码的功能是否正确，还在于，当其他同事在了解你的业务的时候，能够很快的通过单元测试来熟悉代码的功能，甚至不用去读代码，就能够知道它做了哪些事情。因此，写单元测试不仅是解放了自己，更方便了别人。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;项目前期还在尽量写测试，到了后期就失控了&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这种问题的原因在于，对项目进度、项目中的技术点研究时间、人员的沟通、业务需求的熟悉程度等没有把控好。这个问题的出现并不是个人的问题，而是反映了项目管理中存在的问题。当然，个人的原因也存在，就是如何在有限的时间里，提高效率。这一点需要大家好好思考一下了。我的建议，多做计划，根据实际情况变更计划。多和项目组长、组成员进行沟通。及时反应项目中存在的问题。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;为了完成编码任务，没有足够的时间编写单元测试&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这个问题在于，程序员领取的任务较为复杂，或者自己的开发效率有待提高。其实，开发任务是包括编码和单元测试的。在领任务的时候，应该跟据自身的能力，跟组长或经理沟通好，以便留出一定的测试时间。当然，提高自己的编码效率也是很有必要的。至于如何提高开发效率，网上有很多这样的文章，这里就不再赘述了。&lt;/p&gt;
-&lt;h2 id=&quot;重要性&quot;&gt;&lt;a href=&quot;#重要性&quot; class=&quot;headerlink&quot; title=&quot;重要性&quot;&gt;&lt;/a&gt;重要性&lt;/h2&gt;&lt;p&gt;测试常常是程序员十分厌倦的一个活动。测试能给我们带来什么？了解这些是非常重要的，测试不可能保证一个程序是完全正确的，但是测试却可以增强我们对程序完整的信心，测试可以让我们相信程序做了我么期望它做的事情。测试能够使我们尽早的发现程序的 bug 和不足。&lt;/p&gt;
-&lt;p&gt;一个 bug 被隐藏的时间越长，修复这个 bug 的代价就越大。在《快速软件开发》一书中已引用了大量的研究数据指出：最后才修改一个 bug 的代价是在 bug 产生时修改它的代价的10倍。&lt;/p&gt;
-&lt;p&gt;当然，我们主要讨论的是单元测试。单元测试是一个方法层面上的测试，也是最细粒度的测试。用于测试一个类的每一个方法都已经满足了方法的功能要求。在开发中，对于自己开发的模块，只有在通过单元测试之后，才能提交到 SVN 库 或者 Git 库。&lt;/p&gt;
-&lt;h2 id=&quot;应用&quot;&gt;&lt;a href=&quot;#应用&quot; class=&quot;headerlink&quot; title=&quot;应用&quot;&gt;&lt;/a&gt;应用&lt;/h2&gt;&lt;p&gt;正是由于测试在开发中的重要地位，才会在IT界刮起了 TDD 的旋风。TDD，也就是测试驱动开发模式。它旨在强调在开发功能代码之前，先编写测试代码。也就是说在明确要开发某个功能后，首先思考如何对这个功能进行测试，并完成测试代码的编写，然后编写相关的代码满足这些测试用例。然后循环进行添加其他功能，直到完成全部功能的开发。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; 关于测试驱动开发，我之前的博客中有提到过，请参考之前的博文《&lt;a href=&quot;http://ufdouble.com/2016/07/04/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91TDD/&quot; title=&quot;测试驱动开发&quot;&gt;测试驱动开发&lt;/a&gt;》&lt;/p&gt;
-&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;p&gt;说了这么多，那么都有什么工具（框架）能帮助我们完成可重复的单元测试呢？下面我就介绍几个常用的。这里只介绍 Java 语言的。其他语言的请问谷老师（Google）。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JUnit（推荐使用JUnit4）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;JUnit 在日常开发中还是很常用的，而且 Java 的各种 IDE （Eclipse、MyEclipse、IntelliJ IDEA）都集成了 JUnit 的组件。当然，自己添加插件也是很方便的。JUnit 框架是 Java 语言单元测试当前的一站式解决方案。这个框架值得称赞，因为它把测试驱动的开发思想介绍给 Java 开发人员并教给他们如何有效地编写单元测试。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;TestNG&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;TestNG，即Testing Next Generation，下一代测试技术。是根据JUnit和NUnit思想，采用 jdk 的 annotation 技术来强化测试功能并借助XML 文件强化测试组织结构而构建的测试框架。TestNG 的强大之处还在于不仅可以用来做单元测试，还可以用来做集成测试。&lt;/p&gt;
-&lt;p&gt;这里仅仅是介绍一下有哪些最常用的 Java 单元测试工具，对于如何使用这些工具，在后续的博客中会有介绍，这里就不再多说了。有兴趣的请关注后续的文章。&lt;/p&gt;
-&lt;h2 id=&quot;结束语&quot;&gt;&lt;a href=&quot;#结束语&quot; class=&quot;headerlink&quot; title=&quot;结束语&quot;&gt;&lt;/a&gt;结束语&lt;/h2&gt;&lt;p&gt;俗话说，一屋不扫，何以扫天下。开发中，我们自己的代码都不能保证功能的正确性，那么还有什么效率可言呢？做再多的任务，写再多的代码也只不过是在搭鸡窝，做着机器一样的重复的工作。IT界有一个原则，DRY原则 —— Don’t Repeat Yourself ！只有通过对自己的工作不断的检查，不断的测试，才能不断的突破，不断的脱颖而出，当然，你才能不断的提高。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;时间&lt;/s
-    
-    </summary>
-    
-      <category term="软件工程" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
-    
-      <category term="单元测试" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
-    
-      <category term="单元测试" scheme="http://ufdouble.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="JUnit" scheme="http://ufdouble.com/tags/JUnit/"/>
-    
-      <category term="TestNG" scheme="http://ufdouble.com/tags/TestNG/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>敏捷开发</title>
-    <link href="http://ufdouble.com/2016/07/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
-    <id>http://ufdouble.com/2016/07/敏捷开发/</id>
-    <published>2016-07-07T08:01:46.454Z</published>
-    <updated>2016-07-05T05:48:24.860Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月4日&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;现在敏捷开发是越来越火了，人人都在谈敏捷，人人都在学习Scrum和XP…&lt;br&gt;为了不落后他人，于是我也开始学习Scrum，今天主要是对我最近阅读的相关资料，根据自己的理解，用自己的话来讲述Scrum中的各个环节，主要目的有两个，一个是进行知识的总结，另外一个是觉得网上很多学习资料的讲述方式让初学者不太容易理解；所以我决定写一篇扫盲性的博文，同时试着也与园内的朋友一起分享交流一下，希望对初学者有帮助。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;什么是敏捷开发？&quot;&gt;&lt;a href=&quot;#什么是敏捷开发？&quot; class=&quot;headerlink&quot; title=&quot;什么是敏捷开发？&quot;&gt;&lt;/a&gt;什么是敏捷开发？&lt;/h2&gt;&lt;p&gt;敏捷开发(Agile Development)是一种以人为核心、迭代、循序渐进的开发方法。&lt;br&gt;怎么理解呢？首先，我们要理解它不是一门技术，它是一种开发方法，也就是一种软件开发的流程，它会指导我们用规定的环节去一步一步完成项目的开发；而这种开发方式的主要驱动核心是人；它采用的是迭代式开发；&lt;/p&gt;
-&lt;h2 id=&quot;为什么说是以人为核心？&quot;&gt;&lt;a href=&quot;#为什么说是以人为核心？&quot; class=&quot;headerlink&quot; title=&quot;为什么说是以人为核心？&quot;&gt;&lt;/a&gt;为什么说是以人为核心？&lt;/h2&gt;&lt;p&gt;我们大部分人都学过瀑布开发模型，它是以文档为驱动的，为什么呢？因为在瀑布的整个开发过程中，要写大量的文档，把需求文档写出来后，开发人员都是根据文档进行开发的，一切以文档为依据；而敏捷开发它只写有必要的文档，或尽量少写文档，敏捷开发注重的是人与人之间，面对面的交流，所以它强调以人为核心。&lt;/p&gt;
-&lt;h2 id=&quot;什么是迭代？&quot;&gt;&lt;a href=&quot;#什么是迭代？&quot; class=&quot;headerlink&quot; title=&quot;什么是迭代？&quot;&gt;&lt;/a&gt;什么是迭代？&lt;/h2&gt;&lt;p&gt;迭代是指把一个复杂且开发周期很长的开发任务，分解为很多小周期可完成的任务，这样的一个周期就是一次迭代的过程；同时每一次迭代都可以生产或开发出一个可以交付的软件产品。&lt;/p&gt;
-&lt;h2 id=&quot;关于Scrum和XP&quot;&gt;&lt;a href=&quot;#关于Scrum和XP&quot; class=&quot;headerlink&quot; title=&quot;关于Scrum和XP&quot;&gt;&lt;/a&gt;关于Scrum和XP&lt;/h2&gt;&lt;p&gt;前面说了敏捷它是一种指导思想或开发方式，但是它没有明确告诉我们到底采用什么样的流程进行开发，而Scrum和XP就是敏捷开发的具体方式了，你可以采用Scrum方式也可以采用XP方式；Scrum和XP的区别是，Scrum偏重于过程，XP则偏重于实践，但是实际中，两者是结合一起应用的，这里我主要讲Scrum。&lt;/p&gt;
-&lt;h2 id=&quot;什么是Scrum？&quot;&gt;&lt;a href=&quot;#什么是Scrum？&quot; class=&quot;headerlink&quot; title=&quot;什么是Scrum？&quot;&gt;&lt;/a&gt;什么是Scrum？&lt;/h2&gt;&lt;p&gt;Scrum的英文意思是橄榄球运动的一个专业术语，表示“争球”的动作；把一个开发流程的名字取名为Scrum，我想你一定能想象出你的开发团队在开发一个项目时，大家像打橄榄球一样迅速、富有战斗激情、人人你争我抢地完成它，你一定会感到非常兴奋的。&lt;br&gt;而Scrum就是这样的一个开发流程，运用该流程，你就能看到你团队高效的工作。&lt;/p&gt;
-&lt;h2 id=&quot;【Scrum开发流程中的三大角色】&quot;&gt;&lt;a href=&quot;#【Scrum开发流程中的三大角色】&quot; class=&quot;headerlink&quot; title=&quot;【Scrum开发流程中的三大角色】&quot;&gt;&lt;/a&gt;【Scrum开发流程中的三大角色】&lt;/h2&gt;&lt;h3 id=&quot;产品负责人（Product-Owner）&quot;&gt;&lt;a href=&quot;#产品负责人（Product-Owner）&quot; class=&quot;headerlink&quot; title=&quot;产品负责人（Product Owner）&quot;&gt;&lt;/a&gt;产品负责人（Product Owner）&lt;/h3&gt;&lt;p&gt;主要负责确定产品的功能和达到要求的标准，指定软件的发布日期和交付的内容，同时有权力接受或拒绝开发团队的工作成果。&lt;/p&gt;
-&lt;h3 id=&quot;流程管理员（Scrum-Master）&quot;&gt;&lt;a href=&quot;#流程管理员（Scrum-Master）&quot; class=&quot;headerlink&quot; title=&quot;流程管理员（Scrum Master）&quot;&gt;&lt;/a&gt;流程管理员（Scrum Master）&lt;/h3&gt;&lt;p&gt;主要负责整个Scrum流程在项目中的顺利实施和进行，以及清除挡在客户和开发工作之间的沟通障碍，使得客户可以直接驱动开发。&lt;/p&gt;
-&lt;h3 id=&quot;开发团队（Scrum-Team）&quot;&gt;&lt;a href=&quot;#开发团队（Scrum-Team）&quot; class=&quot;headerlink&quot; title=&quot;开发团队（Scrum Team）&quot;&gt;&lt;/a&gt;开发团队（Scrum Team）&lt;/h3&gt;&lt;p&gt;主要负责软件产品在Scrum规定流程下进行开发工作，人数控制在5~10人左右，每个成员可能负责不同的技术方面，但要求每成员必须要有很强的自我管理能力，同时具有一定的表达能力；成员可以采用任何工作方式，只要能达到Sprint的目标。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Scrum流程图&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/LRdmK1w.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;下面，我们开始讲具体实施流程，但是在讲之前，我还要对一个英文单词进行讲解。&lt;/p&gt;
-&lt;h2 id=&quot;什么是Sprint？&quot;&gt;&lt;a href=&quot;#什么是Sprint？&quot; class=&quot;headerlink&quot; title=&quot;什么是Sprint？&quot;&gt;&lt;/a&gt;什么是Sprint？&lt;/h2&gt;&lt;p&gt;Sprint是短距离赛跑的意思，这里面指的是一次迭代，而一次迭代的周期是1个月时间（即4个星期），也就是我们要把一次迭代的开发内容以最快的速度完成它，这个过程我们称它为Sprint。&lt;/p&gt;
-&lt;h2 id=&quot;如何进行Scrum开发？&quot;&gt;&lt;a href=&quot;#如何进行Scrum开发？&quot; class=&quot;headerlink&quot; title=&quot;如何进行Scrum开发？&quot;&gt;&lt;/a&gt;如何进行Scrum开发？&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;我们首先需要确定一个Product Backlog（按优先顺序排列的一个产品需求列表），这个是由Product Owner 负责的；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Scrum Team根据Product Backlog列表，做工作量的预估和安排；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;有了Product Backlog列表，我们需要通过 Sprint Planning Meeting（Sprint计划会议） 来从中挑选出一个Story作为本次迭代完成的目标，这个目标的时间周期是1~4个星期，然后把这个Story进行细化，形成一个Sprint Backlog；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Sprint Backlog是由Scrum Team去完成的，每个成员根据Sprint Backlog再细化成更小的任务（细到每个任务的工作量在2天内能完成）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在Scrum Team完成计划会议上选出的Sprint Backlog过程中，需要进行 Daily Scrum Meeting（每日站立会议），每次会议控制在15分钟左右，每个人都必须发言，并且要向所有成员当面汇报你昨天完成了什么，并且向所有成员承诺你今天要完成什么，同时遇到不能解决的问题也可以提出，每个人回答完成后，要走到黑板前更新自己的 Sprint burn down（Sprint燃尽图）；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;做到每日集成，也就是每天都要有一个可以成功编译、并且可以演示的版本；很多人可能还没有用过自动化的每日集成，其实TFS就有这个功能，它可以支持每次有成员进行签入操作的时候，在服务器上自动获取最新版本，然后在服务器中编译，如果通过则马上再执行单元测试代码，如果也全部通过，则将该版本发布，这时一次正式的签入操作才保存到TFS中，中间有任何失败，都会用邮件通知项目管理人员；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;当一个Story完成，也就是Sprint Backlog被完成，也就表示一次Sprint完成，这时，我们要进行 Srpint Review Meeting（演示会议），也称为评审会议，产品负责人和客户都要参加（最好本公司老板也参加），每一个Scrum Team的成员都要向他们演示自己完成的软件产品（这个会议非常重要，一定不能取消）；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;最后就是 Sprint Retrospective Meeting（回顾会议），也称为总结会议，以轮流发言方式进行，每个人都要发言，总结并讨论改进的地方，放入下一轮Sprint的产品需求中；&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;下面是运用Scrum开发流程中的一些场景图：&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/3462EkG.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;上图是一个 Product Backlog 的示例。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/o2KWOy1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;上图就是每日的站立会议了，参会人员可以随意姿势站立，任务看板要保证让每个人看到，当每个人发言完后，要走到任务版前更新自己的燃尽图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/PDe0XDO.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;任务看版包含 未完成、正在做、已完成 的工作状态，假设你今天把一个未完成的工作已经完成，那么你要把小卡片从未完成区域贴到已完成区域。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/iaCmWmj.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;每个人的工作进度和完成情况都是公开的，如果有一个人的工作任务在某一个位置放了好几天，大家都能发现他的工作进度出现了什么问题（成员人数最好是5~7个，这样每人可以使用一种专用颜色的标签纸，一眼就可以从任务版看出谁的工作进度快，谁的工作进度慢）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/nFVvNbr.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;上图可不是扑克牌，它是计划纸牌，它的作用是防止项目在开发过程中，被某些人所领导。&lt;/p&gt;
-&lt;p&gt;怎么用的呢？比如A程序员开发一个功能，需要5个小时，B程序员认为只需要半小时，那他们各自取相应的牌，藏在手中，最后摊牌，如果时间差距很大，那么A和B就可以讨论A为什么要5个小时…&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;敏捷开发的4句宣言&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;个体与交互 胜过 过程与工具&lt;/p&gt;
-&lt;p&gt;可以工作的软件 胜过 面面俱到的文挡&lt;/p&gt;
-&lt;p&gt;客户协作 胜过 合同谈判&lt;/p&gt;
-&lt;p&gt;响应变化 胜过 遵循计划&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;时间&lt;/s
-    
-    </summary>
-    
-      <category term="软件工程" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
-    
-      <category term="开发方法论" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-    
-      <category term="软件工程" scheme="http://ufdouble.com/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
-    
-      <category term="方法论" scheme="http://ufdouble.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   
@@ -627,69 +715,149 @@ EasyMock.replay(marketMock);
   </entry>
   
   <entry>
-    <title>测试驱动开发（TDD）</title>
-    <link href="http://ufdouble.com/2016/07/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91TDD/"/>
-    <id>http://ufdouble.com/2016/07/测试驱动开发TDD/</id>
-    <published>2016-07-07T08:01:46.454Z</published>
-    <updated>2016-07-05T05:48:43.503Z</updated>
+    <title>个人博客图片测试</title>
+    <link href="http://ufdouble.com/2016/07/rating/"/>
+    <id>http://ufdouble.com/2016/07/rating/</id>
+    <published>2016-07-07T08:01:46.444Z</published>
+    <updated>2016-07-03T04:42:37.558Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;图片测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;关于骑行那些事&quot;&gt;&lt;a href=&quot;#关于骑行那些事&quot; class=&quot;headerlink&quot; title=&quot;关于骑行那些事&quot;&gt;&lt;/a&gt;关于骑行那些事&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/bwyG01t.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/CorVKWU.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/WENVFWW.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;图片测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;关于骑行那些事&quot;&gt;&lt;a href=&quot;#关于骑行那些事&quot; class=&quot;headerlink&quot; title=&quot;关于骑行那些事&quot;&gt;&lt;/a&gt;关于骑行那些事&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;h
+    
+    </summary>
+    
+      <category term="个人爱好" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/"/>
+    
+      <category term="骑行" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/%E9%AA%91%E8%A1%8C/"/>
+    
+    
+      <category term="骑行" scheme="http://ufdouble.com/tags/%E9%AA%91%E8%A1%8C/"/>
+    
+      <category term="山地车" scheme="http://ufdouble.com/tags/%E5%B1%B1%E5%9C%B0%E8%BD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人博客视频测试</title>
+    <link href="http://ufdouble.com/2016/07/video/"/>
+    <id>http://ufdouble.com/2016/07/video/</id>
+    <published>2016-07-07T08:01:46.444Z</published>
+    <updated>2016-07-03T04:21:19.336Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;视频测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;NBA过人集锦-脚踝终结者-Crossover：&quot;&gt;&lt;a href=&quot;#NBA过人集锦-脚踝终结者-Crossover：&quot; class=&quot;headerlink&quot; title=&quot;NBA过人集锦 脚踝终结者 Crossover：&quot;&gt;&lt;/a&gt;NBA过人集锦 脚踝终结者 Crossover：&lt;/h2&gt;&lt;iframe height=&quot;498&quot; width=&quot;510&quot; src=&quot;http://player.youku.com/embed/XOTE2NTU3NTA0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;视频测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;NBA过人集锦-脚踝终结者-Crossover：&quot;&gt;&lt;a href=&quot;#NBA过人集锦-脚踝终结者-Crossover：&quot; class=&quot;headerlink&quot; title=&quot;NBA过人
+    
+    </summary>
+    
+      <category term="个人爱好" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/"/>
+    
+      <category term="篮球" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/%E7%AF%AE%E7%90%83/"/>
+    
+    
+      <category term="篮球" scheme="http://ufdouble.com/tags/%E7%AF%AE%E7%90%83/"/>
+    
+      <category term="NBA" scheme="http://ufdouble.com/tags/NBA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis 和 Memcached 的区别</title>
+    <link href="http://ufdouble.com/2016/07/Redis%E5%92%8CMemcached%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://ufdouble.com/2016/07/Redis和Memcached的区别/</id>
+    <published>2016-07-07T08:01:46.444Z</published>
+    <updated>2016-07-05T05:55:16.256Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月4日&lt;/p&gt;
-&lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;一个高效的软件开发过程对软件开发人员来说是至关重要的，决定着开发是痛苦的挣扎，还是不断进步的喜悦。国人对软件蓝领的不屑，对繁琐冗长的传统开发过程的不耐，使大多数开发人员无所适从。最近兴起的一些软件开发过程相关的技术，提供一些比较高效、实用的软件过程开发方法。其中比较基础、关键的一个技术就是测试驱动开发（Test-Driven Development）。虽然TDD光大于极限编程，但测试驱动开发完全可以单独应用。下面就从开发人员使用的角度进行介绍，使开发人员用最少的代价尽快理解、掌握、应用这种技术。下面分优势，原理，过程，原则，测试技术，Tips等方面进行讨论&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Redis 的作者 Salvatore Sanfilippo 曾经对这两种基于内存的数据存储系统进行过比较：&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;优势&quot;&gt;&lt;a href=&quot;#优势&quot; class=&quot;headerlink&quot; title=&quot;优势&quot;&gt;&lt;/a&gt;优势&lt;/h2&gt;&lt;p&gt;TDD的基本思路就是通过测试来推动整个开发的进行。而测试驱动开发技术并不只是单纯的测试工作。&lt;/p&gt;
-&lt;p&gt;需求向来就是软件开发过程中感觉最不好明确描述、易变的东西。这里说的需求不只是指用户的需求，还包括对代码的使用需求。很多开发人员最害怕的就是后期还要修改某个类或者函数的接口进行修改或者扩展，为什么会发生这样的事情就是因为这部分代码的使用需求没有很好的描述。测试驱动开发就是通过编写测试用例，先考虑代码的使用需求（包括功能、过程、接口等），而且这个描述是无二义的，可执行验证的。&lt;/p&gt;
-&lt;p&gt;通过编写这部分代码的测试用例，对其功能的分解、使用过程、接口都进行了设计。而且这种从使用角度对代码的设计通常更符合后期开发的需求。可测试的要求，对代码的内聚性的提高和复用都非常有益。因此测试驱动开发也是一种代码设计的过程。&lt;/p&gt;
-&lt;p&gt;开发人员通常对编写文档非常厌烦，但要使用、理解别人的代码时通常又希望能有文档进行指导。而测试驱动开发过程中产生的测试用例代码就是对代码的最好的解释。&lt;/p&gt;
-&lt;p&gt;快乐工作的基础就是对自己有信心，对自己的工作成果有信心。当前很多开发人员却经常在担心：“代码是否正确？”“辛苦编写的代码还有没有严重bug？”“修改的新代码对其他部分有没有影响？”。这种担心甚至导致某些代码应该修改却不敢修改的地步。测试驱动开发提供的测试集就可以作为你信心的来源。&lt;/p&gt;
-&lt;p&gt;当然测试驱动开发最重要的功能还在于保障代码的正确性，能够迅速发现、定位bug。而迅速发现、定位bug是很多开发人员的梦想。针对关键代码的测试集，以及不断完善的测试用例，为迅速发现、定位bug提供了条件。&lt;/p&gt;
-&lt;p&gt;我的一段功能非常复杂的代码使用TDD开发完成，真实环境应用中只发现几个bug，而且很快被定位解决。您在应用后，也一定会为那种自信的开发过程，功能不断增加、完善的感觉，迅速发现、定位bug的能力所感染，喜欢这个技术的。&lt;/p&gt;
-&lt;p&gt;那么是什么样的原理、方法提供上面说的这些好处哪？下面我们就看看TDD的原理。&lt;/p&gt;
-&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;测试驱动开发的基本思想就是在开发功能代码之前，先编写测试代码。也就是说在明确要开发某个功能后，首先思考如何对这个功能进行测试，并完成测试代码的编写，然后编写相关的代码满足这些测试用例。然后循环进行添加其他功能，直到完全部功能的开发。&lt;/p&gt;
-&lt;p&gt;我们这里把这个技术的应用领域从代码编写扩展到整个开发过程。应该对整个开发过程的各个阶段进行测试驱动，首先思考如何对这个阶段进行测试、验证、考核，并编写相关的测试文档，然后开始下一步工作，最后再验证相关的工作。下图是一个比较流行的测试模型：V测试模型。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/IbMQX1V.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;在开发的各个阶段，包括需求分析、概要设计、详细设计、编码过程中都应该考虑相对应的测试工作，完成相关的测试用例的设计、测试方案、测试计划的编写。这里提到的开发阶段只是举例，根据实际的开发活动进行调整。相关的测试文档也不一定是非常详细复杂的文档，或者什么形式，但应该养成测试驱动的习惯。&lt;/p&gt;
-&lt;p&gt;关于测试模型，还有X测试模型。这个测试模型，我认为，是对详细阶段和编码阶段进行建模，应该说更详细的描述了详细设计和编码阶段的开发行为。及针对某个功能进行对应的测试驱动开发。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/XsKqinL.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;基本原理应该说非常简单，那么如何进行实际操作哪，下面对开发过程进行详细的介绍。&lt;/p&gt;
-&lt;h2 id=&quot;过程&quot;&gt;&lt;a href=&quot;#过程&quot; class=&quot;headerlink&quot; title=&quot;过程&quot;&gt;&lt;/a&gt;过程&lt;/h2&gt;&lt;p&gt;软件开发其他阶段的测试驱动开发，根据测试驱动开发的思想完成对应的测试文档即可。下面针对详细设计和编码阶段进行介绍。&lt;/p&gt;
-&lt;p&gt;测试驱动开发的基本过程如下：&lt;/p&gt;
-&lt;p&gt;1） 明确当前要完成的功能。可以记录成一个 TODO 列表。&lt;/p&gt;
-&lt;p&gt;2） 快速完成针对此功能的测试用例编写。&lt;/p&gt;
-&lt;p&gt;3） 测试代码编译不通过。&lt;/p&gt;
-&lt;p&gt;4） 编写对应的功能代码。&lt;/p&gt;
-&lt;p&gt;5） 测试通过。&lt;/p&gt;
-&lt;p&gt;6） 对代码进行重构，并保证测试通过。&lt;/p&gt;
-&lt;p&gt;7） 循环完成所有功能的开发。&lt;/p&gt;
-&lt;p&gt;为了保证整个测试过程比较快捷、方便，通常可以使用测试框架组织所有的测试用例。一个免费的、优秀的测试框架是 Xunit 系列，几乎所有的语言都有对应的测试框架。我曾经写过一篇文章介绍CppUnit的文章（ &lt;a href=&quot;http://www.ibm.com/developerworks/cn/linux/l-cppunit/index.html）。&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.ibm.com/developerworks/cn/linux/l-cppunit/index.html）。&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;开发过程中，通常把测试代码和功能代码分开存放，这里提供一个简单的测试框架使用例子，您可以通过它了解测试框架的使用。下面是文件列表。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;project/                项目主目录
-project/test            测试项目主目录
-project/test/testSeq.cpp        测试seq_t 的测试文件，对其他功能文件的测试文件复制后修改即可
-project/test/testSeq.h
-project/test/Makefile            测试项目的 Makefile 
-project/test/main.cpp            测试项目的主文件，不需要修改
-project/main.cpp                   项目的主文件
-project/seq_t.h            功能代码，被测试文件
-project/Makefile                   项目的 Makefile
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;主要流程基本如此，但要让你的代码很容易的进行测试，全面又不繁琐的进行测试，还是有很多测试原则和技术需要考虑。&lt;/p&gt;
-&lt;h2 id=&quot;原则&quot;&gt;&lt;a href=&quot;#原则&quot; class=&quot;headerlink&quot; title=&quot;原则&quot;&gt;&lt;/a&gt;原则&lt;/h2&gt;&lt;p&gt;测试隔离。不同代码的测试应该相互隔离。对一块代码的测试只考虑此代码的测试，不要考虑其实现细节（比如它使用了其他类的边界条件）。&lt;/p&gt;
-&lt;p&gt;一顶帽子。开发人员开发过程中要做不同的工作，比如：编写测试代码、开发功能代码、对代码重构等。做不同的事，承担不同的角色。开发人员完成对应的工作时应该保持注意力集中在当前工作上，而不要过多的考虑其他方面的细节，保证头上只有一顶帽子。避免考虑无关细节过多，无谓地增加复杂度。&lt;/p&gt;
-&lt;p&gt;测试列表。需要测试的功能点很多。应该在任何阶段想添加功能需求问题时，把相关功能点加到测试列表中，然后继续手头工作。然后不断的完成对应的测试用例、功能代码、重构。一是避免疏漏，也避免干扰当前进行的工作。&lt;/p&gt;
-&lt;p&gt;测试驱动。这个比较核心。完成某个功能，某个类，首先编写测试代码，考虑其如何使用、如何测试。然后在对其进行设计、编码。&lt;/p&gt;
-&lt;p&gt;先写断言。测试代码编写时，应该首先编写对功能代码的判断用的断言语句，然后编写相应的辅助语句。&lt;/p&gt;
-&lt;p&gt;可测试性。功能代码设计、开发时应该具有较强的可测试性。其实遵循比较好的设计原则的代码都具备较好的测试性。比如比较高的内聚性，尽量依赖于接口等。&lt;/p&gt;
-&lt;p&gt;及时重构。无论是功能代码还是测试代码，对结构不合理，重复的代码等情况，在测试通过后，及时进行重构。关于重构，我会另撰文详细分析。&lt;br&gt;小步前进。软件开发是个复杂性非常高的工作，开发过程中要考虑很多东西，包括代码的正确性、可扩展性、性能等等，很多问题都是因为复杂性太大导致的。极限编程提出了一个非常好的思路就是小步前进。把所有的规模大、复杂性高的工作，分解成小的任务来完成。对于一个类来说，一个功能一个功能的完成，如果太困难就再分解。每个功能的完成就走测试代码－功能代码－测试－重构的循环。通过分解降低整个系统开发的复杂性。这样的效果非常明显。几个小的功能代码完成后，大的功能代码几乎是不用调试就可以通过。一个个类方法的实现，很快就看到整个类很快就完成啦。本来感觉很多特性需要增加，很快就会看到没有几个啦。你甚至会为这个速度感到震惊。（我理解，是大幅度减少调试、出错的时间产生的这种速度感）&lt;/p&gt;
-&lt;h2 id=&quot;测试技术&quot;&gt;&lt;a href=&quot;#测试技术&quot; class=&quot;headerlink&quot; title=&quot;测试技术&quot;&gt;&lt;/a&gt;测试技术&lt;/h2&gt;&lt;h3 id=&quot;测试范围、粒度&quot;&gt;&lt;a href=&quot;#测试范围、粒度&quot; class=&quot;headerlink&quot; title=&quot;测试范围、粒度&quot;&gt;&lt;/a&gt;测试范围、粒度&lt;/h3&gt;&lt;p&gt;对哪些功能进行测试？会不会太繁琐？什么时候可以停止测试？这些问题比较常见。按大师 Kent Benk 的话，对那些你认为应该测试的代码进行测试。就是说，要相信自己的感觉，自己的经验。那些重要的功能、核心的代码就应该重点测试。感到疲劳就应该停下来休息一下。感觉没有必要更详细的测试，就停止本轮测试。&lt;br&gt;测试驱动开发强调测试并不应该是负担，而应该是帮助我们减轻工作量的方法。而对于何时停止编写测试用例，也是应该根据你的经验，功能复杂、核心功能的代码就应该编写更全面、细致的测试用例，否则测试流程即可。&lt;br&gt;测试范围没有静态的标准，同时也应该可以随着时间改变。对于开始没有编写足够的测试的功能代码，随着bug的出现，根据bug补齐相关的测试用例即可。&lt;br&gt;小步前进的原则，要求我们对大的功能块测试时，应该先分拆成更小的功能块进行测试，比如一个类A使用了类B、C，就应该编写到A使用B、C功能的测试代码前，完成对B、C的测试和开发。那么是不是每个小类或者小函数都应该测试哪？我认为没有必要。你应该运用你的经验，对那些可能出问题的地方重点测试，感觉不可能出问题的地方就等它真正出问题的时候再补测试吧。&lt;/p&gt;
-&lt;h3 id=&quot;怎么编写测试用例&quot;&gt;&lt;a href=&quot;#怎么编写测试用例&quot; class=&quot;headerlink&quot; title=&quot;怎么编写测试用例&quot;&gt;&lt;/a&gt;怎么编写测试用例&lt;/h3&gt;&lt;p&gt;测试用例的编写就用上了传统的测试技术。&lt;/p&gt;
-&lt;p&gt;操作过程尽量模拟正常使用的过程。&lt;/p&gt;
-&lt;p&gt;全面的测试用例应该尽量做到分支覆盖，核心代码尽量做到路径覆盖。&lt;/p&gt;
-&lt;p&gt;测试数据尽量包括：真实数据、边界数据。&lt;/p&gt;
-&lt;p&gt;测试语句和测试数据应该尽量简单，容易理解。&lt;/p&gt;
-&lt;p&gt;为了避免对其他代码过多的依赖，可以实现简单的桩函数或桩类（Mock Object）。&lt;/p&gt;
-&lt;p&gt;如果内部状态非常复杂或者应该判断流程而不是状态，可以通过记录日志字符串的方式进行验证。&lt;/p&gt;
-&lt;h2 id=&quot;Tips&quot;&gt;&lt;a href=&quot;#Tips&quot; class=&quot;headerlink&quot; title=&quot;Tips&quot;&gt;&lt;/a&gt;Tips&lt;/h2&gt;&lt;p&gt;很多朋友有疑问，“测试代码的正确性如何保障？是写测试代码还是写测试文档？”这样是不是会陷入“鸡生蛋，蛋生鸡”的循环。其实是不会的。通常测试代码通常是非常简单的，通常围绕着某个情况的正确性判断的几个语句，如果太复杂，就应该继续分解啦。而传统的开发过程通常强调测试文档。但随着开发节奏的加快，用户需求的不断变化，维护高层（需求、概要设计）的测试文档可以，更低层的测试文档的成本的确太大了。而且可实时验证功能正确性的测试代码就是对代码最好的文档。&lt;/p&gt;
-&lt;p&gt;软件开发过程中，除了遵守上面提到的测试驱动开发的几个原则外，一个需要注意的问题就是，谨防过度设计。编写功能代码时应该关注于完成当前功能点，通过测试，使用最简单、直接的方式来编码。过多的考虑后期的扩展，其他功能的添加，无疑增加了过多的复杂性，容易产生问题。应该等到要添加这些特性时在进行详细的测试驱动开发。到时候，有整套测试用例做基础，通过不断重构很容易添加相关特性。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Redis支持服务器端的数据操作：Redis相比Memcached来说，拥有更多的数据结构和并支持更丰富的数据操作，通常在Memcached里，你需要将数据拿到客户端来进行类似的修改再set回去。这大大增加了网络IO的次数和数据体积。在Redis中，这些复杂的操作通常和一般的GET/SET一样高效。所以，如果需要缓存能够支持更复杂的结构和操作，那么Redis会是不错的选择。&lt;br&gt;内存使用效率对比：使用简单的key-value存储的话，Memcached的内存利用率更高，而如果Redis采用hash结构来做key-value存储，由于其组合式的压缩，其内存利用率会高于Memcached。&lt;br&gt;性能对比：由于Redis只使用单核，而Memcached可以使用多核，所以平均每一个核上Redis在存储小数据时比Memcached性能更高。而在100k以上的数据中，Memcached性能要高于Redis，虽然Redis最近也在存储大数据的性能上进行优化，但是比起Memcached，还是稍有逊色。&lt;br&gt;具体为什么会出现上面的结论，以下为收集到的资料：&lt;/li&gt;
+&lt;li&gt;内存使用效率对比：使用简单的key-value存储的话，Memcached的内存利用率更高，而如果Redis采用hash结构来做key-value存储，由于其组合式的压缩，其内存利用率会高于Memcached。&lt;/li&gt;
+&lt;li&gt;性能对比：由于Redis只使用单核，而Memcached可以使用多核，所以平均每一个核上Redis在存储小数据时比Memcached性能更高。而在100k以上的数据中，Memcached性能要高于Redis，虽然Redis最近也在存储大数据的性能上进行优化，但是比起Memcached，还是稍有逊色。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;具体为什么会出现上面的结论，以下为收集到的资料：&lt;/p&gt;
+&lt;h2 id=&quot;1-数据类型支持不同&quot;&gt;&lt;a href=&quot;#1-数据类型支持不同&quot; class=&quot;headerlink&quot; title=&quot;1. 数据类型支持不同&quot;&gt;&lt;/a&gt;1. 数据类型支持不同&lt;/h2&gt;&lt;p&gt;与Memcached仅支持简单的key-value结构的数据记录不同，Redis支持的数据类型要丰富得多。最为常用的数据类型主要由五种：String、Hash、List、Set和Sorted Set。Redis内部使用一个redisObject对象来表示所有的key和value。redisObject最主要的信息如图所示：&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/OB5S4P1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;type代表一个value对象具体是何种数据类型，encoding是不同数据类型在redis内部的存储方式，比如：type=string代表value存储的是一个普通字符串，那么对应的encoding可以是raw或者是int，如果是int则代表实际redis内部是按数值型类存储和表示这个字符串的，当然前提是这个字符串本身可以用数值表示，比如:”123″ “456”这样的字符串。只有打开了Redis的虚拟内存功能，vm字段字段才会真正的分配内存，该功能默认是关闭状态的。&lt;/p&gt;
+&lt;h3 id=&quot;1）String&quot;&gt;&lt;a href=&quot;#1）String&quot; class=&quot;headerlink&quot; title=&quot;1）String&quot;&gt;&lt;/a&gt;1）String&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;常用命令：set/get/decr/incr/mget等；&lt;/li&gt;
+&lt;li&gt;应用场景：String是最常用的一种数据类型，普通的key/value存储都可以归为此类；&lt;/li&gt;
+&lt;li&gt;实现方式：String在redis内部存储默认就是一个字符串，被redisObject所引用，当遇到incr、 decr等操作时会转成数值型进行计算，此时redisObject的encoding字段为int。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;2）Hash&quot;&gt;&lt;a href=&quot;#2）Hash&quot; class=&quot;headerlink&quot; title=&quot;2）Hash&quot;&gt;&lt;/a&gt;2）Hash&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;常用命令：hget/hset/hgetall等&lt;/li&gt;
+&lt;li&gt;应用场景：我们要存储一个用户信息对象数据，其中包括用户ID、用户姓名、年龄和生日，通过用户ID我们希望获取该用户的姓名或者年龄或者生日；&lt;/li&gt;
+&lt;li&gt;实现方式：Redis的Hash实际是内部存储的Value为一个HashMap，并提供了直接存取这个Map成员的接口。如图所示，Key是用户ID, value是一个Map。这个Map的key是成员的属性名，value是属性值。这样对数据的修改和存取都可以直接通过其内部Map的Key(Redis里称内部Map的key为field), 也就是通过 key(用户ID) + field(属性标签) 就可以操作对应属性数据。当前HashMap的实现有两种方式：当HashMap的成员比较少时Redis为了节省内存会采用类似一维数组的方式来紧凑存储，而不会采用真正的HashMap结构，这时对应的value的redisObject的encoding为zipmap，当成员数量增大时会自动转成真正的HashMap,此时encoding为ht。&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;http://i.imgur.com/DMqswtk.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;3）List&quot;&gt;&lt;a href=&quot;#3）List&quot; class=&quot;headerlink&quot; title=&quot;3）List&quot;&gt;&lt;/a&gt;3）List&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;常用命令：lpush/rpush/lpop/rpop/lrange等；&lt;/li&gt;
+&lt;li&gt;应用场景：Redis list的应用场景非常多，也是Redis最重要的数据结构之一，比如twitter的关注列表，粉丝列表等都可以用Redis的list结构来实现；&lt;/li&gt;
+&lt;li&gt;实现方式：Redis list的实现为一个双向链表，即可以支持反向查找和遍历，更方便操作，不过带来了部分额外的内存开销，Redis内部的很多实现，包括发送缓冲队列等也都是用的这个数据结构。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;4）Set&quot;&gt;&lt;a href=&quot;#4）Set&quot; class=&quot;headerlink&quot; title=&quot;4）Set&quot;&gt;&lt;/a&gt;4）Set&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;常用命令：sadd/spop/smembers/sunion等；&lt;/li&gt;
+&lt;li&gt;应用场景：Redis set对外提供的功能与list类似是一个列表的功能，特殊之处在于set是可以自动排重的，当你需要存储一个列表数据，又不希望出现重复数据时，set是一个很好的选择，并且set提供了判断某个成员是否在一个set集合内的重要接口，这个也是list所不能提供的；&lt;/li&gt;
+&lt;li&gt;实现方式：set 的内部实现是一个 value永远为null的HashMap，实际就是通过计算hash的方式来快速排重的，这也是set能提供判断一个成员是否在集合内的原因。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;5）Sorted-Set&quot;&gt;&lt;a href=&quot;#5）Sorted-Set&quot; class=&quot;headerlink&quot; title=&quot;5）Sorted Set&quot;&gt;&lt;/a&gt;5）Sorted Set&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;常用命令：zadd/zrange/zrem/zcard等；&lt;/li&gt;
+&lt;li&gt;应用场景：Redis sorted set的使用场景与set类似，区别是set不是自动有序的，而sorted set可以通过用户额外提供一个优先级(score)的参数来为成员排序，并且是插入有序的，即自动排序。当你需要一个有序的并且不重复的集合列表，那么可以选择sorted set数据结构，比如twitter 的public timeline可以以发表时间作为score来存储，这样获取时就是自动按时间排好序的。&lt;/li&gt;
+&lt;li&gt;实现方式：Redis sorted set的内部使用HashMap和跳跃表(SkipList)来保证数据的存储和有序，HashMap里放的是成员到score的映射，而跳跃表里存放的是所有的成员，排序依据是HashMap里存的score,使用跳跃表的结构可以获得比较高的查找效率，并且在实现上比较简单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-内存管理机制不同&quot;&gt;&lt;a href=&quot;#2-内存管理机制不同&quot; class=&quot;headerlink&quot; title=&quot;2. 内存管理机制不同&quot;&gt;&lt;/a&gt;2. 内存管理机制不同&lt;/h2&gt;&lt;p&gt;在Redis中，并不是所有的数据都一直存储在内存中的。这是和Memcached相比一个最大的区别。当物理内存用完时，Redis可以将一些很久没用到的value交换到磁盘。Redis只会缓存所有的key的信息，如果Redis发现内存的使用量超过了某一个阀值，将触发swap的操作，Redis根据“swappability = age*log(size_in_memory)”计算出哪些key对应的value需要swap到磁盘。然后再将这些key对应的value持久化到磁盘中，同时在内存中清除。这种特性使得Redis可以保持超过其机器本身内存大小的数据。当然，机器本身的内存必须要能够保持所有的key，毕竟这些数据是不会进行swap操作的。同时由于Redis将内存中的数据swap到磁盘中的时候，提供服务的主线程和进行swap操作的子线程会共享这部分内存，所以如果更新需要swap的数据，Redis将阻塞这个操作，直到子线程完成swap操作后才可以进行修改。当从Redis中读取数据的时候，如果读取的key对应的value不在内存中，那么Redis就需要从swap文件中加载相应数据，然后再返回给请求方。 这里就存在一个I/O线程池的问题。在默认的情况下，Redis会出现阻塞，即完成所有的swap文件加载后才会相应。这种策略在客户端的数量较小，进行批量操作的时候比较合适。但是如果将Redis应用在一个大型的网站应用程序中，这显然是无法满足大并发的情况的。所以Redis运行我们设置I/O线程池的大小，对需要从swap文件中加载相应数据的读取请求进行并发操作，减少阻塞的时间。&lt;/p&gt;
+&lt;p&gt;对于像Redis和Memcached这种基于内存的数据库系统来说，内存管理的效率高低是影响系统性能的关键因素。传统C语言中的malloc/free函数是最常用的分配和释放内存的方法，但是这种方法存在着很大的缺陷：首先，对于开发人员来说不匹配的malloc和free容易造成内存泄露；其次频繁调用会造成大量内存碎片无法回收重新利用，降低内存利用率；最后作为系统调用，其系统开销远远大于一般函数调用。所以，为了提高内存的管理效率，高效的内存管理方案都不会直接使用malloc/free调用。Redis和Memcached均使用了自身设计的内存管理机制，但是实现方法存在很大的差异，下面将会对两者的内存管理机制分别进行介绍。&lt;/p&gt;
+&lt;p&gt;Memcached默认使用Slab Allocation机制管理内存，其主要思想是按照预先规定的大小，将分配的内存分割成特定长度的块以存储相应长度的key-value数据记录，以完全解决内存碎片问题。Slab Allocation机制只为存储外部数据而设计，也就是说所有的key-value数据都存储在Slab Allocation系统里，而Memcached的其它内存请求则通过普通的malloc/free来申请，因为这些请求的数量和频率决定了它们不会对整个系统的性能造成影响Slab Allocation的原理相当简单。 如图所示，它首先从操作系统申请一大块内存，并将其分割成各种尺寸的块Chunk，并把尺寸相同的块分成组Slab Class。其中，Chunk就是用来存储key-value数据的最小单位。每个Slab Class的大小，可以在Memcached启动的时候通过制定Growth Factor来控制。假定图中Growth Factor的取值为1.25，如果第一组Chunk的大小为88个字节，第二组Chunk的大小就为112个字节，依此类推。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/hDbyiAp.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;当Memcached接收到客户端发送过来的数据时首先会根据收到数据的大小选择一个最合适的Slab Class，然后通过查询Memcached保存着的该Slab Class内空闲Chunk的列表就可以找到一个可用于存储数据的Chunk。当一条数据库过期或者丢弃时，该记录所占用的Chunk就可以回收，重新添加到空闲列表中。从以上过程我们可以看出Memcached的内存管理制效率高，而且不会造成内存碎片，但是它最大的缺点就是会导致空间浪费。因为每个Chunk都分配了特定长度的内存空间，所以变长数据无法充分利用这些空间。如图 所示，将100个字节的数据缓存到128个字节的Chunk中，剩余的28个字节就浪费掉了。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/XVk7wln.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Redis的内存管理主要通过源码中zmalloc.h和zmalloc.c两个文件来实现的。Redis为了方便内存的管理，在分配一块内存之后，会将这块内存的大小存入内存块的头部。如图所示，real_ptr是redis调用malloc后返回的指针。redis将内存块的大小size存入头部，size所占据的内存大小是已知的，为size_t类型的长度，然后返回ret_ptr。当需要释放内存的时候，ret_ptr被传给内存管理程序。通过ret_ptr，程序可以很容易的算出real_ptr的值，然后将real_ptr传给free释放内存。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/OBHfQxo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Redis通过定义一个数组来记录所有的内存分配情况，这个数组的长度为ZMALLOC_MAX_ALLOC_STAT。数组的每一个元素代表当前程序所分配的内存块的个数，且内存块的大小为该元素的下标。在源码中，这个数组为zmalloc_allocations。zmalloc_allocations[16]代表已经分配的长度为16bytes的内存块的个数。zmalloc.c中有一个静态变量used_memory用来记录当前分配的内存总大小。所以，总的来看，Redis采用的是包装的mallc/free，相较于Memcached的内存管理方法来说，要简单很多。&lt;/p&gt;
+&lt;h2 id=&quot;3-数据持久化支持&quot;&gt;&lt;a href=&quot;#3-数据持久化支持&quot; class=&quot;headerlink&quot; title=&quot;3. 数据持久化支持&quot;&gt;&lt;/a&gt;3. 数据持久化支持&lt;/h2&gt;&lt;p&gt;Redis虽然是基于内存的存储系统，但是它本身是支持内存数据的持久化的，而且提供两种主要的持久化策略：RDB快照和AOF日志。而memcached是不支持数据持久化操作的。&lt;/p&gt;
+&lt;p&gt;1）RDB快照&lt;br&gt;Redis支持将当前数据的快照存成一个数据文件的持久化机制，即RDB快照。但是一个持续写入的数据库如何生成快照呢？Redis借助了fork命令的copy on write机制。在生成快照时，将当前进程fork出一个子进程，然后在子进程中循环所有的数据，将数据写成为RDB文件。我们可以通过Redis的save指令来配置RDB快照生成的时机，比如配置10分钟就生成快照，也可以配置有1000次写入就生成快照，也可以多个规则一起实施。这些规则的定义就在Redis的配置文件中，你也可以通过Redis的CONFIG SET命令在Redis运行时设置规则，不需要重启Redis。&lt;/p&gt;
+&lt;p&gt;Redis的RDB文件不会坏掉，因为其写操作是在一个新进程中进行的，当生成一个新的RDB文件时，Redis生成的子进程会先将数据写到一个临时文件中，然后通过原子性rename系统调用将临时文件重命名为RDB文件，这样在任何时候出现故障，Redis的RDB文件都总是可用的。同时，Redis的RDB文件也是Redis主从同步内部实现中的一环。RDB有他的不足，就是一旦数据库出现问题，那么我们的RDB文件中保存的数据并不是全新的，从上次RDB文件生成到Redis停机这段时间的数据全部丢掉了。在某些业务下，这是可以忍受的。&lt;/p&gt;
+&lt;p&gt;2）AOF日志&lt;/p&gt;
+&lt;p&gt;AOF日志的全称是append only file，它是一个追加写入的日志文件。与一般数据库的binlog不同的是，AOF文件是可识别的纯文本，它的内容就是一个个的Redis标准命令。只有那些会导致数据发生修改的命令才会追加到AOF文件。每一条修改数据的命令都生成一条日志，AOF文件会越来越大，所以Redis又提供了一个功能，叫做AOF rewrite。其功能就是重新生成一份AOF文件，新的AOF文件中一条记录的操作只会有一次，而不像一份老文件那样，可能记录了对同一个值的多次操作。其生成过程和RDB类似，也是fork一个进程，直接遍历数据，写入新的AOF临时文件。在写入新文件的过程中，所有的写操作日志还是会写到原来老的AOF文件中，同时还会记录在内存缓冲区中。当重完操作完成后，会将所有缓冲区中的日志一次性写入到临时文件中。然后调用原子性的rename命令用新的AOF文件取代老的AOF文件。&lt;/p&gt;
+&lt;p&gt;AOF是一个写文件操作，其目的是将操作日志写到磁盘上，所以它也同样会遇到我们上面说的写操作的流程。在Redis中对AOF调用write写入后，通过appendfsync选项来控制调用fsync将其写到磁盘上的时间，下面appendfsync的三个设置项，安全强度逐渐变强。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;appendfsync no 当设置appendfsync为no的时候，Redis不会主动调用fsync去将AOF日志内容同步到磁盘，所以这一切就完全依赖于操作系统的调试了。对大多数Linux操作系统，是每30秒进行一次fsync，将缓冲区中的数据写到磁盘上。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;appendfsync everysec 当设置appendfsync为everysec的时候，Redis会默认每隔一秒进行一次fsync调用，将缓冲区中的数据写到磁盘。但是当这一次的fsync调用时长超过1秒时。Redis会采取延迟fsync的策略，再等一秒钟。也就是在两秒后再进行fsync，这一次的fsync就不管会执行多长时间都会进行。这时候由于在fsync时文件描述符会被阻塞，所以当前的写操作就会阻塞。所以结论就是，在绝大多数情况下，Redis会每隔一秒进行一次fsync。在最坏的情况下，两秒钟会进行一次fsync操作。这一操作在大多数数据库系统中被称为group commit，就是组合多次写操作的数据，一次性将日志写到磁盘。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;appednfsync always 当设置appendfsync为always时，每一次写操作都会调用一次fsync，这时数据是最安全的，当然，由于每次都会执行fsync，所以其性能也会受到影响。&lt;br&gt;对于一般性的业务需求，建议使用RDB的方式进行持久化，原因是RDB的开销并相比AOF日志要低很多，对于那些无法忍数据丢失的应用，建议使用AOF日志。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于一般性的业务需求，建议使用RDB的方式进行持久化，原因是RDB的开销并相比AOF日志要低很多，对于那些无法忍数据丢失的应用，建议使用AOF日志。&lt;/p&gt;
+&lt;h2 id=&quot;4-集群管理的不同&quot;&gt;&lt;a href=&quot;#4-集群管理的不同&quot; class=&quot;headerlink&quot; title=&quot;4. 集群管理的不同&quot;&gt;&lt;/a&gt;4. 集群管理的不同&lt;/h2&gt;&lt;p&gt;Memcached是全内存的数据缓冲系统，Redis虽然支持数据的持久化，但是全内存毕竟才是其高性能的本质。作为基于内存的存储系统来说，机器物理内存的大小就是系统能够容纳的最大数据量。如果需要处理的数据量超过了单台机器的物理内存大小，就需要构建分布式集群来扩展存储能力。&lt;/p&gt;
+&lt;p&gt;Memcached本身并不支持分布式，因此只能在客户端通过像一致性哈希这样的分布式算法来实现Memcached的分布式存储。下图给出了Memcached的分布式存储实现架构。当客户端向Memcached集群发送数据之前，首先会通过内置的分布式算法计算出该条数据的目标节点，然后数据会直接发送到该节点上存储。但客户端查询数据时，同样要计算出查询数据所在的节点，然后直接向该节点发送查询请求以获取数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/jZUPw1w.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;相较于Memcached只能采用客户端实现分布式存储，Redis更偏向于在服务器端构建分布式存储。最新版本的Redis已经支持了分布式存储功能。Redis Cluster是一个实现了分布式且允许单点故障的Redis高级版本，它没有中心节点，具有线性可伸缩的功能。下图给出Redis Cluster的分布式存储架构，其中节点与节点之间通过二进制协议进行通信，节点与客户端之间通过ascii协议进行通信。在数据的放置策略上，Redis Cluster将整个key的数值域分成4096个哈希槽，每个节点上可以存储一个或多个哈希槽，也就是说当前Redis Cluster支持的最大节点数就是4096。Redis Cluster使用的分布式算法也很简单：crc16( key ) % HASH_SLOTS_NUMBER。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/oysYdZ2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;为了保证单点故障下的数据可用性，Redis Cluster引入了Master节点和Slave节点。在Redis Cluster中，每个Master节点都会有对应的两个用于冗余的Slave节点。这样在整个集群中，任意两个节点的宕机都不会导致数据的不可用。当Master节点退出后，集群会自动选择一个Slave节点成为新的Master节点。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Tw5STdh.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;参考资料：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.redisdoc.com/en/latest/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.redisdoc.com/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://memcached.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://memcached.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
@@ -699,18 +867,48 @@ project/Makefile                   项目的 Makefile
     
     </summary>
     
-      <category term="软件工程" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+      <category term="服务端技术" scheme="http://ufdouble.com/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="开发方法论" scheme="http://ufdouble.com/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+      <category term="缓存服务器" scheme="http://ufdouble.com/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8A%80%E6%9C%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-      <category term="软件工程" scheme="http://ufdouble.com/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+      <category term="缓存" scheme="http://ufdouble.com/tags/%E7%BC%93%E5%AD%98/"/>
     
-      <category term="方法论" scheme="http://ufdouble.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+      <category term="Redis" scheme="http://ufdouble.com/tags/Redis/"/>
     
-      <category term="测试驱动开发" scheme="http://ufdouble.com/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+      <category term="Memcached" scheme="http://ufdouble.com/tags/Memcached/"/>
     
-      <category term="TDD" scheme="http://ufdouble.com/tags/TDD/"/>
+  </entry>
+  
+  <entry>
+    <title>个人博客音乐测试</title>
+    <link href="http://ufdouble.com/2016/07/muisc/"/>
+    <id>http://ufdouble.com/2016/07/muisc/</id>
+    <published>2016-07-07T08:01:46.444Z</published>
+    <updated>2016-07-03T04:23:33.591Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;音乐测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;张碧晨-我可以忘记你：&quot;&gt;&lt;a href=&quot;#张碧晨-我可以忘记你：&quot; class=&quot;headerlink&quot; title=&quot;张碧晨 我可以忘记你：&quot;&gt;&lt;/a&gt;张碧晨 我可以忘记你：&lt;/h2&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=416552313&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;音乐测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;张碧晨-我可以忘记你：&quot;&gt;&lt;a href=&quot;#张碧晨-我可以忘记你：&quot; class=&quot;headerlink&quot; title=&quot;张碧晨 我可以忘记你：&quot;&gt;&lt;/a&gt;张碧晨 我可以忘记你：&lt;/h
+    
+    </summary>
+    
+      <category term="个人爱好" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/"/>
+    
+      <category term="音乐" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/%E9%9F%B3%E4%B9%90/"/>
+    
+    
+      <category term="张碧晨" scheme="http://ufdouble.com/tags/%E5%BC%A0%E7%A2%A7%E6%99%A8/"/>
+    
+      <category term="音乐" scheme="http://ufdouble.com/tags/%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   
@@ -905,204 +1103,6 @@ echo&amp;quot;ta1&amp;quot;;
       <category term="java" scheme="http://ufdouble.com/tags/java/"/>
     
       <category term="缓存" scheme="http://ufdouble.com/tags/%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis 和 Memcached 的区别</title>
-    <link href="http://ufdouble.com/2016/07/Redis%E5%92%8CMemcached%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://ufdouble.com/2016/07/Redis和Memcached的区别/</id>
-    <published>2016-07-07T08:01:46.444Z</published>
-    <updated>2016-07-05T05:55:16.256Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：2016年7月4日&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Redis 的作者 Salvatore Sanfilippo 曾经对这两种基于内存的数据存储系统进行过比较：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;Redis支持服务器端的数据操作：Redis相比Memcached来说，拥有更多的数据结构和并支持更丰富的数据操作，通常在Memcached里，你需要将数据拿到客户端来进行类似的修改再set回去。这大大增加了网络IO的次数和数据体积。在Redis中，这些复杂的操作通常和一般的GET/SET一样高效。所以，如果需要缓存能够支持更复杂的结构和操作，那么Redis会是不错的选择。&lt;br&gt;内存使用效率对比：使用简单的key-value存储的话，Memcached的内存利用率更高，而如果Redis采用hash结构来做key-value存储，由于其组合式的压缩，其内存利用率会高于Memcached。&lt;br&gt;性能对比：由于Redis只使用单核，而Memcached可以使用多核，所以平均每一个核上Redis在存储小数据时比Memcached性能更高。而在100k以上的数据中，Memcached性能要高于Redis，虽然Redis最近也在存储大数据的性能上进行优化，但是比起Memcached，还是稍有逊色。&lt;br&gt;具体为什么会出现上面的结论，以下为收集到的资料：&lt;/li&gt;
-&lt;li&gt;内存使用效率对比：使用简单的key-value存储的话，Memcached的内存利用率更高，而如果Redis采用hash结构来做key-value存储，由于其组合式的压缩，其内存利用率会高于Memcached。&lt;/li&gt;
-&lt;li&gt;性能对比：由于Redis只使用单核，而Memcached可以使用多核，所以平均每一个核上Redis在存储小数据时比Memcached性能更高。而在100k以上的数据中，Memcached性能要高于Redis，虽然Redis最近也在存储大数据的性能上进行优化，但是比起Memcached，还是稍有逊色。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;具体为什么会出现上面的结论，以下为收集到的资料：&lt;/p&gt;
-&lt;h2 id=&quot;1-数据类型支持不同&quot;&gt;&lt;a href=&quot;#1-数据类型支持不同&quot; class=&quot;headerlink&quot; title=&quot;1. 数据类型支持不同&quot;&gt;&lt;/a&gt;1. 数据类型支持不同&lt;/h2&gt;&lt;p&gt;与Memcached仅支持简单的key-value结构的数据记录不同，Redis支持的数据类型要丰富得多。最为常用的数据类型主要由五种：String、Hash、List、Set和Sorted Set。Redis内部使用一个redisObject对象来表示所有的key和value。redisObject最主要的信息如图所示：&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/OB5S4P1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;type代表一个value对象具体是何种数据类型，encoding是不同数据类型在redis内部的存储方式，比如：type=string代表value存储的是一个普通字符串，那么对应的encoding可以是raw或者是int，如果是int则代表实际redis内部是按数值型类存储和表示这个字符串的，当然前提是这个字符串本身可以用数值表示，比如:”123″ “456”这样的字符串。只有打开了Redis的虚拟内存功能，vm字段字段才会真正的分配内存，该功能默认是关闭状态的。&lt;/p&gt;
-&lt;h3 id=&quot;1）String&quot;&gt;&lt;a href=&quot;#1）String&quot; class=&quot;headerlink&quot; title=&quot;1）String&quot;&gt;&lt;/a&gt;1）String&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;常用命令：set/get/decr/incr/mget等；&lt;/li&gt;
-&lt;li&gt;应用场景：String是最常用的一种数据类型，普通的key/value存储都可以归为此类；&lt;/li&gt;
-&lt;li&gt;实现方式：String在redis内部存储默认就是一个字符串，被redisObject所引用，当遇到incr、 decr等操作时会转成数值型进行计算，此时redisObject的encoding字段为int。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;2）Hash&quot;&gt;&lt;a href=&quot;#2）Hash&quot; class=&quot;headerlink&quot; title=&quot;2）Hash&quot;&gt;&lt;/a&gt;2）Hash&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;常用命令：hget/hset/hgetall等&lt;/li&gt;
-&lt;li&gt;应用场景：我们要存储一个用户信息对象数据，其中包括用户ID、用户姓名、年龄和生日，通过用户ID我们希望获取该用户的姓名或者年龄或者生日；&lt;/li&gt;
-&lt;li&gt;实现方式：Redis的Hash实际是内部存储的Value为一个HashMap，并提供了直接存取这个Map成员的接口。如图所示，Key是用户ID, value是一个Map。这个Map的key是成员的属性名，value是属性值。这样对数据的修改和存取都可以直接通过其内部Map的Key(Redis里称内部Map的key为field), 也就是通过 key(用户ID) + field(属性标签) 就可以操作对应属性数据。当前HashMap的实现有两种方式：当HashMap的成员比较少时Redis为了节省内存会采用类似一维数组的方式来紧凑存储，而不会采用真正的HashMap结构，这时对应的value的redisObject的encoding为zipmap，当成员数量增大时会自动转成真正的HashMap,此时encoding为ht。&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;http://i.imgur.com/DMqswtk.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;3）List&quot;&gt;&lt;a href=&quot;#3）List&quot; class=&quot;headerlink&quot; title=&quot;3）List&quot;&gt;&lt;/a&gt;3）List&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;常用命令：lpush/rpush/lpop/rpop/lrange等；&lt;/li&gt;
-&lt;li&gt;应用场景：Redis list的应用场景非常多，也是Redis最重要的数据结构之一，比如twitter的关注列表，粉丝列表等都可以用Redis的list结构来实现；&lt;/li&gt;
-&lt;li&gt;实现方式：Redis list的实现为一个双向链表，即可以支持反向查找和遍历，更方便操作，不过带来了部分额外的内存开销，Redis内部的很多实现，包括发送缓冲队列等也都是用的这个数据结构。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;4）Set&quot;&gt;&lt;a href=&quot;#4）Set&quot; class=&quot;headerlink&quot; title=&quot;4）Set&quot;&gt;&lt;/a&gt;4）Set&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;常用命令：sadd/spop/smembers/sunion等；&lt;/li&gt;
-&lt;li&gt;应用场景：Redis set对外提供的功能与list类似是一个列表的功能，特殊之处在于set是可以自动排重的，当你需要存储一个列表数据，又不希望出现重复数据时，set是一个很好的选择，并且set提供了判断某个成员是否在一个set集合内的重要接口，这个也是list所不能提供的；&lt;/li&gt;
-&lt;li&gt;实现方式：set 的内部实现是一个 value永远为null的HashMap，实际就是通过计算hash的方式来快速排重的，这也是set能提供判断一个成员是否在集合内的原因。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;5）Sorted-Set&quot;&gt;&lt;a href=&quot;#5）Sorted-Set&quot; class=&quot;headerlink&quot; title=&quot;5）Sorted Set&quot;&gt;&lt;/a&gt;5）Sorted Set&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;常用命令：zadd/zrange/zrem/zcard等；&lt;/li&gt;
-&lt;li&gt;应用场景：Redis sorted set的使用场景与set类似，区别是set不是自动有序的，而sorted set可以通过用户额外提供一个优先级(score)的参数来为成员排序，并且是插入有序的，即自动排序。当你需要一个有序的并且不重复的集合列表，那么可以选择sorted set数据结构，比如twitter 的public timeline可以以发表时间作为score来存储，这样获取时就是自动按时间排好序的。&lt;/li&gt;
-&lt;li&gt;实现方式：Redis sorted set的内部使用HashMap和跳跃表(SkipList)来保证数据的存储和有序，HashMap里放的是成员到score的映射，而跳跃表里存放的是所有的成员，排序依据是HashMap里存的score,使用跳跃表的结构可以获得比较高的查找效率，并且在实现上比较简单。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;2-内存管理机制不同&quot;&gt;&lt;a href=&quot;#2-内存管理机制不同&quot; class=&quot;headerlink&quot; title=&quot;2. 内存管理机制不同&quot;&gt;&lt;/a&gt;2. 内存管理机制不同&lt;/h2&gt;&lt;p&gt;在Redis中，并不是所有的数据都一直存储在内存中的。这是和Memcached相比一个最大的区别。当物理内存用完时，Redis可以将一些很久没用到的value交换到磁盘。Redis只会缓存所有的key的信息，如果Redis发现内存的使用量超过了某一个阀值，将触发swap的操作，Redis根据“swappability = age*log(size_in_memory)”计算出哪些key对应的value需要swap到磁盘。然后再将这些key对应的value持久化到磁盘中，同时在内存中清除。这种特性使得Redis可以保持超过其机器本身内存大小的数据。当然，机器本身的内存必须要能够保持所有的key，毕竟这些数据是不会进行swap操作的。同时由于Redis将内存中的数据swap到磁盘中的时候，提供服务的主线程和进行swap操作的子线程会共享这部分内存，所以如果更新需要swap的数据，Redis将阻塞这个操作，直到子线程完成swap操作后才可以进行修改。当从Redis中读取数据的时候，如果读取的key对应的value不在内存中，那么Redis就需要从swap文件中加载相应数据，然后再返回给请求方。 这里就存在一个I/O线程池的问题。在默认的情况下，Redis会出现阻塞，即完成所有的swap文件加载后才会相应。这种策略在客户端的数量较小，进行批量操作的时候比较合适。但是如果将Redis应用在一个大型的网站应用程序中，这显然是无法满足大并发的情况的。所以Redis运行我们设置I/O线程池的大小，对需要从swap文件中加载相应数据的读取请求进行并发操作，减少阻塞的时间。&lt;/p&gt;
-&lt;p&gt;对于像Redis和Memcached这种基于内存的数据库系统来说，内存管理的效率高低是影响系统性能的关键因素。传统C语言中的malloc/free函数是最常用的分配和释放内存的方法，但是这种方法存在着很大的缺陷：首先，对于开发人员来说不匹配的malloc和free容易造成内存泄露；其次频繁调用会造成大量内存碎片无法回收重新利用，降低内存利用率；最后作为系统调用，其系统开销远远大于一般函数调用。所以，为了提高内存的管理效率，高效的内存管理方案都不会直接使用malloc/free调用。Redis和Memcached均使用了自身设计的内存管理机制，但是实现方法存在很大的差异，下面将会对两者的内存管理机制分别进行介绍。&lt;/p&gt;
-&lt;p&gt;Memcached默认使用Slab Allocation机制管理内存，其主要思想是按照预先规定的大小，将分配的内存分割成特定长度的块以存储相应长度的key-value数据记录，以完全解决内存碎片问题。Slab Allocation机制只为存储外部数据而设计，也就是说所有的key-value数据都存储在Slab Allocation系统里，而Memcached的其它内存请求则通过普通的malloc/free来申请，因为这些请求的数量和频率决定了它们不会对整个系统的性能造成影响Slab Allocation的原理相当简单。 如图所示，它首先从操作系统申请一大块内存，并将其分割成各种尺寸的块Chunk，并把尺寸相同的块分成组Slab Class。其中，Chunk就是用来存储key-value数据的最小单位。每个Slab Class的大小，可以在Memcached启动的时候通过制定Growth Factor来控制。假定图中Growth Factor的取值为1.25，如果第一组Chunk的大小为88个字节，第二组Chunk的大小就为112个字节，依此类推。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/hDbyiAp.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;当Memcached接收到客户端发送过来的数据时首先会根据收到数据的大小选择一个最合适的Slab Class，然后通过查询Memcached保存着的该Slab Class内空闲Chunk的列表就可以找到一个可用于存储数据的Chunk。当一条数据库过期或者丢弃时，该记录所占用的Chunk就可以回收，重新添加到空闲列表中。从以上过程我们可以看出Memcached的内存管理制效率高，而且不会造成内存碎片，但是它最大的缺点就是会导致空间浪费。因为每个Chunk都分配了特定长度的内存空间，所以变长数据无法充分利用这些空间。如图 所示，将100个字节的数据缓存到128个字节的Chunk中，剩余的28个字节就浪费掉了。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/XVk7wln.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Redis的内存管理主要通过源码中zmalloc.h和zmalloc.c两个文件来实现的。Redis为了方便内存的管理，在分配一块内存之后，会将这块内存的大小存入内存块的头部。如图所示，real_ptr是redis调用malloc后返回的指针。redis将内存块的大小size存入头部，size所占据的内存大小是已知的，为size_t类型的长度，然后返回ret_ptr。当需要释放内存的时候，ret_ptr被传给内存管理程序。通过ret_ptr，程序可以很容易的算出real_ptr的值，然后将real_ptr传给free释放内存。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/OBHfQxo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Redis通过定义一个数组来记录所有的内存分配情况，这个数组的长度为ZMALLOC_MAX_ALLOC_STAT。数组的每一个元素代表当前程序所分配的内存块的个数，且内存块的大小为该元素的下标。在源码中，这个数组为zmalloc_allocations。zmalloc_allocations[16]代表已经分配的长度为16bytes的内存块的个数。zmalloc.c中有一个静态变量used_memory用来记录当前分配的内存总大小。所以，总的来看，Redis采用的是包装的mallc/free，相较于Memcached的内存管理方法来说，要简单很多。&lt;/p&gt;
-&lt;h2 id=&quot;3-数据持久化支持&quot;&gt;&lt;a href=&quot;#3-数据持久化支持&quot; class=&quot;headerlink&quot; title=&quot;3. 数据持久化支持&quot;&gt;&lt;/a&gt;3. 数据持久化支持&lt;/h2&gt;&lt;p&gt;Redis虽然是基于内存的存储系统，但是它本身是支持内存数据的持久化的，而且提供两种主要的持久化策略：RDB快照和AOF日志。而memcached是不支持数据持久化操作的。&lt;/p&gt;
-&lt;p&gt;1）RDB快照&lt;br&gt;Redis支持将当前数据的快照存成一个数据文件的持久化机制，即RDB快照。但是一个持续写入的数据库如何生成快照呢？Redis借助了fork命令的copy on write机制。在生成快照时，将当前进程fork出一个子进程，然后在子进程中循环所有的数据，将数据写成为RDB文件。我们可以通过Redis的save指令来配置RDB快照生成的时机，比如配置10分钟就生成快照，也可以配置有1000次写入就生成快照，也可以多个规则一起实施。这些规则的定义就在Redis的配置文件中，你也可以通过Redis的CONFIG SET命令在Redis运行时设置规则，不需要重启Redis。&lt;/p&gt;
-&lt;p&gt;Redis的RDB文件不会坏掉，因为其写操作是在一个新进程中进行的，当生成一个新的RDB文件时，Redis生成的子进程会先将数据写到一个临时文件中，然后通过原子性rename系统调用将临时文件重命名为RDB文件，这样在任何时候出现故障，Redis的RDB文件都总是可用的。同时，Redis的RDB文件也是Redis主从同步内部实现中的一环。RDB有他的不足，就是一旦数据库出现问题，那么我们的RDB文件中保存的数据并不是全新的，从上次RDB文件生成到Redis停机这段时间的数据全部丢掉了。在某些业务下，这是可以忍受的。&lt;/p&gt;
-&lt;p&gt;2）AOF日志&lt;/p&gt;
-&lt;p&gt;AOF日志的全称是append only file，它是一个追加写入的日志文件。与一般数据库的binlog不同的是，AOF文件是可识别的纯文本，它的内容就是一个个的Redis标准命令。只有那些会导致数据发生修改的命令才会追加到AOF文件。每一条修改数据的命令都生成一条日志，AOF文件会越来越大，所以Redis又提供了一个功能，叫做AOF rewrite。其功能就是重新生成一份AOF文件，新的AOF文件中一条记录的操作只会有一次，而不像一份老文件那样，可能记录了对同一个值的多次操作。其生成过程和RDB类似，也是fork一个进程，直接遍历数据，写入新的AOF临时文件。在写入新文件的过程中，所有的写操作日志还是会写到原来老的AOF文件中，同时还会记录在内存缓冲区中。当重完操作完成后，会将所有缓冲区中的日志一次性写入到临时文件中。然后调用原子性的rename命令用新的AOF文件取代老的AOF文件。&lt;/p&gt;
-&lt;p&gt;AOF是一个写文件操作，其目的是将操作日志写到磁盘上，所以它也同样会遇到我们上面说的写操作的流程。在Redis中对AOF调用write写入后，通过appendfsync选项来控制调用fsync将其写到磁盘上的时间，下面appendfsync的三个设置项，安全强度逐渐变强。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;appendfsync no 当设置appendfsync为no的时候，Redis不会主动调用fsync去将AOF日志内容同步到磁盘，所以这一切就完全依赖于操作系统的调试了。对大多数Linux操作系统，是每30秒进行一次fsync，将缓冲区中的数据写到磁盘上。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;appendfsync everysec 当设置appendfsync为everysec的时候，Redis会默认每隔一秒进行一次fsync调用，将缓冲区中的数据写到磁盘。但是当这一次的fsync调用时长超过1秒时。Redis会采取延迟fsync的策略，再等一秒钟。也就是在两秒后再进行fsync，这一次的fsync就不管会执行多长时间都会进行。这时候由于在fsync时文件描述符会被阻塞，所以当前的写操作就会阻塞。所以结论就是，在绝大多数情况下，Redis会每隔一秒进行一次fsync。在最坏的情况下，两秒钟会进行一次fsync操作。这一操作在大多数数据库系统中被称为group commit，就是组合多次写操作的数据，一次性将日志写到磁盘。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;appednfsync always 当设置appendfsync为always时，每一次写操作都会调用一次fsync，这时数据是最安全的，当然，由于每次都会执行fsync，所以其性能也会受到影响。&lt;br&gt;对于一般性的业务需求，建议使用RDB的方式进行持久化，原因是RDB的开销并相比AOF日志要低很多，对于那些无法忍数据丢失的应用，建议使用AOF日志。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;对于一般性的业务需求，建议使用RDB的方式进行持久化，原因是RDB的开销并相比AOF日志要低很多，对于那些无法忍数据丢失的应用，建议使用AOF日志。&lt;/p&gt;
-&lt;h2 id=&quot;4-集群管理的不同&quot;&gt;&lt;a href=&quot;#4-集群管理的不同&quot; class=&quot;headerlink&quot; title=&quot;4. 集群管理的不同&quot;&gt;&lt;/a&gt;4. 集群管理的不同&lt;/h2&gt;&lt;p&gt;Memcached是全内存的数据缓冲系统，Redis虽然支持数据的持久化，但是全内存毕竟才是其高性能的本质。作为基于内存的存储系统来说，机器物理内存的大小就是系统能够容纳的最大数据量。如果需要处理的数据量超过了单台机器的物理内存大小，就需要构建分布式集群来扩展存储能力。&lt;/p&gt;
-&lt;p&gt;Memcached本身并不支持分布式，因此只能在客户端通过像一致性哈希这样的分布式算法来实现Memcached的分布式存储。下图给出了Memcached的分布式存储实现架构。当客户端向Memcached集群发送数据之前，首先会通过内置的分布式算法计算出该条数据的目标节点，然后数据会直接发送到该节点上存储。但客户端查询数据时，同样要计算出查询数据所在的节点，然后直接向该节点发送查询请求以获取数据。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/jZUPw1w.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;相较于Memcached只能采用客户端实现分布式存储，Redis更偏向于在服务器端构建分布式存储。最新版本的Redis已经支持了分布式存储功能。Redis Cluster是一个实现了分布式且允许单点故障的Redis高级版本，它没有中心节点，具有线性可伸缩的功能。下图给出Redis Cluster的分布式存储架构，其中节点与节点之间通过二进制协议进行通信，节点与客户端之间通过ascii协议进行通信。在数据的放置策略上，Redis Cluster将整个key的数值域分成4096个哈希槽，每个节点上可以存储一个或多个哈希槽，也就是说当前Redis Cluster支持的最大节点数就是4096。Redis Cluster使用的分布式算法也很简单：crc16( key ) % HASH_SLOTS_NUMBER。&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/oysYdZ2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;为了保证单点故障下的数据可用性，Redis Cluster引入了Master节点和Slave节点。在Redis Cluster中，每个Master节点都会有对应的两个用于冗余的Slave节点。这样在整个集群中，任意两个节点的宕机都不会导致数据的不可用。当Master节点退出后，集群会自动选择一个Slave节点成为新的Master节点。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Tw5STdh.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;参考资料：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.redisdoc.com/en/latest/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.redisdoc.com/en/latest/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://memcached.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://memcached.org/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：&lt;a href=&quot;https://github.com/double-qiu&quot; title=&quot;DOUBLE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DOUBLE&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;时间&lt;/s
-    
-    </summary>
-    
-      <category term="服务端技术" scheme="http://ufdouble.com/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="缓存服务器" scheme="http://ufdouble.com/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8A%80%E6%9C%AF/%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-      <category term="缓存" scheme="http://ufdouble.com/tags/%E7%BC%93%E5%AD%98/"/>
-    
-      <category term="Redis" scheme="http://ufdouble.com/tags/Redis/"/>
-    
-      <category term="Memcached" scheme="http://ufdouble.com/tags/Memcached/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人博客视频测试</title>
-    <link href="http://ufdouble.com/2016/07/video/"/>
-    <id>http://ufdouble.com/2016/07/video/</id>
-    <published>2016-07-07T08:01:46.444Z</published>
-    <updated>2016-07-03T04:21:19.336Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;视频测试&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;NBA过人集锦-脚踝终结者-Crossover：&quot;&gt;&lt;a href=&quot;#NBA过人集锦-脚踝终结者-Crossover：&quot; class=&quot;headerlink&quot; title=&quot;NBA过人集锦 脚踝终结者 Crossover：&quot;&gt;&lt;/a&gt;NBA过人集锦 脚踝终结者 Crossover：&lt;/h2&gt;&lt;iframe height=&quot;498&quot; width=&quot;510&quot; src=&quot;http://player.youku.com/embed/XOTE2NTU3NTA0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;视频测试&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;NBA过人集锦-脚踝终结者-Crossover：&quot;&gt;&lt;a href=&quot;#NBA过人集锦-脚踝终结者-Crossover：&quot; class=&quot;headerlink&quot; title=&quot;NBA过人
-    
-    </summary>
-    
-      <category term="个人爱好" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/"/>
-    
-      <category term="篮球" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/%E7%AF%AE%E7%90%83/"/>
-    
-    
-      <category term="篮球" scheme="http://ufdouble.com/tags/%E7%AF%AE%E7%90%83/"/>
-    
-      <category term="NBA" scheme="http://ufdouble.com/tags/NBA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人博客图片测试</title>
-    <link href="http://ufdouble.com/2016/07/rating/"/>
-    <id>http://ufdouble.com/2016/07/rating/</id>
-    <published>2016-07-07T08:01:46.444Z</published>
-    <updated>2016-07-03T04:42:37.558Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;图片测试&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;关于骑行那些事&quot;&gt;&lt;a href=&quot;#关于骑行那些事&quot; class=&quot;headerlink&quot; title=&quot;关于骑行那些事&quot;&gt;&lt;/a&gt;关于骑行那些事&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/bwyG01t.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/CorVKWU.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/WENVFWW.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;图片测试&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;关于骑行那些事&quot;&gt;&lt;a href=&quot;#关于骑行那些事&quot; class=&quot;headerlink&quot; title=&quot;关于骑行那些事&quot;&gt;&lt;/a&gt;关于骑行那些事&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;h
-    
-    </summary>
-    
-      <category term="个人爱好" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/"/>
-    
-      <category term="骑行" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/%E9%AA%91%E8%A1%8C/"/>
-    
-    
-      <category term="骑行" scheme="http://ufdouble.com/tags/%E9%AA%91%E8%A1%8C/"/>
-    
-      <category term="山地车" scheme="http://ufdouble.com/tags/%E5%B1%B1%E5%9C%B0%E8%BD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人博客音乐测试</title>
-    <link href="http://ufdouble.com/2016/07/muisc/"/>
-    <id>http://ufdouble.com/2016/07/muisc/</id>
-    <published>2016-07-07T08:01:46.444Z</published>
-    <updated>2016-07-03T04:23:33.591Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;音乐测试&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;张碧晨-我可以忘记你：&quot;&gt;&lt;a href=&quot;#张碧晨-我可以忘记你：&quot; class=&quot;headerlink&quot; title=&quot;张碧晨 我可以忘记你：&quot;&gt;&lt;/a&gt;张碧晨 我可以忘记你：&lt;/h2&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=416552313&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;音乐测试&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;张碧晨-我可以忘记你：&quot;&gt;&lt;a href=&quot;#张碧晨-我可以忘记你：&quot; class=&quot;headerlink&quot; title=&quot;张碧晨 我可以忘记你：&quot;&gt;&lt;/a&gt;张碧晨 我可以忘记你：&lt;/h
-    
-    </summary>
-    
-      <category term="个人爱好" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/"/>
-    
-      <category term="音乐" scheme="http://ufdouble.com/categories/%E4%B8%AA%E4%BA%BA%E7%88%B1%E5%A5%BD/%E9%9F%B3%E4%B9%90/"/>
-    
-    
-      <category term="张碧晨" scheme="http://ufdouble.com/tags/%E5%BC%A0%E7%A2%A7%E6%99%A8/"/>
-    
-      <category term="音乐" scheme="http://ufdouble.com/tags/%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   
