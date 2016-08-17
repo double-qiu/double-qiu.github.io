@@ -3,6 +3,31 @@
 
 
     
+  <url>
+    <loc>http://ufdouble.com/2016/08/%E5%A5%A5%E8%BF%90%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2016-08-17T09:23:13.584Z</lastmod>
+    <data>
+        <display>
+        <title>奥运杂谈</title>
+        <pubTime>2016-08-17T08:01:25.750Z</pubTime>
+        
+        <tag>奥运</tag>
+         
+        <tag>体育</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="http://ufdouble.com/categories/%E7%94%9F%E6%B4%BB/"/>
+          
+             
+              <breadCrumb title="人生感悟" url="http://ufdouble.com/categories/%E7%94%9F%E6%B4%BB/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://ufdouble.com/2016/07/%E8%B0%88%E8%B0%88%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%86%99/</loc>
@@ -12,9 +37,9 @@
         <title>谈谈开发中的单元测试怎么写</title>
         <pubTime>2016-07-07T08:01:46.454Z</pubTime>
         
-        <tag>TDD</tag>
-         
         <tag>单元测试</tag>
+         
+        <tag>TDD</tag>
          
         <tag>JUnit</tag>
          
@@ -41,9 +66,9 @@
         <title>谈谈开发中单元测试的重要性</title>
         <pubTime>2016-07-07T08:01:46.454Z</pubTime>
         
-        <tag>TDD</tag>
-         
         <tag>单元测试</tag>
+         
+        <tag>TDD</tag>
          
         <tag>JUnit</tag>
          
@@ -97,11 +122,11 @@
         <title>nginx缓存静态文件搭建详解</title>
         <pubTime>2016-07-07T08:01:46.444Z</pubTime>
         
+        <tag>缓存</tag>
+         
         <tag>nginx</tag>
          
         <tag>java</tag>
-         
-        <tag>缓存</tag>
          
          
            
@@ -124,13 +149,13 @@
         <title>测试驱动开发（TDD）</title>
         <pubTime>2016-07-07T08:01:46.454Z</pubTime>
         
+        <tag>TDD</tag>
+         
         <tag>软件工程</tag>
          
         <tag>方法论</tag>
          
         <tag>测试驱动开发</tag>
-         
-        <tag>TDD</tag>
          
          
            
